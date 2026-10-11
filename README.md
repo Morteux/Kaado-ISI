@@ -121,9 +121,10 @@ El progreso no se sincroniza entre navegadores o dispositivos en la versión loc
 ## Cómo se guarda la información
 
 - La aplicación usa el almacenamiento local del navegador, con la clave de almacenamiento **kaado-isi-campaign-v2**.
-- No hay inicio de sesión, cuenta de usuario, base de datos remota ni sincronización entre dispositivos implementada en esta versión.
-- El progreso permanece en el perfil del navegador en el que estudias. El modo privado, borrar los datos del sitio o algunas configuraciones del navegador pueden hacer que se pierda.
-- El progreso de estudio y los sinónimos personales se guardan en claves locales distintas. Los sinónimos no se mezclan con los datos del progreso y no se envían a un servicio remoto.
+- Todavía no hay inicio de sesión, base de datos remota ni sincronización entre dispositivos implementados. El progreso SRS de vocabulario y kanji sigue en el navegador.
+- La arquitectura prevista para la persistencia entre dispositivos es una cuenta con correo y contraseña, recuperación de acceso por correo y una base de datos PostgreSQL gestionada con Supabase Auth y políticas de acceso por usuario (RLS). El progreso de cada tarjeta deberá asociarse al ID de usuario y usar identificadores estables para sincronizarlo entre dispositivos. Esta arquitectura está planificada, no implementada.
+- El progreso de estudio y los sinónimos personales se guardan en claves locales distintas. Los sinónimos no se mezclan con los datos del progreso, no se subirán a la futura base de datos y no se sincronizarán entre dispositivos.
+- El progreso local permanece en el perfil del navegador en el que estudias. El modo privado, borrar los datos del sitio o algunas configuraciones del navegador pueden hacer que se pierda.
 
 ## Datos y atribución
 
@@ -133,7 +134,7 @@ La aplicación incluye datos de kanji con atribución a **OpenJLPT**, bajo licen
 
 Kaado ISI es un prototipo estático y local. Las siguientes mejoras aportarían bastante valor:
 
-1. **Persistencia remota del progreso:** cuando se diseñe la base de datos persistente, definir qué datos de estudio se sincronizan y cómo se identifican los usuarios. Los sinónimos personales deben permanecer locales.
+1. **Persistencia remota del progreso:** implementar el acceso con correo y contraseña, recuperación por correo y sincronización del progreso SRS de vocabulario y kanji mediante Supabase Auth y PostgreSQL con RLS. Los sinónimos personales deben permanecer locales.
 2. **Sincronización entre dispositivos:** requeriría una cuenta o un servicio remoto; ahora mismo el progreso vive en un único navegador.
 3. **Mejor control de las respuestas:** revisar los sinónimos aceptados y permitir añadir alternativas válidas cuando una traducción natural no esté en la lista.
 4. **Pruebas automatizadas:** probar el algoritmo SRS, los desbloqueos y los cambios de selección para evitar regresiones.
