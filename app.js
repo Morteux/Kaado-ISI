@@ -176,7 +176,7 @@ select.value=String(Math.min(st.stage,x.kind==="kanji"||x.kind==="vocab"?8:9));
 const apply=document.createElement("button");apply.type="button";apply.className="ghost";apply.textContent="Set stage";
 apply.addEventListener("click",()=>{setManualStage(stageKey,Number(select.value));renderStudyList();renderKanjiCatalog();renderCatalog()});
 controls.append(select,apply);
-if(x.kind==="vocab"){info.append(ch,details);row.append(info,controls)}else{info.append(details);row.append(ch,info,controls)}
+if(x.kind==="vocab"){info.append(ch,details);row.append(info,controls)}else{info.append(read,meaning,meta);row.append(ch,info,controls)}
 list.append(row)
 });
 document.getElementById("studyListCount").textContent=filtered.length.toLocaleString()+" items · showing "+(filtered.length?start+1:0)+"–"+Math.min(start+size,filtered.length);
