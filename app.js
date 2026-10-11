@@ -23,7 +23,7 @@ Object.entries(statIcons).forEach(([id,name])=>{const el=document.getElementById
 // Hide kana readings when they merely repeat a kana-only vocabulary term.
 function isRedundantVocabReading(word){
   const term=String(word?.jp||"").trim(),reading=String(word?.reading||word?.kana||"").trim();
-  return !!term&&term===reading&&!/[\\u3400-\\u9FFF々]/u.test(term);
+  return !!term&&term===reading&&!/[\u3400-\u9FFF々]/u.test(term);
 }
 // ── Vocabulary dataset: できる日本語初中級 ────────────────────
 const WORDS = [
