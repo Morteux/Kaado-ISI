@@ -101,19 +101,29 @@ La tarjeta marcada como conocida se programa para repaso dentro de dos días. El
 
 Al principio se muestran las primeras 30 tarjetas de esta herramienta para mantener la página manejable; utiliza el buscador para localizar cualquier otra.
 
-### 7. Exportar o borrar el progreso
+### 7. Guardar sinónimos personales
 
-- **Exportar progreso JSON:** descarga un archivo con los datos de progreso locales. Guárdalo como copia de seguridad.
-- **Reiniciar progreso:** borra todo el progreso de esta aplicación guardado en el navegador actual, después de pedir confirmación.
+Si una traducción válida no está incluida en las respuestas aceptadas, puedes añadirla como sinónimo personal:
 
-**Importante:** actualmente hay exportación, pero no importación desde un archivo JSON. El archivo exportado no se restaura desde la interfaz. Si borras los datos del navegador, usas otro navegador o cambias de dispositivo, el progreso no se sincroniza automáticamente ni se transfiere por sí solo.
+1. Escribe la respuesta y pulsa **Comprobar respuesta**.
+2. Si se marca como incorrecta, pulsa **Guardar esta respuesta como sinónimo local**.
+3. Confirma que quieres guardarla. La respuesta se acepta para esa tarjeta y queda guardada en este navegador.
+4. Desde **Progreso → Sinónimos locales**, puedes revisar los sinónimos guardados y eliminarlos individualmente.
+
+Los sinónimos solo se aplican a traducciones de vocabulario y al significado de kanji, no a los modos de lectura kun/on. Se guardan en una clave de almacenamiento local separada del progreso de estudio. No se enviarán a la futura base de datos persistente ni se compartirán entre dispositivos. Reiniciar el progreso de estudio no elimina los sinónimos personales.
+
+### 8. Reiniciar el progreso
+
+El botón **Reiniciar progreso** borra los datos de estudio de esta aplicación guardados en el navegador actual, después de pedir confirmación. No borra los sinónimos locales, que se administran por separado.
+
+El progreso no se sincroniza entre navegadores o dispositivos en la versión local actual. Si borras los datos del sitio o el almacenamiento del navegador, puedes perderlo.
 
 ## Cómo se guarda la información
 
 - La aplicación usa el almacenamiento local del navegador, con la clave de almacenamiento **kaado-isi-campaign-v2**.
 - No hay inicio de sesión, cuenta de usuario, base de datos remota ni sincronización entre dispositivos implementada en esta versión.
 - El progreso permanece en el perfil del navegador en el que estudias. El modo privado, borrar los datos del sitio o algunas configuraciones del navegador pueden hacer que se pierda.
-- El archivo exportado contiene datos de progreso y fechas de repaso; guárdalo en un lugar privado.
+- El progreso de estudio y los sinónimos personales se guardan en claves locales distintas. Los sinónimos no se mezclan con los datos del progreso y no se envían a un servicio remoto.
 
 ## Datos y atribución
 
@@ -123,7 +133,7 @@ La aplicación incluye datos de kanji con atribución a **OpenJLPT**, bajo licen
 
 Kaado ISI es un prototipo estático y local. Las siguientes mejoras aportarían bastante valor:
 
-1. **Importar copias de seguridad:** permitir restaurar el JSON exportado, con validación y confirmación antes de reemplazar el progreso.
+1. **Persistencia remota del progreso:** cuando se diseñe la base de datos persistente, definir qué datos de estudio se sincronizan y cómo se identifican los usuarios. Los sinónimos personales deben permanecer locales.
 2. **Sincronización entre dispositivos:** requeriría una cuenta o un servicio remoto; ahora mismo el progreso vive en un único navegador.
 3. **Mejor control de las respuestas:** revisar los sinónimos aceptados y permitir añadir alternativas válidas cuando una traducción natural no esté en la lista.
 4. **Pruebas automatizadas:** probar el algoritmo SRS, los desbloqueos y los cambios de selección para evitar regresiones.
