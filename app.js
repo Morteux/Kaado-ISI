@@ -171,7 +171,7 @@ meta.textContent=tags.join(" · ");
 const details=document.createElement("div");details.append(read,meaning,meta);
 const controls=document.createElement("div");controls.className="kanji-stage-controls";
 const select=document.createElement("select");select.className="search";select.setAttribute("aria-label","Set stage for "+x.kind+" "+x.jp);
-for(let stage=0;stage<=(x.kind==="kanji"||x.kind==="vocab"?8:9);stage++){const option=document.createElement("option");option.value=String(stage);option.textContent=stage===0?"Stage 0 · New":stage===9?"Stage 9 · Mastered":stage===8?"Stage 8 · "+(x.kind==="vocab"||x.kind==="kanji"?"120 days":"60 days"):"Stage "+stage;select.append(option)}
+for(let stage=0;stage<=(x.kind==="kanji"||x.kind==="vocab"?8:9);stage++){const option=document.createElement("option");option.value=String(stage);option.textContent=stage===0?"Stage 0 · New":stage===9?"Stage 9 · Mastered":stage===8&&x.kind!=="vocab"?"Stage 8 · 120 days":"Stage "+stage;select.append(option)}
 select.value=String(Math.min(st.stage,x.kind==="kanji"||x.kind==="vocab"?8:9));
 const apply=document.createElement("button");apply.type="button";apply.className="ghost";apply.textContent="Set stage";
 apply.addEventListener("click",()=>{setManualStage(stageKey,Number(select.value));renderStudyList();renderKanjiCatalog();renderCatalog()});
