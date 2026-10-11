@@ -1368,6 +1368,31 @@ main {
   }
 }
 
+/* Vocabulary terms are words, not single-character kanji: give them a full readable line in both lists. */
+#studyListResults .kanji-catalog-row.vocab-catalog-row {
+  grid-template-columns:minmax(0,1fr);
+  gap:8px;
+  align-items:start
+}
+#studyListResults .vocab-catalog-row>div:first-child {
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:5px;
+  min-width:0
+}
+#studyListResults .vocab-catalog-row>div:first-child>.kanji-catalog-char {
+  align-self:stretch;
+  text-align:left;
+  font-size:1.3rem;
+  line-height:1.5;
+  min-width:0;
+  overflow-wrap:anywhere;
+  word-break:normal
+}
+#studyListResults .vocab-catalog-row>div:first-child>div:last-child {
+  min-width:0
+}
 /* Small page-specific layout helpers */
 .content-toolbar {
   margin:0 0 18px;
