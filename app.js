@@ -169,14 +169,18 @@ else if(x.kind==="vocab"){const t=studyListTopic(x);if(t)tags.push(t.label);else
 else tags.push((x.kind==="hiragana"?"Hiragana":"Katakana")+" · "+(st.stage===9?"Stage 9 · Mastered":"Stage "+st.stage+"/9"));
 meta.textContent=tags.join(" · ");
 const details=document.createElement("div");details.append(read,meaning,meta);
+if(x.kind==="hiragana"||x.kind==="katakana"){
 const controls=document.createElement("div");controls.className="kanji-stage-controls";
 const select=document.createElement("select");select.className="search";select.setAttribute("aria-label","Set stage for "+x.kind+" "+x.jp);
-for(let stage=0;stage<=(x.kind==="kanji"||x.kind==="vocab"?8:9);stage++){const option=document.createElement("option");option.value=String(stage);option.textContent=stage===0?"Stage 0 · New":stage===9?"Stage 9 · Mastered":stage===8&&x.kind!=="vocab"?"Stage 8 · 120 days":"Stage "+stage;select.append(option)}
-select.value=String(Math.min(st.stage,x.kind==="kanji"||x.kind==="vocab"?8:9));
+for(let stage=0;stage<=9;stage++){const option=document.createElement("option");option.value=String(stage);option.textContent=stage===0?"Stage 0 · New":stage===9?"Stage 9 · Mastered":stage===8?"Stage 8 · 60 days":"Stage "+stage;select.append(option)}
+select.value=String(st.stage);
 const apply=document.createElement("button");apply.type="button";apply.className="ghost";apply.textContent="Set stage";
 apply.addEventListener("click",()=>{setManualStage(stageKey,Number(select.value));renderStudyList();renderKanjiCatalog();renderCatalog()});
 controls.append(select,apply);
-if(x.kind==="vocab"){info.append(ch,details);row.append(info,controls)}else{info.append(read,meaning,meta);row.append(ch,info,controls)}
+if(x.kind==="vocab"){info.append(ch,details);row.append(info)}else{info.append(read,meaning,meta);row.append(ch,info)}
+row.append(controls);
+}else if(x.kind==="vocab"){info.append(ch,details);row.append(info)}
+else{info.append(read,meaning,meta);row.append(ch,info)}
 list.append(row)
 });
 document.getElementById("studyListCount").textContent=filtered.length.toLocaleString()+" items · showing "+(filtered.length?start+1:0)+"–"+Math.min(start+size,filtered.length);
