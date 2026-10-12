@@ -1492,3 +1492,13 @@ main {
 #reviewView #jpReading {
   display: none;
 }
+
+
+/* Review session accuracy indicator */
+.review-session-stats { flex-wrap: wrap; }
+.review-session-stats .session-accuracy { transition: color .2s ease; }
+.review-session-stats .accuracy-neutral { color: var(--muted, #94a3b8); }
+.review-session-stats .accuracy-low { color: #f87171; }
+.review-session-stats .accuracy-mid { color: #facc15; }
+.review-session-stats .accuracy-high { color: #a3e635; }
+.review-session-stats .accuracy-perfect { color: #4ade80; }
