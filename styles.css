@@ -1581,3 +1581,7 @@ main {
 @media(max-width:420px) {
   .review-progress-heading { font-size:.74rem; gap:8px; }
 }
+
+
+/* Keep the review entry point while removing the separate dashboard Due panel. */
+.review-start-panel.review-start-only { justify-content:flex-end; }
