@@ -1613,3 +1613,6 @@ main {
 .stage-legend-row>span{display:flex;align-items:center;min-width:0}
 .stage-legend-row strong{color:var(--text);font-variant-numeric:tabular-nums}
 @media(max-width:760px){.progress-charts{grid-template-columns:1fr}}
+
+/* Active study pool: one compact pending/completed donut */
+.pool-chart-panel{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;margin:8px 0 18px;padding:12px 0}.pool-chart-wrap{display:flex;align-items:center;justify-content:center;width:150px;max-width:42%}.pool-donut{display:block;width:100%;height:auto;overflow:visible}.pool-chart-legend{display:grid;gap:9px;min-width:150px}.pool-legend-row{display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:.9rem}.pool-legend-row>span{display:flex;align-items:center}.pool-legend-row strong{font-size:1.05rem;color:var(--text);font-variant-numeric:tabular-nums}.pool-total{padding-top:8px;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}@media(max-width:420px){.pool-chart-panel{gap:12px}.pool-chart-wrap{width:120px}.pool-chart-legend{min-width:125px;flex:1}}
