@@ -143,6 +143,15 @@ Kaado ISI es un prototipo estático y local. Las siguientes mejoras aportarían 
 
 ## Desarrollo
 
-La aplicación está implementada como una página HTML autocontenida con CSS y JavaScript integrados. No requiere un proceso de compilación ni dependencias de instalación: basta con servir o abrir la página en un navegador moderno compatible con JavaScript y almacenamiento local.
+La aplicación es estática y no requiere un proceso de compilación ni dependencias de instalación. `index.html` carga los datos y los módulos JavaScript; basta con servir el directorio con un servidor estático compatible con JavaScript y almacenamiento local.
 
-El archivo principal es [index.html](./index.html).
+- [index.html](./index.html): interfaz y carga de módulos.
+- [app.js](./app.js): interfaz, tarjetas, campaña, estadísticas y persistencia local.
+- [srs.js](./srs.js): motor de repetición espaciada independiente de la interfaz y de los datos de Kaado ISI.
+- [tests/srs.test.js](./tests/srs.test.js): pruebas automatizadas del algoritmo, ejecutables con `node --test tests/srs.test.js`.
+
+### Motor SRS reutilizable
+
+`srs.js` expone `KaadoSRS` en el navegador y `module.exports` en Node.js. Recibe tarjetas y estados como objetos simples, por lo que se puede reutilizar en otra aplicación sin copiar la interfaz, la campaña ni el almacenamiento de Kaado ISI. Incluye normalización de estados, intervalos, transición tras una respuesta, ajustes manuales de etapa y comprobación de vencimiento. La aplicación conserva su clave local actual y el formato de los datos de progreso.
+
+La política actual mantiene los intervalos de 4 h, 8 h, 1, 2, 7, 14, 30 y 120 días. Un acierto limpio avanza una etapa; uno o más errores seguidos de un acierto reducen una o dos etapas; revelar la respuesta reduce dos. Los fallos programan un nuevo repaso a la mitad del intervalo normal de la etapa resultante, con mínimo de dos horas en etapa 0. Hiragana y katakana usan la mitad de los intervalos normales y pueden marcarse manualmente como dominados en etapa 9; la revisión normal no supera la etapa 8. El progreso anterior se conserva, y los valores guardados inválidos se normalizan para evitar fechas o etapas corruptas.
