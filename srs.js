@@ -68,6 +68,7 @@
     } = options;
     const identity = card || key || "";
     const previous = normalizeState(previousState, identity);
+    if (maxStageFor(identity) === 9 && previous.stage === 9) return previous;
     const cleanCorrect = correct === true && Number(penalty) === 0;
     const penaltySteps = cleanCorrect ? 0 : Math.max(1, Math.min(2, Math.floor(Number(penalty) || 1)));
     const stage = cleanCorrect
