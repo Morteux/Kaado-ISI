@@ -1584,4 +1584,4 @@ main {
 
 
 /* Keep the review entry point while removing the separate dashboard Due panel. */
-.review-start-panel.review-start-only { justify-content:flex-end; }
+.review-start-only { display:flex; justify-content:flex-end; margin:0 0 16px; }
