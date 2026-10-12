@@ -1559,3 +1559,25 @@ main {
 }
 .progress.review-outcome-bar .progress-fail { background:#16a34a; }
 .progress.review-outcome-bar .progress-success { background:#dc2626; }
+
+
+/* Compact review status: answered/remaining on the left, accuracy on the right. */
+.review-progress-heading {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:0 0 8px;
+  color:var(--muted);
+  font-size:.8rem;
+  font-weight:700;
+  font-variant-numeric:tabular-nums
+}
+.review-progress-heading .review-outcome-summary {
+  margin:0;
+  text-align:right;
+  flex:0 0 auto
+}
+@media(max-width:420px) {
+  .review-progress-heading { font-size:.74rem; gap:8px; }
+}
