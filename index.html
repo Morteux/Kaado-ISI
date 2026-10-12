@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#111827"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23141c2f%22/%3E%3Ctext x=%2232%22 y=%2247%22 font-size=%2248%22 text-anchor=%22middle%22 fill=%22%23a5b4fc%22%3E字%3C/text%3E%3C/svg%3E"><title>Kaado ISI · Japanese Learning</title>
-<link rel="stylesheet" href="styles.css?v=review-counts-heading-20261012"></head>
+<link rel="stylesheet" href="styles.css?v=review-counts-no-dashboard-due-20261012"></head>
 <body>
 
 <main>
@@ -12,7 +12,7 @@
 <div class="list-head content-toolbar"><label class="hidden" for="deckSelect">Deck <select id="deckSelect" class="search"><option value="vocab">Vocabulary</option><option value="hiragana">Hiragana · ひらがな</option><option value="katakana">Katakana · カタカナ</option><option value="kanji">Kanji · 初級 II</option></select></label><label id="topicLabel" class="hidden" for="topicSelect">できる日本語初中級 <select id="topicSelect" class="search"><option value="13-1">できる日本語初中級 · 13 · Part 1</option><option value="13-2">できる日本語初中級 · 13 · Part 2</option><option value="all">All vocabulary units</option></select></label><label id="chapterLabel" class="hidden" for="kanjiChapterSelect">漢字HSJ初級II <select id="kanjiChapterSelect" class="search"><option value="all">All textbook chapters</option></select></label><label id="kanjiModeLabel" class="hidden" for="kanjiModeSelect">Mode <select id="kanjiModeSelect" class="search"><option value="kun">訓読み · Kun reading</option><option value="on">音読み · On reading</option><option value="translation">Translation</option></select></label></div>
 <section class="rank-banner" aria-label="Rank and campaign"><div><div class="rank-name" data-icon="rank"><span id="rankName">Ashigaru</span></div></div><div class="rank-count"><strong id="unlockCount">5</strong><span>new cards per batch</span></div></section>
 <section id="statsView">
-<div class="review-start-panel"><div><div class="eyebrow">Due across all content</div><strong id="homeDue">0</strong></div><button id="startReviewBtn" class="primary">Start review →</button></div>
+<div class="review-start-panel review-start-only"><button id="startReviewBtn" class="primary">Start review →</button></div>
 <div class="list-panel"><h2 data-icon="progress">Local progress</h2><div class="stats"><div class="stat"><strong id="pTotal">0</strong><span>Cards in the active study pool</span></div><div class="stat"><strong id="pSeen">0</strong><span>Cards reviewed</span></div><div class="stat"><strong id="pMastered">0</strong><span>Mastered (7+ days)</span></div></div>
 <h2 data-icon="target">Overview</h2>
 <div class="accuracy-panel"><div><div class="eyebrow">Weekly rating · last 7 days</div><div class="accuracy-value" id="gWeeklyAccuracy">—</div><div class="accuracy-status insufficient" id="gWeeklyAccuracyStatus">Not enough data</div><p class="hint hidden" id="gWeeklyAccuracyDetail"></p></div><div class="accuracy-side"><span>First-try correct answers</span><strong id="gWeeklyAccuracyCount">0 of 0</strong></div></div>
@@ -37,4 +37,4 @@
 </main>
 <div id="resetConfirmModal" class="confirm-overlay hidden" role="presentation"><section class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="resetConfirmTitle" aria-describedby="resetConfirmDescription"><h2 id="resetConfirmTitle">Delete all progress?</h2><p id="resetConfirmDescription">This will erase your saved study progress in this browser. This action cannot be undone. Your selected question language and local synonyms will not be deleted.</p><label for="resetConfirmInput">Type <strong>reset</strong> to confirm deletion.</label><input id="resetConfirmInput" class="search reset-confirm-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type reset" /><div class="actions"><button id="cancelResetBtn" class="ghost" type="button">Cancel</button><button id="confirmResetBtn" class="danger-button" type="button" disabled>Delete progress</button></div></section></div>
 <script src="json/hiragana.js"></script><script src="json/katakana.js"></script><script src="json/kanji.js"></script>
-<script src="app.js?v=review-counts-heading-20261012"></script></body></html>
+<script src="app.js?v=review-counts-no-dashboard-due-20261012"></script></body></html>
