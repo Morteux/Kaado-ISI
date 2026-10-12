@@ -1654,3 +1654,11 @@ main {
 #feedback.reveal-feedback .kanji-catalog-row .kanji-catalog-char{min-width:0;overflow-wrap:anywhere}
 @media(max-width:760px){#feedback.reveal-feedback .kanji-catalog-row:not(.vocab-catalog-row){grid-template-columns:48px minmax(0,1fr)}}
 @media(max-width:560px){#feedback.reveal-feedback .kanji-catalog-row.vocab-catalog-row>div:first-child{grid-template-columns:36px minmax(0,1fr);gap:8px}}
+
+
+/* Fast, gradient feedback across the entire study panel. */
+.study{position:relative;isolation:isolate}
+.study::before{content:"";position:absolute;inset:-5px;border-radius:22px;z-index:5;pointer-events:none;opacity:0;transition:opacity 170ms ease-out}
+.study.study-result-correct::before{opacity:1;background:linear-gradient(125deg,rgba(34,197,94,.22),rgba(74,222,128,.08) 48%,rgba(22,163,74,.2))}
+.study.study-result-incorrect::before{opacity:1;background:linear-gradient(125deg,rgba(239,68,68,.24),rgba(248,113,113,.08) 48%,rgba(220,38,38,.22))}
+@media(prefers-reduced-motion:reduce){.study::before{transition:none}}
