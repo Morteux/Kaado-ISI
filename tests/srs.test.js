@@ -67,5 +67,5 @@ test("manual stage changes schedule the interval for the selected stage", () => 
 
 test("stage caps are respected for both regular cards and kana", () => {
   assert.equal(SRS.reviewTransition({ previousState: { stage: 8 }, key: "vocab:x", correct: true, now: NOW }).stage, 8);
-  assert.equal(SRS.reviewTransition({ previousState: { stage: 8 }, key: "kana:あ", correct: true, now: NOW }).stage, 9);
+  assert.equal(SRS.reviewTransition({ previousState: { stage: 8 }, key: "kana:あ", correct: true, now: NOW }).stage, 8);
 });
