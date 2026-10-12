@@ -150,7 +150,7 @@ function initQuickLevelControls(){
   select.innerHTML="";
   for(let stage=0;stage<=(allowMastered?9:8);stage++){
    const option=document.createElement("option");option.value=String(stage);
-   option.textContent=stage===0?"Stage 0 · New":stage===9?"Stage 9 · Mastered (never reviewed)":stage===1?"Stage 1 · 4 hours":stage===2?"Stage 2 · 8 hours":stage===3?"Stage 3 · 1 day":stage===4?"Stage 4 · 2 days":stage===5?"Stage 5 · 7 days":stage===6?"Stage 6 · 14 days":stage===7?"Stage 7 · 30 days":"Stage 8 · 120 days";
+   option.textContent=stage===0?"Stage 0 · New":stage===9?"Stage 9 · Mastered (never reviewed again)":stage===1?"Stage 1 · 4 hours":stage===2?"Stage 2 · 8 hours":stage===3?"Stage 3 · 1 day":stage===4?"Stage 4 · 2 days":stage===5?"Stage 5 · 7 days":stage===6?"Stage 6 · 14 days":stage===7?"Stage 7 · 30 days":"Stage 8 · 120 days";
    select.append(option);
   }
   select.value=String(Math.min(allowMastered?9:8,selected));
@@ -164,7 +164,7 @@ function initQuickLevelControls(){
   else if(type==="wk"){const levels=[...new Set(Object.values(KANJI_LEVELS).map(d=>Number(d.wk)).filter(n=>Number.isFinite(n)&&n>0))].sort((a,b)=>a-b);values=levels.map(n=>({value:String(n),label:"WaniKani "+n}));}
   else values=KANJI_CHAPTERS.map(ch=>({value:String(ch.id),label:"漢字HSJ初級II · "+ch.id}));
   values.forEach(x=>{const o=document.createElement("option");o.value=x.value;o.textContent=x.label;select.append(o)});
-  const kanaOnly=type==="hiragana"||type==="katakana",currentStage=Number(stageSelect.value),previous=Number.isInteger(currentStage)?currentStage:4;
+  const kanaOnly=type==="hiragana"||type==="katakana",currentStage=Number(stageSelect.value),previous=Number.isInteger(currentStage)?currentStage:4;document.getElementById("applyQuickLevel").textContent=kanaOnly?"Apply to kana":"Apply to kanji";
   fillStageOptions(stageSelect,kanaOnly,kanaOnly?previous:Math.min(8,previous));
   quickLevelPreview();
  }
