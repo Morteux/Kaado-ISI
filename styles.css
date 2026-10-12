@@ -1585,3 +1585,31 @@ main {
 
 /* Keep the review entry point while removing the separate dashboard Due panel. */
 .review-start-only { display:flex; justify-content:flex-end; margin:0 0 16px; }
+
+/* Compact visual progress charts */
+.progress-charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.chart-panel{min-width:0}
+.chart-subtitle{font-size:.8rem;color:var(--muted);margin-top:-10px;margin-bottom:10px}
+.chart-canvas{min-width:0}
+.activity-svg{display:block;width:100%;height:auto;overflow:visible}
+.chart-baseline{stroke:var(--line);stroke-width:1}
+.chart-axis-label{fill:var(--muted);font-size:10px}
+.chart-correct{fill:var(--chart-correct,#34d399)}
+.chart-wrong{fill:var(--chart-wrong,#fb7185)}
+.chart-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.75rem;color:var(--muted);margin-top:2px}
+.legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;flex:none}
+.correct-dot{background:var(--chart-correct,#34d399)}
+.wrong-dot{background:var(--chart-wrong,#fb7185)}
+.chart-total{display:flex;align-items:baseline;gap:7px;margin-top:-2px}
+.chart-total strong{font-size:1.35rem;font-variant-numeric:tabular-nums}
+.chart-total span{font-size:.78rem;color:var(--muted)}
+.stage-chart-wrap{display:flex;justify-content:center;align-items:center}
+.stage-donut{width:140px;max-width:100%;height:auto;overflow:visible}
+.donut-track{fill:none;stroke:var(--panel2);stroke-width:14}
+.donut-number{fill:var(--text);font-size:21px;font-weight:750}
+.donut-caption{fill:var(--muted);font-size:10px}
+.stage-chart-legend{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;margin-top:6px}
+.stage-legend-row{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.76rem;color:var(--muted)}
+.stage-legend-row>span{display:flex;align-items:center;min-width:0}
+.stage-legend-row strong{color:var(--text);font-variant-numeric:tabular-nums}
+@media(max-width:760px){.progress-charts{grid-template-columns:1fr}}
