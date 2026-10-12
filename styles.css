@@ -1622,3 +1622,5 @@ main {
 
 /* Japanese campaign rank with furigana and romaji */
 .campaign-name{display:inline-flex;flex-direction:column;align-items:center;line-height:1.12;gap:3px}.campaign-name ruby{ruby-position:over;font-size:1.25em;line-height:1.25}.campaign-name rt{font-size:.40em;letter-spacing:.04em}.campaign-romaji{font-size:.62em;font-weight:600;letter-spacing:.1em;color:var(--muted,#94a3b8);line-height:1.1}
+
+.stage-change-tag{display:inline-block;margin:3px 0 0 5px;padding:2px 8px;border:1px solid currentColor;border-radius:999px;font-size:.75rem;font-weight:800;white-space:nowrap;vertical-align:middle}.stage-change-up{color:var(--green);background:rgba(110,231,183,.1)}.stage-change-down{color:var(--red);background:rgba(252,165,165,.1)}.stage-change-same{color:var(--muted);background:rgba(155,169,196,.08)}#questionPrompt[data-part]::after{content:attr(data-part);display:inline-block;margin-left:8px;padding:2px 7px;border:1px solid var(--line);border-radius:999px;font-size:.7rem;color:var(--accent);white-space:nowrap}
