@@ -276,6 +276,24 @@ main {
   flex-wrap:wrap;
   margin-top:18px
 }
+#reviewView .actions {
+  justify-content:center;
+}
+#reviewView .actions .review-reveal {
+  background:#b91c1c;
+  border-color:#b91c1c;
+  color:#fff;
+  order:1;
+}
+#reviewView .actions .review-check {
+  background:#15803d;
+  border-color:#15803d;
+  color:#fff;
+  order:2;
+}
+#reviewView .actions #nextBtn {
+  order:3;
+}
 .bottom-actions-row {
   display:flex;
   align-items:center;
