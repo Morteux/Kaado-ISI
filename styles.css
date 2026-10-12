@@ -1681,5 +1681,5 @@ main {
 #startReviewBtn{margin-left:auto;flex-shrink:0}
 
 /* Place review availability text on the left and action button on the right */
-.rank-banner #reviewAvailabilityMessage{order:0;flex:1;text-align:left;margin:0 16px 0 0}
-.rank-banner #startReviewBtn{order:1;margin-left:auto;flex-shrink:0}
+.rank-banner #reviewAvailabilityMessage{order:0;flex:0 1 auto;text-align:left;margin:0 12px 0 auto}
+.rank-banner #startReviewBtn{order:1;margin-left:0;flex-shrink:0}
