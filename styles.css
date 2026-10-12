@@ -1642,7 +1642,11 @@ main {
 .reveal-detail-row{display:grid;grid-template-columns:minmax(105px,.75fr) minmax(0,1.25fr);gap:10px;padding:9px 4px;border-bottom:1px solid var(--line);align-items:start}
 .reveal-detail-label{font-size:.8rem;color:var(--muted)}
 .reveal-detail-value{font-size:.9rem;overflow-wrap:anywhere}
-.reveal-answer-row{display:flex;flex-wrap:wrap;gap:8px;padding:12px 4px;margin-top:4px;border-top:1px solid var(--line)}
-.reveal-answer-row strong{color:var(--text)}
-.reveal-status{font-size:.85rem;color:var(--muted);padding:8px 4px 2px}
 @media(max-width:640px){.reveal-detail-list{grid-template-columns:1fr}.reveal-detail-row{grid-template-columns:minmax(100px,.7fr) minmax(0,1.3fr)}}
+
+/* Reveal uses the catalog row styling without the catalog's stage-edit controls. */
+#feedback.reveal-feedback .kanji-catalog-row{width:100%;min-width:0;box-sizing:border-box;grid-template-columns:64px minmax(0,1fr)}
+#feedback.reveal-feedback .kanji-catalog-row.vocab-catalog-row{grid-template-columns:minmax(0,1fr)}
+#feedback.reveal-feedback .kanji-catalog-row.vocab-catalog-row>div:first-child{width:100%;min-width:0}
+#feedback.reveal-feedback .kanji-catalog-row:not(.vocab-catalog-row)>div:first-child{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:center;min-width:0}
+#feedback.reveal-feedback .kanji-catalog-row .kanji-catalog-char{min-width:0;overflow-wrap:anywhere}
