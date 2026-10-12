@@ -54,6 +54,7 @@ test("kana uses half the interval and stage 9 is terminal", () => {
   assert.equal(mastered.stage, 9);
   assert.equal(mastered.due, 0);
   assert.equal(SRS.isDue(mastered, NOW, "kana:あ"), false);
+  assert.deepEqual(SRS.reviewTransition({ previousState: mastered, key: "kana:あ", correct: true, now: NOW }), mastered);
 });
 
 test("manual stage changes schedule the interval for the selected stage", () => {
