@@ -75,7 +75,7 @@ function katakanaUnlocked(){return kanaMastery("hiragana")>=.8}
 function kanjiUnlocked(){return katakanaUnlocked()&&kanaMastery("katakana")>=.8}
 function jlptLabel(level){return level?"JLPT N"+level:"No official JLPT level"}
 // Normalize accents/case/punctuation and tolerate a single typo for most short answers.
-function norm(s){return s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase().replace(/～/g,"").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ")}
+function norm(s){return String(s).normalize("NFD").replace(/([\p{Script=Latin}])\p{M}+/gu,"$1").toLocaleLowerCase().replace(/ß/g,"ss").replace(/～/g,"").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ")}
 function distance(a,b){const prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let diagonal=prev[0];prev[0]=i;for(let j=1;j<=b.length;j++){const old=prev[j];prev[j]=Math.min(prev[j]+1,prev[j-1]+1,diagonal+(a[i-1]===b[j-1]?0:1));diagonal=old}}return prev[b.length]}
 function matches(input,answers){const v=norm(input);if(!v)return false;return answers.some(a=>{const target=norm(a);if(v===target)return true;if(Math.min(v.length,target.length)<5)return false;return distance(v,target)<= (Math.max(v.length,target.length)>=9?2:1)})}
 // ── Persistence and card state ──────────────────────────────
