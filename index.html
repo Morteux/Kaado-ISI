@@ -28,7 +28,7 @@
 <div class="study"><article class="card">
 <div class="review-progress-heading"><span id="reviewSessionCount" aria-live="polite">0 contestadas / 0 restantes</span><strong id="reviewOutcomeSummary" class="review-outcome-summary" aria-live="polite">0%</strong></div><div class="progress review-outcome-bar" id="progressBar" role="img" aria-label="0% fallos · 0% aciertos"></div>
 <div id="questionArea"><div class="word" id="jpWord">親</div><div class="reading" id="jpReading"></div><div class="prompt" id="questionPrompt">Enter your answer.</div>
-<div class="answers"><label class="fieldlabel" id="answerLabel" for="answerInput">Answer</label><input id="answerInput" autocomplete="off" placeholder="Enter your answer"></div>
+<div class="answers"><input id="answerInput" autocomplete="off" placeholder="Enter your answer"></div>
 <div id="feedback" class="feedback hidden" aria-live="polite"></div><button id="saveSynonymBtn" class="ghost hidden" type="button">Save this answer as a local synonym</button><div class="actions"><button id="revealBtn" class="review-reveal">Reveal</button><button class="primary review-check" id="checkBtn">Check</button><button id="nextBtn" class="primary hidden">Next →</button></div></div>
 <div id="finished" class="hidden"><div class="word">お疲れさま！</div><p>You have finished all currently due items.</p><button id="restartBtn" class="primary">Review again</button><button id="finishHomeBtn" class="ghost">Back to dashboard</button></div>
 </article></div>
@@ -36,4 +36,4 @@
 </main>
 <div id="resetConfirmModal" class="confirm-overlay hidden" role="presentation"><section class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="resetConfirmTitle" aria-describedby="resetConfirmDescription"><h2 id="resetConfirmTitle">Delete all progress?</h2><p id="resetConfirmDescription">This will erase your saved study progress in this browser. This action cannot be undone. Your selected question language and local synonyms will not be deleted.</p><label for="resetConfirmInput">Type <strong>reset</strong> to confirm deletion.</label><input id="resetConfirmInput" class="search reset-confirm-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type reset" /><div class="actions"><button id="cancelResetBtn" class="ghost" type="button">Cancel</button><button id="confirmResetBtn" class="danger-button" type="button" disabled>Delete progress</button></div></section></div>
 <script src="json/hiragana.js"></script><script src="json/katakana.js"></script><script src="json/kanji.js"></script>
-<script src="srs.js?v=srs-core-20261012"></script><script src="app.js?v=unified-content-reviews-3-20261012"></script></body></html>
+<script src="srs.js?v=srs-core-20261012"></script><script src="app.js?v=remove-answer-label-20261012"></script></body></html>
