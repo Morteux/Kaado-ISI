@@ -296,3 +296,25 @@ function closeResetModal(){resetModal.classList.add("hidden");resetConfirmInput.
 initQuickLevelControls();
 decorateSumiIcons();
 buildQueue();
+
+// Keep every progress chart and review-availability indicator in sync with due times
+// and progress changes made in another tab, without rebuilding the active review queue.
+function refreshProgressFromStorage(){
+  try{
+    const saved=localStorage.getItem(KEY);
+    if(saved!==null)store=JSON.parse(saved)||{};
+    const history=localStorage.getItem(ANSWER_HISTORY_KEY);
+    if(history!==null){const parsed=JSON.parse(history);answerHistory=Array.isArray(parsed)?parsed:[]}
+  }catch{}
+  renderStats();
+}
+window.addEventListener("focus",refreshProgressFromStorage);
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")refreshProgressFromStorage()});
+window.addEventListener("storage",e=>{
+  if(e.key===KEY||e.key===ANSWER_HISTORY_KEY){
+    if(e.key===KEY){try{store=JSON.parse(e.newValue||"{}")||{}}catch{store={}}}
+    if(e.key===ANSWER_HISTORY_KEY){try{const parsed=JSON.parse(e.newValue||"[]");answerHistory=Array.isArray(parsed)?parsed:[]}catch{answerHistory=[]}}
+    renderStats();
+  }
+});
+window.setInterval(()=>{if(document.visibilityState==="visible")renderStats()},60000);
