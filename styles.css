@@ -1532,3 +1532,30 @@ main {
   max-width:none;
   margin-inline:auto;
 }
+
+
+/* Review outcomes: failures on the left in green, correct answers on the right in red. */
+.review-outcome-summary {
+  margin:0 0 -8px;
+  text-align:right;
+  color:var(--muted);
+  font-size:.78rem;
+  font-weight:750;
+  font-variant-numeric:tabular-nums
+}
+.progress.review-outcome-bar {
+  display:flex;
+  width:100%;
+  background:var(--line);
+  gap:0
+}
+.progress.review-outcome-bar .progress-segment {
+  display:block;
+  flex:0 0 auto;
+  height:100%;
+  min-width:0;
+  border-radius:0;
+  transition:width .2s ease;
+}
+.progress.review-outcome-bar .progress-fail { background:#16a34a; }
+.progress.review-outcome-bar .progress-success { background:#dc2626; }
