@@ -1662,3 +1662,10 @@ main {
 .study.study-result-correct::before{opacity:1;background:linear-gradient(125deg,rgba(34,197,94,.22),rgba(74,222,128,.08) 48%,rgba(22,163,74,.2))}
 .study.study-result-incorrect::before{opacity:1;background:linear-gradient(125deg,rgba(239,68,68,.24),rgba(248,113,113,.08) 48%,rgba(220,38,38,.22))}
 @media(prefers-reduced-motion:reduce){.study::before{transition:none}}
+
+
+/* Feedback for accepted minor typos */
+.typo-feedback{color:var(--text);border:1px solid #64748b;background:var(--surface, #1c2740)}
+.typo-comparison{margin-top:8px;font-size:1.05rem;overflow-wrap:anywhere}
+.typo-extra{color:#ef4444;text-decoration:underline;text-decoration-thickness:2px;font-weight:800}
+.typo-missing{color:#22c55e;font-weight:800;text-decoration:underline;text-decoration-style:dashed;text-decoration-thickness:2px}
