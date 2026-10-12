@@ -1669,3 +1669,8 @@ main {
 .typo-comparison{margin-top:8px;font-size:1.05rem;overflow-wrap:anywhere}
 .typo-extra{color:#ef4444;text-decoration:underline;text-decoration-thickness:2px;font-weight:800}
 .typo-missing{color:#22c55e;font-weight:800;text-decoration:underline;text-decoration-style:dashed;text-decoration-thickness:2px}
+
+
+.review-availability-message{margin:10px 0 0;color:var(--muted);font-size:.9rem;line-height:1.5;text-align:center}
+.review-availability-message.hidden{display:none}
+#startReviewBtn:disabled,#restartBtn:disabled{opacity:.48;cursor:not-allowed;filter:saturate(.45);box-shadow:none}
