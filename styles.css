@@ -1483,3 +1483,12 @@ main {
   }
 }
 
+
+
+/* Review card: center the prompt term and keep its reading hidden. */
+#reviewView #jpWord {
+  text-align: center;
+}
+#reviewView #jpReading {
+  display: none;
+}
