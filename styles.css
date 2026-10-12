@@ -1520,3 +1520,15 @@ main {
 .review-session-stats .accuracy-mid { color: #facc15; }
 .review-session-stats .accuracy-high { color: #a3e635; }
 .review-session-stats .accuracy-perfect { color: #4ade80; }
+
+/* Review uses the full site content width rather than the dashboard two-column study layout. */
+#reviewView .study {
+  display:block;
+  width:100%;
+  max-width:none;
+}
+#reviewView .study > .card {
+  width:100%;
+  max-width:none;
+  margin-inline:auto;
+}
