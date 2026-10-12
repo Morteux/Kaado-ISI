@@ -164,7 +164,7 @@ function initQuickLevelControls(){
   else if(type==="wk"){const levels=[...new Set(Object.values(KANJI_LEVELS).map(d=>Number(d.wk)).filter(n=>Number.isFinite(n)&&n>0))].sort((a,b)=>a-b);values=levels.map(n=>({value:String(n),label:"WaniKani "+n}));}
   else values=KANJI_CHAPTERS.map(ch=>({value:String(ch.id),label:"漢字HSJ初級II · "+ch.id}));
   values.forEach(x=>{const o=document.createElement("option");o.value=x.value;o.textContent=x.label;select.append(o)});
-  const kanaOnly=type==="hiragana"||type==="katakana",previous=Number(stageSelect.value)||4;
+  const kanaOnly=type==="hiragana"||type==="katakana",currentStage=Number(stageSelect.value),previous=Number.isInteger(currentStage)?currentStage:4;
   fillStageOptions(stageSelect,kanaOnly,kanaOnly?previous:Math.min(8,previous));
   quickLevelPreview();
  }
