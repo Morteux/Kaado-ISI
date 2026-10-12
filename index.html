@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#111827"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23141c2f%22/%3E%3Ctext x=%2232%22 y=%2247%22 font-size=%2248%22 text-anchor=%22middle%22 fill=%22%23a5b4fc%22%3E字%3C/text%3E%3C/svg%3E"><title>Kaado ISI · Japanese Learning</title>
-<link rel="stylesheet" href="styles.css?v=review-header-clean-20261012"></head>
+<link rel="stylesheet" href="styles.css?v=review-outcomes-20261012"></head>
 <body>
 
 <main>
@@ -25,9 +25,9 @@
 <section id="contentView" class="hidden"><div class="list-panel"><div class="list-head"><h2 data-icon="list">Study list</h2></div><div class="kanji-filters study-list-filters"><input class="search" id="studyListSearch" placeholder="Search content, readings or meanings…"><label>Content type<select class="search" id="studyListContentType"><option value="all">All content</option><option value="vocab">Vocabulary</option><option value="hiragana">Hiragana</option><option value="katakana">Katakana</option><option value="kanji">Kanji</option></select></label><label>Level system<select class="search" id="studyListFilterType"><option value="all">All content</option><option value="jlpt">JLPT</option><option value="joyo">Jōyō grade</option><option value="wk">WaniKani</option><option value="topic">Textbook</option></select></label><label>Level / textbook unit<select class="search" id="studyListFilterValue"></select></label></div><div id="studyListCount" class="hint"></div><div id="studyListResults" class="kanji-catalog-list"></div><div class="actions kanji-pagination"><button id="studyListPrevPage" type="button">← Previous</button><span id="studyListPageLabel" class="hint"></span><button id="studyListNextPage" type="button">Next →</button></div></div></section>
 </div>
 <section id="reviewView" class="hidden">
-<div class="review-top"><button id="backHomeBtn" class="ghost">← Back to dashboard</button><div class="review-session-stats"><div><span>Due</span><strong id="reviewRemaining">0</strong></div><div><span>Correct</span><strong id="reviewCorrect">0</strong></div><div><span>Accuracy</span><strong id="reviewAccuracy" class="session-accuracy" aria-live="polite">—</strong></div></div></div>
+<div class="review-top"><button id="backHomeBtn" class="ghost">← Back to dashboard</button><div class="review-session-stats"><div><span>Due</span><strong id="reviewRemaining">0</strong></div><div><span>Correct</span><strong id="reviewCorrect">0</strong></div></div></div>
 <div class="study"><article class="card">
-<div class="progress"><div id="progressBar"></div></div>
+<div id="reviewOutcomeSummary" class="review-outcome-summary" aria-live="polite">0% fallos · 0% aciertos</div><div class="progress review-outcome-bar" id="progressBar" role="img" aria-label="0% fallos · 0% aciertos"></div>
 <div id="questionArea"><div class="word" id="jpWord">親</div><div class="reading" id="jpReading"></div><div class="prompt" id="questionPrompt">Enter your answer.</div>
 <div class="answers"><label class="fieldlabel" id="answerLabel" for="answerInput">Answer</label><input id="answerInput" autocomplete="off" placeholder="Enter your answer"></div>
 <div id="feedback" class="feedback hidden" aria-live="polite"></div><button id="saveSynonymBtn" class="ghost hidden" type="button">Save this answer as a local synonym</button><div class="actions"><button id="revealBtn" class="review-reveal">Reveal</button><button class="primary review-check" id="checkBtn">Check</button><button id="nextBtn" class="primary hidden">Next →</button></div></div>
@@ -37,4 +37,4 @@
 </main>
 <div id="resetConfirmModal" class="confirm-overlay hidden" role="presentation"><section class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="resetConfirmTitle" aria-describedby="resetConfirmDescription"><h2 id="resetConfirmTitle">Delete all progress?</h2><p id="resetConfirmDescription">This will erase your saved study progress in this browser. This action cannot be undone. Your selected question language and local synonyms will not be deleted.</p><label for="resetConfirmInput">Type <strong>reset</strong> to confirm deletion.</label><input id="resetConfirmInput" class="search reset-confirm-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type reset" /><div class="actions"><button id="cancelResetBtn" class="ghost" type="button">Cancel</button><button id="confirmResetBtn" class="danger-button" type="button" disabled>Delete progress</button></div></section></div>
 <script src="json/hiragana.js"></script><script src="json/katakana.js"></script><script src="json/kanji.js"></script>
-<script src="app.js?v=review-header-clean-20261012"></script></body></html>
+<script src="app.js?v=review-outcomes-20261012"></script></body></html>
