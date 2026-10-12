@@ -1557,8 +1557,8 @@ main {
   border-radius:0;
   transition:width .2s ease;
 }
-.progress.review-outcome-bar .progress-fail { background:#16a34a; }
-.progress.review-outcome-bar .progress-success { background:#dc2626; }
+.progress.review-outcome-bar .progress-success { background:#16a34a; }
+.progress.review-outcome-bar .progress-fail { background:#dc2626; }
 
 
 /* Compact review status: answered/remaining on the left, accuracy on the right. */
