@@ -1683,3 +1683,10 @@ main {
 /* Place review availability text on the left and action button on the right */
 .rank-banner #reviewAvailabilityMessage{order:0;flex:0 1 auto;text-align:right;margin:0 12px 0 auto}
 .rank-banner #startReviewBtn{order:1;margin-left:0;flex-shrink:0}
+
+
+/* Dashboard analytics: keep the visual summaries dominant and avoid redundant stage summaries. */
+.analytics-stats{grid-template-columns:repeat(2,minmax(0,1fr));}
+.analytics-stats .stat{min-width:0;}
+.analytics-grid{grid-template-columns:minmax(0,1fr);}
+@media(max-width:420px){.analytics-stats{grid-template-columns:1fr 1fr;gap:8px}.analytics-stats .stat{padding:12px 10px}}
