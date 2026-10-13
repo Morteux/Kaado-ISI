@@ -1,157 +1,82 @@
 # Kaado ISI
 
-Aplicación web estática para estudiar vocabulario japonés y kanji mediante tarjetas de recuperación activa y repetición espaciada. La interfaz está en español y está pensada para usarse desde el navegador, tanto en ordenador como en móvil.
+Kaado ISI is a static web app for studying Japanese vocabulary, kana, and kanji with active recall and spaced repetition. The interface is in English and works in desktop and mobile browsers.
 
-**No requiere cuenta ni servidor:** el progreso se guarda en el almacenamiento local del navegador.
+**No account or server is required.** Study progress is stored in the current browser's local storage.
 
-## Contenido
+## Content
 
-- **Vocabulario:** palabras japonesas con lectura y significados en español e inglés, organizadas por tema.
-- **Kanji · 初級 II:** estudio por capítulo y por modalidad: lectura kun (訓読み), lectura on (音読み) o significado.
-- **Información de kanji:** niveles orientativos JLPT, curso escolar Jōyō y nivel de WaniKani cuando hay datos disponibles.
-- **Campaña y rangos:** progreso global, desbloqueos y rangos inspirados en títulos históricos japoneses.
-- **Ajuste del nivel inicial:** permite saltarse tarjetas que ya se conocen sin tener que recorrer todo el contenido desde cero.
+- **Vocabulary:** Japanese words with readings and English and Spanish meanings, organized by textbook topic.
+- **Kanji · 初級 II:** Kanji from 漢字HSJ初級II, with kunyomi, onyomi, and meaning prompts.
+- **Kana:** Hiragana and katakana are prerequisite study content before kanji.
+- **Kanji reference data:** JLPT, Jōyō grade, and WaniKani levels where available.
+- **Campaign and ranks:** Global progress, content unlocks, and themed ranks.
+- **Manual level adjustment:** Set the stage of known content without reviewing every card from the beginning.
 
-## Cómo usarla
+## Studying
 
-### 1. Elegir qué estudiar
+The app uses a shared review queue. New content is introduced as the learning campaign allows, and reviews become available when their scheduled interval expires.
 
-En la parte superior de **Estudiar**, elige un bloque:
+### Answering cards
 
-- **Vocabulario:** selecciona un tema o la opción que reúne los temas disponibles.
-- **Kanji · 初級 II:** selecciona un capítulo o todos los capítulos disponibles, y elige una modalidad:
-  - **訓読み · Lectura kun:** escribe una lectura kun aceptada para el kanji.
-  - **音読み · Lectura on:** escribe una lectura on aceptada para el kanji.
-  - **Traducción:** escribe un significado en español o inglés.
+- Vocabulary cards require both the translation and reading parts.
+- Kanji cards can ask for kunyomi, onyomi, or meaning.
+- Translation answers may be in English or Spanish.
+- Reading answers must match an accepted reading for that card.
+- Romaji input is converted to kana when WanaKana is available.
+- Small spelling mistakes in non-Japanese answers may be accepted and shown with a character-by-character comparison.
+- If a kanji reading answer matches the opposite reading type, the app explains the distinction and lets you retry without penalizing the card.
+- Revealing an answer applies the configured stage penalty.
 
-La lista de tarjetas muestra el contenido accesible según el progreso de la campaña. Las tarjetas nuevas se incorporan en tandas de cinco.
+## Spaced repetition
 
-### 2. Responder una tarjeta
+Each card has its own learning stage. A clean correct answer advances the card; incorrect attempts or revealing the answer can reduce its stage. When a card is penalized, its next interval is shortened according to the SRS rules.
 
-1. Mira la palabra o el kanji.
-2. Escribe la traducción o lectura solicitada.
-3. Pulsa **Comprobar respuesta** o la tecla Intro.
-4. Si aciertas, pulsa **Siguiente** o Intro para continuar.
-5. Si no recuerdas la respuesta, puedes intentarlo de nuevo o pulsar **Ver respuesta**.
+The standard intervals are:
 
-En las tarjetas de vocabulario y de significado de kanji se acepta una respuesta en inglés o español. En los modos kun y on se aceptan las lecturas incluidas en los datos de esa tarjeta.
-
-La comparación ignora diferencias de mayúsculas, tildes y puntuación, y tolera algunos errores de escritura pequeños según la longitud de la respuesta. No es un corrector lingüístico: una traducción válida que no esté incluida entre las respuestas aceptadas puede marcarse como incorrecta.
-
-### 3. Repetición espaciada
-
-Cada tarjeta mantiene su propia etapa. Si respondes correctamente sin fallos, avanza una etapa y se programa el siguiente repaso. Los intervalos normales son:
-
-| Etapa alcanzada | Tiempo hasta el siguiente repaso |
+| Stage | Time until next review |
 | ---: | --- |
-| 0 | Disponible inmediatamente |
-| 1 | 4 horas |
-| 2 | 8 horas |
-| 3 | 1 día |
-| 4 | 2 días |
-| 5 | 7 días |
-| 6 | 14 días |
-| 7 | 30 días |
-| 8 | 120 días |
+| 0 | Available immediately |
+| 1 | 4 hours |
+| 2 | 8 hours |
+| 3 | 1 day |
+| 4 | 2 days |
+| 5 | 7 days |
+| 6 | 14 days |
+| 7 | 30 days |
+| 8 | 120 days |
 
-Las tarjetas de una sesión se limitan a las que ya están disponibles para estudiar y cuyo próximo repaso ha vencido. Al terminar la cola, puedes volver a generarla para revisar las tarjetas que ya estén pendientes en ese momento.
+Kana uses half of the standard intervals. Kana can be marked as mastered at stage 9; mastered kana are excluded from active statistics and will not be reviewed again.
 
-#### Qué ocurre si te equivocas
+## Statistics and content management
 
-- **Un fallo y luego aciertas:** la tarjeta baja una etapa.
-- **Dos o más fallos y luego aciertas:** baja dos etapas.
-- **Ver respuesta:** cuenta como una respuesta revelada y baja dos etapas.
-- En caso de fallo o respuesta revelada, el próximo intervalo se reduce a la mitad del intervalo normal correspondiente a la etapa resultante. La etapa mínima es 0.
+The Statistics view includes review counts, learning-stage charts, recent accuracy, and a seven-day kanji review forecast. Weekly performance requires at least 20 answers across at least two different days in the last seven days. The progress-zone threshold is 85% first-try accuracy; 100% is shown as Nirvana.
 
-Los fallos no muestran automáticamente la solución: puedes volver a intentarlo. No hay botones para declarar una respuesta correcta sin escribirla, aunque sí existe el ajuste manual del nivel inicial descrito más abajo.
+The Contents view provides searchable vocabulary, kana, and kanji lists. Manual adjustment tools can set stages by kanji level, textbook chapter, vocabulary topic, or individual card. Kanji reference filters include JLPT, Jōyō grade, WaniKani, and textbook chapter.
 
-### 4. Desbloqueos y campaña
+## Local synonyms
 
-La progresión tiene dos niveles de desbloqueo:
+If a valid translation is not in the accepted answer list, you can save it as a local synonym after submitting an answer. Local synonyms apply only to vocabulary translations and kanji meanings, not reading questions. They are stored separately from study progress in this browser and are not synced to other devices. Resetting study progress does not delete local synonyms.
 
-- **Tandas de tarjetas nuevas:** aparecen cinco tarjetas inicialmente por bloque. Para liberar la tanda siguiente, al menos el 80 % de la tanda anterior debe haber sido visto y alcanzar la etapa 1 o superior.
-- **Temas y capítulos:** el siguiente tema de vocabulario o capítulo de kanji se desbloquea cuando al menos el 80 % de las tarjetas del bloque anterior alcanza la etapa 3 o superior (intervalo normal de un día).
+## Resetting progress
 
-En kanji, las modalidades disponibles de cada carácter se consideran tarjetas independientes para el progreso y los desbloqueos. Una lectura conocida no implica automáticamente que se conozcan las demás lecturas o el significado.
+The Reset progress action asks for confirmation before deleting this app's saved study progress in the current browser. Local synonyms are managed separately and are not deleted by this action.
 
-El rango se calcula con el promedio de las etapas de **todo el contenido**, incluidos los bloques todavía bloqueados. El rango final, **Fudō Myōō**, requiere que todas las tarjetas lleguen a la etapa 8.
+Progress is not synced between browsers or devices. Clearing this site's browser storage, using private browsing, or changing browser profiles may cause locally stored progress to be lost.
 
-### 5. Consultar la lista
+## Data and attribution
 
-La pestaña **Lista** permite buscar tarjetas disponibles por palabra, lectura o traducción. Cambiar entre vocabulario y kanji actualiza la lista y sus filtros. La lista es una referencia del contenido accesible, no una herramienta para modificar directamente las respuestas o los datos.
+The app includes kanji reference data attributed to **OpenJLPT**, under the **CC BY-SA 4.0** license. JLPT levels are indicative and are not an official list published by the JLPT examination organization. Jōyō and WaniKani references are also provided for guidance and do not represent official equivalencies between systems. The app's dictionary attribution is **Jisho.org**.
 
-### 6. Consultar y ajustar el progreso
+## Development
 
-La pestaña **Progreso** incluye:
+The app is static and does not require a build step or package installation. Serve the project directory with a static web server that supports JavaScript and browser local storage.
 
-- Estadísticas de las tarjetas de la selección actual.
-- Una tabla de kanji con referencias JLPT, Jōyō y WaniKani disponibles.
-- El estado separado de cada modalidad de kanji.
-- El estado de los desbloqueos de la campaña.
-- Herramientas para ajustar manualmente el nivel inicial.
+- [index.html](./index.html): interface and script loading.
+- [app.js](./app.js): interface, cards, campaign, statistics, and local persistence.
+- [srs.js](./srs.js): spaced-repetition engine independent of the interface and app data.
+- [tests/srs.test.js](./tests/srs.test.js): automated SRS tests, runnable with `node --test tests/srs.test.js`.
 
-#### Marcar como conocida una tarjeta
+### Reusable SRS engine
 
-1. Abre **Progreso**.
-2. En **Ajustar nivel inicial**, busca una palabra, traducción, kanji o lectura.
-3. Pulsa **Conozco · 4/8** para colocar esa tarjeta en la etapa 4.
-4. Si necesitas empezar esa tarjeta de nuevo, pulsa **Etapa 0**.
-
-La tarjeta marcada como conocida se programa para repaso dentro de dos días. El cambio cuenta para los desbloqueos. El ajuste se hace por separado para cada palabra y para cada modalidad de kanji, así que conviene marcar solo lo que realmente sabes.
-
-Al principio se muestran las primeras 30 tarjetas de esta herramienta para mantener la página manejable; utiliza el buscador para localizar cualquier otra.
-
-### 7. Guardar sinónimos personales
-
-Si una traducción válida no está incluida en las respuestas aceptadas, puedes añadirla como sinónimo personal:
-
-1. Escribe la respuesta y pulsa **Comprobar respuesta**.
-2. Si se marca como incorrecta, pulsa **Guardar esta respuesta como sinónimo local**.
-3. Confirma que quieres guardarla. La respuesta se acepta para esa tarjeta y queda guardada en este navegador.
-4. Desde **Progreso → Sinónimos locales**, puedes revisar los sinónimos guardados y eliminarlos individualmente.
-
-Los sinónimos solo se aplican a traducciones de vocabulario y al significado de kanji, no a los modos de lectura kun/on. Se guardan en una clave de almacenamiento local separada del progreso de estudio. No se enviarán a la futura base de datos persistente ni se compartirán entre dispositivos. Reiniciar el progreso de estudio no elimina los sinónimos personales.
-
-### 8. Reiniciar el progreso
-
-El botón **Reiniciar progreso** borra los datos de estudio de esta aplicación guardados en el navegador actual, después de pedir confirmación. No borra los sinónimos locales, que se administran por separado.
-
-El progreso no se sincroniza entre navegadores o dispositivos en la versión local actual. Si borras los datos del sitio o el almacenamiento del navegador, puedes perderlo.
-
-## Cómo se guarda la información
-
-- La aplicación usa el almacenamiento local del navegador, con la clave de almacenamiento **kaado-isi-campaign-v2**.
-- Todavía no hay inicio de sesión, base de datos remota ni sincronización entre dispositivos implementados. El progreso SRS de vocabulario y kanji sigue en el navegador.
-- La arquitectura prevista para la persistencia entre dispositivos es una cuenta con correo y contraseña, recuperación de acceso por correo y una base de datos PostgreSQL gestionada con Supabase Auth y políticas de acceso por usuario (RLS). El progreso de cada tarjeta deberá asociarse al ID de usuario y usar identificadores estables para sincronizarlo entre dispositivos. Esta arquitectura está planificada, no implementada.
-- El progreso de estudio y los sinónimos personales se guardan en claves locales distintas. Los sinónimos no se mezclan con los datos del progreso, no se subirán a la futura base de datos y no se sincronizarán entre dispositivos.
-- El progreso local permanece en el perfil del navegador en el que estudias. El modo privado, borrar los datos del sitio o algunas configuraciones del navegador pueden hacer que se pierda.
-
-## Datos y atribución
-
-La aplicación incluye datos de kanji con atribución a **OpenJLPT**, bajo licencia **CC BY-SA 4.0**. Las referencias JLPT mostradas son orientativas y proceden de datos externos; no representan una lista oficial publicada por el organismo del examen. Las referencias de Jōyō y WaniKani también se presentan como información de orientación, no como una equivalencia oficial entre sistemas.
-
-## Limitaciones conocidas y mejoras recomendadas
-
-Kaado ISI es un prototipo estático y local. Las siguientes mejoras aportarían bastante valor:
-
-1. **Persistencia remota del progreso:** implementar el acceso con correo y contraseña, recuperación por correo y sincronización del progreso SRS de vocabulario y kanji mediante Supabase Auth y PostgreSQL con RLS. Los sinónimos personales deben permanecer locales.
-2. **Sincronización entre dispositivos:** requeriría una cuenta o un servicio remoto; ahora mismo el progreso vive en un único navegador.
-3. **Mejor control de las respuestas:** revisar los sinónimos aceptados y permitir añadir alternativas válidas cuando una traducción natural no esté en la lista.
-4. **Pruebas automatizadas:** probar el algoritmo SRS, los desbloqueos y los cambios de selección para evitar regresiones.
-5. **Accesibilidad y usabilidad:** añadir opciones para tamaño de letra, modo claro y navegación por teclado más completa.
-6. **Métricas más claras:** distinguir tarjetas únicas estudiadas, intentos, respuestas correctas y repasos completados; actualmente algunas estadísticas cuentan las revisiones acumuladas, no días consecutivos de estudio.
-
-## Desarrollo
-
-La aplicación es estática y no requiere un proceso de compilación ni dependencias de instalación. `index.html` carga los datos y los módulos JavaScript; basta con servir el directorio con un servidor estático compatible con JavaScript y almacenamiento local.
-
-- [index.html](./index.html): interfaz y carga de módulos.
-- [app.js](./app.js): interfaz, tarjetas, campaña, estadísticas y persistencia local.
-- [srs.js](./srs.js): motor de repetición espaciada independiente de la interfaz y de los datos de Kaado ISI.
-- [tests/srs.test.js](./tests/srs.test.js): pruebas automatizadas del algoritmo, ejecutables con `node --test tests/srs.test.js`.
-
-### Motor SRS reutilizable
-
-`srs.js` expone `KaadoSRS` en el navegador y `module.exports` en Node.js. Recibe tarjetas y estados como objetos simples, por lo que se puede reutilizar en otra aplicación sin copiar la interfaz, la campaña ni el almacenamiento de Kaado ISI. Incluye normalización de estados, intervalos, transición tras una respuesta, ajustes manuales de etapa y comprobación de vencimiento. La aplicación conserva su clave local actual y el formato de los datos de progreso.
-
-La política actual mantiene los intervalos de 4 h, 8 h, 1, 2, 7, 14, 30 y 120 días. Un acierto limpio avanza una etapa; uno o más errores seguidos de un acierto reducen una o dos etapas; revelar la respuesta reduce dos. Los fallos programan un nuevo repaso a la mitad del intervalo normal de la etapa resultante, con mínimo de dos horas en etapa 0. Hiragana y katakana usan la mitad de los intervalos normales y pueden marcarse manualmente como dominados en etapa 9; la revisión normal no supera la etapa 8. El progreso anterior se conserva, y los valores guardados inválidos se normalizan para evitar fechas o etapas corruptas.
+`srs.js` exposes `KaadoSRS` in the browser and `module.exports` in Node.js. It accepts cards and state as plain objects, so it can be reused without copying the Kaado ISI interface, campaign, or storage layer. It includes state normalization, interval calculation, answer transitions, manual stage adjustments, and due-date checks. The app retains its existing local-storage key and progress data format.
