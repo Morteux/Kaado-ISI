@@ -688,11 +688,6 @@ main {
     font-size:.72rem
   }
 }
-/* Analytics and progress summaries */
-.analytics-stats {
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  margin-top:12px
-}
 .analytics-grid {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -741,9 +736,6 @@ main {
   font-size:.82rem
 }
 @media(max-width:760px) {
-  .analytics-stats {
-    grid-template-columns:repeat(2,minmax(0,1fr))
-  }
   .analytics-grid {
     grid-template-columns:1fr
   }
@@ -1685,8 +1677,4 @@ main {
 .rank-banner #startReviewBtn{order:1;margin-left:0;flex-shrink:0}
 
 
-/* Dashboard analytics: keep the visual summaries dominant and avoid redundant stage summaries. */
-.analytics-stats{grid-template-columns:repeat(2,minmax(0,1fr));}
-.analytics-stats .stat{min-width:0;}
 .analytics-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}.type-chart-panel{display:flex;flex-direction:column;gap:10px}.type-chart-panel h3{margin-bottom:0}.type-chart-value{font-size:2rem;line-height:1.1;font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.type-chart-panel .analytics-track{height:10px;margin-top:2px}.type-chart-panel .hint{margin:0}.type-chart-caption{font-size:.72rem;color:var(--muted);margin-top:auto;padding-top:4px;}
-@media(max-width:420px){.analytics-stats{grid-template-columns:1fr 1fr;gap:8px}.analytics-stats .stat{padding:12px 10px}}
