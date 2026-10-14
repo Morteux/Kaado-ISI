@@ -91,9 +91,8 @@ function renderLocalSynonymsList(){const el=document.getElementById("localSynony
 function addCurrentSynonym(){if(!current||!isTranslationCard(current))return;const input=document.getElementById("answerInput"),value=input.value.trim();if(!value)return;const key=current.key||current.jp;if(!confirm("Save “"+value+"” as a local synonym for "+current.jp+"? This will be accepted as a valid answer for this card in this browser."))return;const values=cardSynonyms(current);if(!values.some(v=>norm(v)===norm(value)))values.push(value);localSynonyms[key]=values;saveLocalSynonyms();checked=true;sessionSeen++;sessionCorrect++;sessionAttempts++;sessionHits++;reviewOutcomes.push(true);renderReviewProgress();document.getElementById("checkBtn").classList.add("hidden");document.getElementById("revealBtn").classList.add("hidden");document.getElementById("saveSynonymBtn").classList.add("hidden");document.getElementById("nextBtn").classList.remove("hidden");recordAnswer(true,0);feedback("Synonym saved in this browser. It is now accepted as a valid answer for this card.", "good")}
 
 let queue=[],index=0,sessionSeen=0,sessionCorrect=0,sessionAttempts=0,sessionHits=0,reviewOutcomes=[],checked=false,revealed=false,wrongAttempts=0,current=null,currentEntry=null,currentDirection="jp-en",currentTranslationLanguage="en",sessionReviewPlan=new Map(),reviewSessionFinalized=true;
-const NEW_BATCH_SIZE=5,MASTER_STAGE=3;
-const STAGE_INTERVALS=KaadoSRS.INTERVALS_DAYS;
-const STAGE_NAMES=[{name:"Tōkatsu",jp:"等活地獄",meaning:"Hell of resurrection"},{name:"Kokujō",jp:"黒縄地獄",meaning:"Hell of black ropes"},{name:"Shūgō",jp:"衆合地獄",meaning:"Hell of crushing"},{name:"Kyōkan",jp:"叫喚地獄",meaning:"Hell of screaming"},{name:"Daikyōkan",jp:"大叫喚地獄",meaning:"Great hell of screaming"},{name:"Shōnetsu",jp:"焦熱地獄",meaning:"Scorching hell"},{name:"Daishōnetsu",jp:"大焦熱地獄",meaning:"Great scorching hell"},{name:"Muken",jp:"無間地獄",meaning:"Uninterrupted hell"}];
+const MASTER_STAGE=3;
+
 function vocabTopics(){return [...new Set(WORDS.map(w=>w.topic))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}))}
 function vocabUnitCards(topic){return WORDS.filter(w=>w.topic===topic).map(w=>({...w,key:w.jp,unitKey:"vocab-"+topic}))}
 function unitMastery(cards,minStage=MASTER_STAGE){return cards.length?cards.filter(w=>state(w).stage>=minStage).length/cards.length:0}
