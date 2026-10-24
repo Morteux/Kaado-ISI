@@ -282,7 +282,7 @@ function thematicUnits(){
  return units;
 }
 function initThematicContentControls(){
- const list=document.getElementById("thematicUnitList"),granular=document.getElementById("granularContentMode"),thematic=document.getElementById("thematicContentMode"),granularPanel=document.getElementById("studyListPanel"),thematicPanel=document.getElementById("thematicContentPanel"),stageSelect=document.getElementById("thematicTargetStage"),message=document.getElementById("thematicActionMessage");
+ const list=document.getElementById("thematicUnitList"),granular=document.getElementById("granularContentMode"),thematic=document.getElementById("thematicContentMode"),granularPanel=document.getElementById("studyListPanel"),thematicPanel=document.getElementById("thematicContentPanel"),stageSelect=document.getElementById("thematicTargetStage"),message=document.getElementById("thematicActionMessage"),preview=document.getElementById("thematicUnitPreview"),previewTitle=document.getElementById("thematicPreviewTitle"),previewCount=document.getElementById("thematicPreviewCount"),previewItems=document.getElementById("thematicPreviewItems"),previewMore=document.getElementById("thematicPreviewMore");
  if(!list||!granular)return;
  let units=[];
  function render(){
@@ -293,17 +293,51 @@ function initThematicContentControls(){
    const copy=document.createElement("span");copy.className="thematic-unit-copy";
    const title=document.createElement("strong");title.textContent=unit.title;
    const detail=document.createElement("small");detail.textContent=unit.subtitle+" · "+unit.cards.filter(x=>state(x.card).stage>0).length+" already started";
-   copy.append(title,detail);row.append(check,copy);list.append(row);
+   copy.append(title,detail);row.append(check,copy);check.addEventListener("change",renderPreview);row.addEventListener("click",event=>{if(event.target===copy||event.target===title||event.target===detail){check.checked=!check.checked;renderPreview()}});list.append(row);
   });
   document.getElementById("thematicUnitCount").textContent=units.length+" available units";
+  renderPreview();
  }
  function selectedUnits(){const ids=new Set([...list.querySelectorAll("input:checked")].map(x=>x.value));return units.filter(x=>ids.has(x.id))}
+
+ function renderPreview(){
+  const chosen=selectedUnits();
+  if(!chosen.length){preview.classList.add("hidden");return}
+  preview.classList.remove("hidden");
+  previewTitle.textContent=chosen.length===1?chosen[0].title:"Selected unit contents";
+  const cards=chosen.flatMap(unit=>unit.cards.map(entry=>({unit,entry})));
+  previewCount.textContent=cards.length+" items";
+  previewItems.innerHTML="";
+  const limit=36;
+  cards.slice(0,limit).forEach(({unit,entry})=>{
+   const chip=document.createElement("span");chip.className="thematic-preview-chip";
+   const card=entry.card||{},key=entry.key;
+   if(entry.kind==="kanji"){
+    const data=KANJI.find(k=>("kanji:"+k.c)===key);
+    chip.classList.add("kanji");
+    chip.textContent=(data?.c||key.replace("kanji:",""))+(data?.en?.length?" · "+data.en.slice(0,2).join(", "):"");
+    chip.title=data?.en?.join(", ")||chip.textContent;
+   }else if(entry.kind==="hiragana"||entry.kind==="katakana"){
+    chip.classList.add("kana");
+    chip.textContent=(card.jp||"")+(card.reading?" · "+card.reading:"");
+    chip.title=card.reading||card.jp||"";
+   }else{
+    chip.classList.add("vocab");
+    const meanings=[...(card.es||[]).slice(0,2)];
+    chip.textContent=(card.jp||"")+(card.reading&&card.reading!==card.jp?" · "+card.reading:"")+(meanings.length?" · "+meanings.join(", "):"");
+    chip.title=[card.jp,card.reading,...(card.es||[]),...(card.en||[])].filter(Boolean).join(" · ");
+   }
+   previewItems.append(chip);
+  });
+  if(cards.length>limit){previewMore.textContent="Showing "+limit+" of "+cards.length+" items. Select one unit at a time for a more focused preview.";previewMore.classList.remove("hidden")}else{previewMore.textContent="";previewMore.classList.add("hidden")}
+ }
+
  function showMode(mode){
   const isThematic=mode==="thematic";
   granularPanel.classList.toggle("hidden",isThematic);thematicPanel.classList.toggle("hidden",!isThematic);
   granular.classList.toggle("primary",!isThematic);granular.classList.toggle("ghost",isThematic);granular.setAttribute("aria-pressed",String(!isThematic));
   thematic.classList.toggle("primary",isThematic);thematic.classList.toggle("ghost",!isThematic);thematic.setAttribute("aria-pressed",String(isThematic));
-  if(isThematic)render();
+  if(isThematic){render();renderPreview()}else preview.classList.add("hidden");
  }
  granular.addEventListener("click",()=>showMode("granular"));thematic.addEventListener("click",()=>showMode("thematic"));
  document.getElementById("markThematicKnown").addEventListener("click",()=>{
