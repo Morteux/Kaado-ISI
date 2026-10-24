@@ -261,6 +261,76 @@ function initVocabLevelControls(){
  document.getElementById("cancelQuickVocabLevel").addEventListener("click",()=>{document.getElementById("quickVocabLevelPanel").classList.add("hidden");document.getElementById("vocabLibraryPanel").classList.add("hidden");document.getElementById("vocabLevelToggle").textContent="Adjust vocabulary level"});
  document.getElementById("vocabCatalogSearch").addEventListener("input",resetPage);filter.addEventListener("change",resetPage);document.getElementById("vocabPrevPage").addEventListener("click",()=>{vocabCatalogPage=Math.max(0,vocabCatalogPage-1);renderCatalog()});document.getElementById("vocabNextPage").addEventListener("click",()=>{vocabCatalogPage++;renderCatalog()});
 }
+
+function thematicUnits(){
+ const units=[];
+ for(const deck of ["hiragana","katakana"]){
+  const cards=kanaUnitCards(deck);
+  if(cards.length)units.push({id:"kana:"+deck,title:deck==="hiragana"?"All hiragana":"All katakana",subtitle:"Kana · "+cards.length+" characters",kind:"kana",cards:cards.map(card=>({key:card.key,card,kind:deck}))});
+ }
+ KANJI_CHAPTERS.forEach(ch=>{
+  const cards=KANJI.filter(k=>k.chapter===ch.id).map(k=>({key:"kanji:"+k.c,card:{key:"kanji:"+k.c},kind:"kanji"}));
+  if(cards.length)units.push({id:"kanji:"+ch.id,title:"漢字HSJ初級II · "+ch.id+" · "+ch.title,subtitle:"Kanji · "+cards.length+" characters",kind:"kanji",cards});
+ });
+ VOCABULARY_BOOKS.forEach(book=>{
+  const topics=[...new Set(book.words.map(w=>String(w.topic)))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+  topics.forEach(topic=>{
+   const words=book.words.filter(w=>String(w.topic)===topic);
+   units.push({id:"vocab:"+book.id+":"+topic,title:book.title+" · "+topic.replace("-"," · Part "),subtitle:"Vocabulary · "+words.length+" words",kind:"vocab",cards:words.map(w=>({key:vocabCardKey(w),card:{...w,key:vocabCardKey(w)},kind:"vocab"}))});
+  });
+ });
+ return units;
+}
+function initThematicContentControls(){
+ const list=document.getElementById("thematicUnitList"),granular=document.getElementById("granularContentMode"),thematic=document.getElementById("thematicContentMode"),granularPanel=document.getElementById("studyListPanel"),thematicPanel=document.getElementById("thematicContentPanel"),stageSelect=document.getElementById("thematicTargetStage"),message=document.getElementById("thematicActionMessage");
+ if(!list||!granular)return;
+ let units=[];
+ function render(){
+  units=thematicUnits();list.innerHTML="";
+  units.forEach(unit=>{
+   const row=document.createElement("label");row.className="thematic-unit";
+   const check=document.createElement("input");check.type="checkbox";check.value=unit.id;check.dataset.unitId=unit.id;
+   const copy=document.createElement("span");copy.className="thematic-unit-copy";
+   const title=document.createElement("strong");title.textContent=unit.title;
+   const detail=document.createElement("small");detail.textContent=unit.subtitle+" · "+unit.cards.filter(x=>state(x.card).stage>0).length+" already started";
+   copy.append(title,detail);row.append(check,copy);list.append(row);
+  });
+  document.getElementById("thematicUnitCount").textContent=units.length+" available units";
+ }
+ function selectedUnits(){const ids=new Set([...list.querySelectorAll("input:checked")].map(x=>x.value));return units.filter(x=>ids.has(x.id))}
+ function showMode(mode){
+  const isThematic=mode==="thematic";
+  granularPanel.classList.toggle("hidden",isThematic);thematicPanel.classList.toggle("hidden",!isThematic);
+  granular.classList.toggle("primary",!isThematic);granular.classList.toggle("ghost",isThematic);granular.setAttribute("aria-pressed",String(!isThematic));
+  thematic.classList.toggle("primary",isThematic);thematic.classList.toggle("ghost",!isThematic);thematic.setAttribute("aria-pressed",String(isThematic));
+  if(isThematic)render();
+ }
+ granular.addEventListener("click",()=>showMode("granular"));thematic.addEventListener("click",()=>showMode("thematic"));
+ document.getElementById("markThematicKnown").addEventListener("click",()=>{
+  const chosen=selectedUnits();if(!chosen.length){message.textContent="Select at least one unit.";return}
+  const stage=Number(stageSelect.value),cards=chosen.flatMap(u=>u.cards);
+  if(stage===9&&cards.some(x=>x.kind!=="hiragana"&&x.kind!=="katakana")){message.textContent="Stage 9 is only available when every selected unit is hiragana or katakana.";return}
+  if(!confirm("Set "+cards.length+" cards across "+chosen.length+" unit(s) to Stage "+stage+"? Existing progress will be replaced."))return;
+  const now=Date.now();
+  cards.forEach(({key,card})=>{store[key]=KaadoSRS.manualStageTransition({previousState:state({key}),card,key,stage,now})});
+  save();render();renderList();renderKanjiCatalog?.();
+  message.textContent=cards.length+" cards set to Stage "+stage+".";
+ });
+ document.getElementById("forceThematicReview").addEventListener("click",()=>{
+  const chosen=selectedUnits();if(!chosen.length){message.textContent="Select at least one unit.";return}
+  const cards=chosen.flatMap(u=>u.cards),now=Date.now();
+  if(!confirm("Add "+cards.length+" cards across "+chosen.length+" unit(s) to review now? Existing stages are preserved; new cards start at Stage 1."))return;
+  cards.forEach(({key,card})=>{
+   const old=state({key}),targetStage=old.stage===0?1:old.stage;
+   const next=KaadoSRS.manualStageTransition({previousState:old,card,key,stage:targetStage,now});
+   store[key]={...next,seen:Math.max(1,Number(next.seen)||0),due:now};
+  });
+  save();render();renderList();renderKanjiCatalog?.();buildQueue();
+  message.textContent=cards.length+" cards from "+chosen.length+" unit(s) are available for review now. Their stage will continue normally after review.";
+ });
+ render();
+}
+
 function showHomeTab(tab){document.querySelectorAll("[data-home-tab]").forEach(b=>{const active=b.dataset.homeTab===tab;b.classList.toggle("active",active);b.setAttribute("aria-selected",String(active));b.tabIndex=active?0:-1});document.getElementById("statsView").classList.toggle("hidden",tab!=="stats");document.getElementById("contentView").classList.toggle("hidden",tab!=="content");if(tab==="content"){renderList();renderManualProgressList()}else renderStats()}
 document.querySelectorAll("[data-home-tab]").forEach(b=>b.addEventListener("keydown",e=>{if(e.key!=="ArrowLeft"&&e.key!=="ArrowRight")return;e.preventDefault();const tab=e.key==="ArrowRight"?(b.dataset.homeTab==="stats"?"content":"stats"):(b.dataset.homeTab==="content"?"stats":"content");const target=document.querySelector(`[data-home-tab="${tab}"]`);showHomeTab(tab);target.focus()}));
 let studyListPage=0;
@@ -310,6 +380,7 @@ const resetModal=document.getElementById("resetConfirmModal"),cancelResetBtn=doc
 function closeResetModal(){resetModal.classList.add("hidden");resetConfirmInput.value="";updateResetConfirmation();document.getElementById("resetBtn").focus()}document.getElementById("resetBtn").addEventListener("click",()=>{resetModal.classList.remove("hidden");resetConfirmInput.focus()});resetConfirmInput.addEventListener("input",updateResetConfirmation);cancelResetBtn.addEventListener("click",closeResetModal);resetModal.addEventListener("click",e=>{if(e.target===resetModal)closeResetModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!resetModal.classList.contains("hidden"))closeResetModal()});confirmResetBtn.addEventListener("click",()=>{if(resetConfirmInput.value!=="reset")return;store={};answerHistory=[];try{localStorage.setItem(ANSWER_HISTORY_KEY,"[]")}catch{}save();buildQueue();document.getElementById("progressMessage").textContent="Progress reset.";closeResetModal()});
 
 initQuickLevelControls();
+initThematicContentControls();
 decorateSumiIcons();
 buildQueue();
 
