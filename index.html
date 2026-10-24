@@ -3,12 +3,26 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#111827"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23141c2f%22/%3E%3Ctext x=%2232%22 y=%2247%22 font-size=%2248%22 text-anchor=%22middle%22 fill=%22%23a5b4fc%22%3E字%3C/text%3E%3C/svg%3E"><title>Kaado ISI · Japanese Learning</title>
-<link rel="stylesheet" href="styles.css?v=cleanup-20261015"></head>
+<link rel="stylesheet" href="styles.css?v=cleanup-20261015"><style>
+.account-panel{margin:1rem 0}.account-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap}.account-heading h2{margin:0}.account-sync-status{font-size:.82rem;color:var(--muted,#94a3b8)}.account-form{display:flex;gap:.75rem;align-items:end;flex-wrap:wrap;margin-top:.75rem}.account-form label{display:flex;flex-direction:column;gap:.35rem;min-width:180px;flex:1}.account-form input,.account-form select{width:100%;box-sizing:border-box}.account-actions{display:flex;gap:.5rem;flex-wrap:wrap}.account-message{min-height:1.2em;font-size:.9rem}.account-message.error{color:#ef4444}.account-message.success{color:#16a34a}
+</style></head>
 <body>
 
 <main>
 <div id="homeView">
 <nav class="home-navigation" role="tablist" aria-label="Dashboard sections"><button class="home-nav-card active" id="statsTab" role="tab" aria-selected="true" aria-controls="statsView" tabindex="0" data-home-tab="stats"><span class="home-nav-icon stats-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m0 14h16M8 15v-4m4 4V7m4 8V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="home-nav-copy"><strong>Dashboard</strong><small>Progress, reviews and mastery</small></span><span class="home-nav-arrow" aria-hidden="true">↗</span></button><button class="home-nav-card" id="contentTab" role="tab" aria-selected="false" aria-controls="contentView" tabindex="-1" data-home-tab="content"><span class="home-nav-icon content-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4.75A1.75 1.75 0 0 1 6.75 3H20v16H6.75A1.75 1.75 0 0 0 5 20.75v-16Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 17.5c0-1 .8-1.75 1.75-1.75H20M9 7h7m-7 3h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span class="home-nav-copy"><strong>Contents</strong><small>Browse and adjust your study pool</small></span><span class="home-nav-arrow" aria-hidden="true">↗</span></button></nav>
+<section class="list-panel account-panel" aria-labelledby="accountHeading">
+ <div class="account-heading"><div><h2 id="accountHeading">Account & cloud sync</h2><p class="hint">Use the same account on each device to keep your study progress in sync.</p></div><span id="accountSyncStatus" class="account-sync-status">Local-only mode</span></div>
+ <p id="accountSetupWarning" class="hint">Cloud accounts are not configured yet. Follow <code>docs/SUPABASE_SETUP.md</code> and add your project keys to <code>supabase-config.js</code>.</p>
+ <form id="accountForm" class="account-form hidden">
+  <label for="accountEmail">Email <input id="accountEmail" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+  <label for="accountPassword">Password <input id="accountPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></label>
+  <label for="accountMode">Action <select id="accountMode" class="search"><option value="login">Log in</option><option value="signup">Create account</option></select></label>
+  <div class="account-actions"><button id="accountSubmit" class="primary" type="submit">Log in</button><button id="accountForgot" class="ghost" type="button">Reset password</button></div>
+ </form>
+ <div id="accountSignedIn" class="hidden"><p>Signed in as <strong id="accountUserEmail"></strong></p><button id="accountLogout" class="ghost hidden" type="button">Log out</button></div>
+ <p id="accountMessage" class="account-message" aria-live="polite"></p>
+</section>
 
 <section class="rank-banner" aria-label="Rank and campaign"><div class="rank-campaign-info"><div class="rank-name" data-icon="rank"><span id="rankName" class="campaign-name"><ruby>足軽<rt>あしがる</rt></ruby><small class="campaign-romaji">Ashigaru</small></span></div><div class="rank-count"><strong id="unlockCount">5</strong><span>new cards per batch</span></div></div><button id="startReviewBtn" class="primary">Start review →</button></section>
 <section id="statsView">
@@ -34,4 +48,4 @@
 </main>
 <div id="resetConfirmModal" class="confirm-overlay hidden" role="presentation"><section class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="resetConfirmTitle" aria-describedby="resetConfirmDescription"><h2 id="resetConfirmTitle">Delete all progress?</h2><p id="resetConfirmDescription">This will erase your saved study progress in this browser. This action cannot be undone. Your selected question language and local synonyms will not be deleted.</p><label for="resetConfirmInput">Type <strong>reset</strong> to confirm deletion.</label><input id="resetConfirmInput" class="search reset-confirm-input" type="text" autocomplete="off" spellcheck="false" placeholder="Type reset" /><div class="actions"><button id="cancelResetBtn" class="ghost" type="button">Cancel</button><button id="confirmResetBtn" class="danger-button" type="button" disabled>Delete progress</button></div></section></div>
 <script src="json/hiragana.js"></script><script src="json/katakana.js"></script><script src="json/kanji.js"></script>
-<script src="srs.js?v=srs-core-20261012"></script><script src="app.js?v=cleanup-20261015"></script></body></html>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="srs.js?v=srs-core-20261012"></script><script src="app.js?v=cloud-auth-20261024"></script></body></html>
