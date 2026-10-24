@@ -284,23 +284,31 @@ function thematicUnits(){
 function initThematicContentControls(){
  const list=document.getElementById("thematicUnitList"),granular=document.getElementById("granularContentMode"),thematic=document.getElementById("thematicContentMode"),granularPanel=document.getElementById("studyListPanel"),thematicPanel=document.getElementById("thematicContentPanel"),stageSelect=document.getElementById("thematicTargetStage"),message=document.getElementById("thematicActionMessage"),preview=document.getElementById("thematicUnitPreview"),previewTitle=document.getElementById("thematicPreviewTitle"),previewCount=document.getElementById("thematicPreviewCount"),previewItems=document.getElementById("thematicPreviewItems"),previewPrev=document.getElementById("thematicPreviewPrev"),previewNext=document.getElementById("thematicPreviewNext"),previewPage=document.getElementById("thematicPreviewPage");
  if(!list||!granular)return;
- let units=[];
+ let units=[],selectionOrder=[];
+ function updateSelectionOrder(check){
+  selectionOrder=selectionOrder.filter(id=>id!==check.value);
+  if(check.checked)selectionOrder.push(check.value);
+ }
  function render(){
-  units=thematicUnits();list.innerHTML="";
+  units=thematicUnits();selectionOrder=[];list.innerHTML="";
   units.forEach(unit=>{
    const row=document.createElement("div");row.className="thematic-unit";row.setAttribute("role","button");row.tabIndex=0;
    const check=document.createElement("input");check.type="checkbox";check.value=unit.id;check.dataset.unitId=unit.id;
    const copy=document.createElement("span");copy.className="thematic-unit-copy";
    const title=document.createElement("strong");title.textContent=unit.title;
    const detail=document.createElement("small");detail.textContent=unit.subtitle+" · "+unit.cards.filter(x=>state(x.card).stage>0).length+" already started";
-   copy.append(title,detail);row.append(check,copy);check.addEventListener("change",()=>renderPreview());
-   const toggleFromRow=e=>{if(e.target===check)return;check.checked=!check.checked;renderPreview()};
-   row.addEventListener("click",toggleFromRow);row.addEventListener("keydown",e=>{if(e.target!==row||(e.key!=="Enter"&&e.key!==" "))return;e.preventDefault();check.checked=!check.checked;renderPreview()});list.append(row);
+   copy.append(title,detail);row.append(check,copy);
+   check.addEventListener("change",()=>{updateSelectionOrder(check);renderPreview()});
+   const toggleFromRow=e=>{if(e.target===check)return;check.checked=!check.checked;updateSelectionOrder(check);renderPreview()};
+   row.addEventListener("click",toggleFromRow);row.addEventListener("keydown",e=>{if(e.target!==row||(e.key!=="Enter"&&e.key!==" "))return;e.preventDefault();check.checked=!check.checked;updateSelectionOrder(check);renderPreview()});list.append(row);
   });
   document.getElementById("thematicUnitCount").textContent=units.length+" available units";
   renderPreview();
  }
- function selectedUnits(){const ids=new Set([...list.querySelectorAll("input:checked")].map(x=>x.value));return units.filter(x=>ids.has(x.id))}
+ function selectedUnits(){
+  const ids=new Set([...list.querySelectorAll("input:checked")].map(x=>x.value));
+  return selectionOrder.slice().reverse().filter(id=>ids.has(id)).map(id=>units.find(unit=>unit.id===id)).filter(Boolean);
+ }
 
  let previewPageIndex=0;
  function renderPreview(resetPage=true){
