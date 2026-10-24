@@ -293,7 +293,7 @@ function initThematicContentControls(){
    const copy=document.createElement("span");copy.className="thematic-unit-copy";
    const title=document.createElement("strong");title.textContent=unit.title;
    const detail=document.createElement("small");detail.textContent=unit.subtitle+" · "+unit.cards.filter(x=>state(x.card).stage>0).length+" already started";
-   copy.append(title,detail);row.append(check,copy);check.addEventListener("change",renderPreview);row.addEventListener("click",event=>{if(event.target===copy||event.target===title||event.target===detail){check.checked=!check.checked;renderPreview()}});list.append(row);
+   copy.append(title,detail);row.append(check,copy);check.addEventListener("change",renderPreview);list.append(row);
   });
   document.getElementById("thematicUnitCount").textContent=units.length+" available units";
   renderPreview();
