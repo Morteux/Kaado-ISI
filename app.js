@@ -293,11 +293,21 @@ function initThematicContentControls(){
   units=thematicUnits();selectionOrder=[];list.innerHTML="";
   units.forEach(unit=>{
    const row=document.createElement("div");row.className="thematic-unit";row.setAttribute("role","button");row.tabIndex=0;
+   const main=document.createElement("div");main.className="thematic-unit-main";
    const check=document.createElement("input");check.type="checkbox";check.value=unit.id;check.dataset.unitId=unit.id;
    const copy=document.createElement("span");copy.className="thematic-unit-copy";
    const title=document.createElement("strong");title.textContent=unit.title;
-   const detail=document.createElement("small");detail.textContent=unit.subtitle+" · "+unit.cards.filter(x=>state(x.card).stage>0).length+" already started";
-   copy.append(title,detail);row.append(check,copy);
+   const states=unit.cards.map(x=>({entry:x,state:state(x.card)}));
+   const total=states.length;
+   const mastered=states.filter(({entry,state:st})=>entry.kind==="hiragana"||entry.kind==="katakana"?st.stage===9:st.stage>=8).length;
+   const started=states.filter(({state:st,entry})=>st.stage>0&&!(entry.kind==="hiragana"||entry.kind==="katakana"?st.stage===9:st.stage>=8)).length;
+   const unstarted=Math.max(0,total-mastered-started);
+   const percent=total?Math.round(mastered/total*100):0;
+   const detail=document.createElement("small");detail.textContent=unit.subtitle+" · "+mastered+" / "+total+" mastered ("+percent+"%)";
+   copy.append(title,detail);main.append(check,copy);row.append(main);
+   const bar=document.createElement("div");bar.className="thematic-unit-progress";bar.setAttribute("role","img");bar.setAttribute("aria-label",mastered+" mastered, "+started+" started, "+unstarted+" not started out of "+total);
+   [[mastered,"mastered"],[started,"started"],[unstarted,"unstarted"]].forEach(([count,kind])=>{if(!count)return;const segment=document.createElement("span");segment.className="thematic-unit-progress-segment "+kind;segment.style.width=(count/Math.max(1,total)*100)+"%";bar.append(segment)});
+   row.append(bar);
    check.addEventListener("change",()=>{updateSelectionOrder(check);renderPreview()});
    const toggleFromRow=e=>{if(e.target===check)return;check.checked=!check.checked;updateSelectionOrder(check);renderPreview()};
    row.addEventListener("click",toggleFromRow);row.addEventListener("keydown",e=>{if(e.target!==row||(e.key!=="Enter"&&e.key!==" "))return;e.preventDefault();check.checked=!check.checked;updateSelectionOrder(check);renderPreview()});list.append(row);
