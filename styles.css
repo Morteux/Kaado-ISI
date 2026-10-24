@@ -1685,11 +1685,17 @@ main {
 .content-mode-buttons{display:flex;gap:8px;flex-wrap:wrap}
 .content-mode-toolbar>p{margin:.5rem 0 0}
 .thematic-unit-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0}
-.thematic-unit{display:flex;align-items:flex-start;gap:10px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);cursor:pointer;min-width:0}
+.thematic-unit{display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:12px 12px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel2);cursor:pointer;min-width:0;overflow:hidden}
+.thematic-unit-main{display:flex;align-items:flex-start;gap:10px;min-width:0}
 .thematic-unit input{margin-top:4px;flex:none}
 .thematic-unit-copy{display:flex;flex-direction:column;gap:4px;min-width:0}
 .thematic-unit-copy strong{font-size:.9rem;overflow-wrap:anywhere}
 .thematic-unit-copy small{font-size:.78rem;color:var(--muted)}
+.thematic-unit-progress{display:flex;width:calc(100% + 24px);height:6px;margin:0 -12px;overflow:hidden;background:#888888}
+.thematic-unit-progress-segment{display:block;height:100%;flex:none}
+.thematic-unit-progress-segment.mastered{background:#279b62}
+.thematic-unit-progress-segment.started{background:#e8b83f}
+.thematic-unit-progress-segment.unstarted{background:#858585}
 .thematic-bulk-actions{display:flex;align-items:end;gap:10px;flex-wrap:wrap;padding-top:12px;border-top:1px solid var(--line)}
 .thematic-bulk-actions label{display:flex;flex-direction:column;gap:5px;min-width:200px;font-size:.82rem;color:var(--muted)}
 .thematic-bulk-actions button{min-height:38px}
