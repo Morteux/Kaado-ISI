@@ -327,7 +327,7 @@ const resetModal=document.getElementById("resetConfirmModal"),cancelResetBtn=doc
 function closeResetModal(){resetModal.classList.add("hidden");resetConfirmInput.value="";updateResetConfirmation();document.getElementById("resetBtn").focus()}document.getElementById("resetBtn").addEventListener("click",()=>{resetModal.classList.remove("hidden");resetConfirmInput.focus()});resetConfirmInput.addEventListener("input",updateResetConfirmation);cancelResetBtn.addEventListener("click",closeResetModal);resetModal.addEventListener("click",e=>{if(e.target===resetModal)closeResetModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!resetModal.classList.contains("hidden"))closeResetModal()});confirmResetBtn.addEventListener("click",()=>{if(resetConfirmInput.value!=="reset")return;store={};answerHistory=[];try{localStorage.setItem(ANSWER_HISTORY_KEY,"[]")}catch{}save();buildQueue();document.getElementById("progressMessage").textContent="Progress reset.";closeResetModal()});
 
 
-initThematicContentControls();
+initStudyListCatalog();initThematicContentControls();
 decorateSumiIcons();
 buildQueue();
 
