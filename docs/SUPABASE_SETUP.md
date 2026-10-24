@@ -1,10 +1,10 @@
 # Kaado ISI: free account and cloud-sync setup
 
-This guide explains how to finish configuring the account system and sync study progress between devices. The app is static and hosted on GitHub Pages, so it uses Supabase for email/password authentication and PostgreSQL storage.
+This guide explains how to finish configuring the account system and sync study progress between devices. The app is a static website intended for deployment on Vercel, with GitHub remaining the source-code repository. Supabase provides email/password authentication and PostgreSQL storage.
 
 ## Chosen stack
 
-- **Hosting:** GitHub Pages (existing setup, free for a public repository).
+- **Hosting:** Vercel Hobby for personal, non-commercial use; connect it to this GitHub repository for automatic deployments.
 - **Authentication + database:** [Supabase Free](https://supabase.com/pricing).
 - **Browser SDK:** `@supabase/supabase-js` v2 loaded from jsDelivr.
 - **Database table:** `public.user_data`, one JSONB record per authenticated user, protected by Row Level Security (RLS).
@@ -47,21 +47,26 @@ Edit `supabase-config.js` and replace:
 - `https://YOUR_PROJECT_REF.supabase.co` with the Project URL.
 - `YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY` with the publishable key (or anon public key).
 
-Commit and push the change to GitHub. These are public browser configuration values, not server secrets. Do not add the database password or service-role key.
+Commit and push the change to GitHub. If Vercel is connected to the repository, it should deploy the update automatically. These are public browser configuration values, not server secrets. Do not add the database password or service-role key.
 
-### 4. Configure authentication URLs
+### 4. Deploy to Vercel and configure authentication URLs
 
-In Supabase, open **Authentication / URL Configuration**:
-
-- Set **Site URL** to `https://morteux.github.io/Kaado-ISI/`.
-- Add `https://morteux.github.io/Kaado-ISI/` to the allowed redirect URLs.
-- If you test a local copy, add its exact local URL separately, for example `http://127.0.0.1:5500/`.
+1. Open [Vercel](https://vercel.com/) and sign in with GitHub.
+2. Choose **Add New / Project** and import `Morteux/Kaado-ISI`.
+3. This is a plain static HTML/CSS/JavaScript app. Leave the framework preset as **Other** (or no framework) and do not add a build command. Set the output directory to the repository root if Vercel asks for one. Deploy the project.
+4. Copy the production URL Vercel assigns to the project, such as `https://your-project.vercel.app/`. The exact URL depends on the project name and account.
+5. In Supabase, open **Authentication / URL Configuration**:
+   - Set **Site URL** to your exact Vercel production URL, including `https://` and the trailing slash.
+   - Add that same production URL to the allowed redirect URLs.
+   - For local testing, add the exact local URL separately, for example `http://127.0.0.1:5500/`.
+   - If you want to test Vercel Preview deployments, you can also add the appropriate Vercel preview URL pattern; keep the production Site URL set to the stable production URL.
+6. If you previously configured GitHub Pages as the Site URL, replace it with the Vercel production URL. You can keep the GitHub Pages URL in the allowlist temporarily if you still want to test the old deployment.
 
 Email confirmation is controlled in Supabase's authentication settings. If confirmation is enabled, create an account, open the confirmation email, and then log in. The default email service has sending limits; a custom SMTP provider may be needed if you later want reliable email delivery. Do not enable paid email services for this free setup.
 
 ### 5. Test the account and sync
 
-1. Open the deployed site and hard-refresh it after the GitHub Pages deployment finishes.
+1. Open the production URL from Vercel and hard-refresh after deployment finishes.
 2. In **Account & cloud sync**, create an account with your email and a strong password.
 3. Confirm the email if Supabase asks you to.
 4. Log in. The account panel should show the signed-in email and cloud-sync status.
@@ -87,6 +92,6 @@ The account panel can request a reset email. Configure the redirect URLs above s
 - [ ] RLS enabled on `public.user_data`.
 - [ ] Only authenticated users have table access.
 - [ ] No `service_role` or secret key committed to the repository.
-- [ ] Site URL and redirect allowlist match the GitHub Pages URL.
+- [ ] Site URL and redirect allowlist match the Vercel production URL.
 - [ ] Sign-up, confirmation, login, sync, logout and password reset tested.
 - [ ] A second device successfully loads the same account's progress.
