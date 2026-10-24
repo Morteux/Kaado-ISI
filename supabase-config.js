@@ -3,8 +3,8 @@
  * These values are intended for browser use. NEVER put a service_role/secret key here.
  */
 (function () {
-  const SUPABASE_URL = "https://YOUR_PROJECT_REF.supabase.co";
-  const SUPABASE_PUBLISHABLE_KEY = "YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY";
+  const SUPABASE_URL = "https://ddxhayyinaskillzmtgw.supabase.co";
+  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_mCB5kAgZpswDauyFwCiPrA_9QaEeXkN";
 
   if (!window.supabase || SUPABASE_URL.includes("YOUR_PROJECT_REF") ||
       SUPABASE_PUBLISHABLE_KEY.includes("YOUR_SUPABASE_")) {
