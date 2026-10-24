@@ -5,40 +5,37 @@
 <meta name="theme-color" content="#111827"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23141c2f%22/%3E%3Ctext x=%2232%22 y=%2247%22 font-size=%2248%22 text-anchor=%22middle%22 fill=%22%23a5b4fc%22%3E字%3C/text%3E%3C/svg%3E"><title>Kaado ISI · Japanese Learning</title>
 <link rel="stylesheet" href="styles.css?v=cleanup-20261015"><style>
 .account-panel{margin:.5rem 0;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.account-heading{display:flex;align-items:center;gap:.5rem;flex:0 0 auto;margin:0}.account-heading h2,.account-heading .hint{display:none}.account-sync-status{font-size:.78rem;color:var(--muted,#94a3b8);white-space:nowrap}.account-form{display:flex;gap:.6rem;align-items:end;flex:1;flex-wrap:wrap;margin:0}.account-form label{display:flex;flex-direction:column;gap:.25rem;min-width:150px;flex:1;font-size:.85rem}.account-form input,.account-form select{width:100%;box-sizing:border-box}.account-actions{display:flex;gap:.4rem;flex-wrap:wrap}.account-actions button{padding:8px 11px}.account-message{min-height:0;margin:0;font-size:.82rem;flex:1 1 100%}.account-message.error{color:#ef4444}.account-message.success{color:#16a34a}#accountSignedIn:not(.hidden){display:flex;align-items:center;gap:10px;flex:1;min-width:0}#accountSignedIn p{margin:0;font-size:.85rem;overflow-wrap:anywhere}#accountSignedIn #accountLogout:not(.hidden){margin-left:auto;padding:7px 10px}#accountSetupWarning{margin:0;font-size:.8rem;flex:1 1 100%}@media(max-width:600px){.account-panel{padding:10px 12px;gap:8px}.account-heading{flex-basis:100%}.account-form{flex-basis:100%}.account-form label{min-width:100%;}.account-message{flex-basis:100%}}
-
-/* Authentication gate: hide every study surface until the account's first cloud sync succeeds. */
-body.app-locked main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding-top:24px;padding-bottom:24px}
-body.app-locked #homeView{width:100%}
+/* Login gate is deliberately scoped to the unauthenticated screen so the in-app account strip stays unchanged. */
+body.app-locked main{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:32px 20px}
+body.app-locked #homeView{width:100%;display:flex;align-items:center;justify-content:center}
 body.app-locked #homeView>:not(.account-panel),body.app-locked #reviewView,body.app-locked .footer{display:none!important}
-body.app-locked .account-panel{width:100%;max-width:460px;margin:0 auto;padding:clamp(18px,3vw,26px);box-shadow:0 18px 55px rgba(0,0,0,.24)}
-body.app-locked .account-heading{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-body.app-locked .account-heading h2{font-size:1.3rem;letter-spacing:-.03em}
-body.app-locked .account-heading .hint{display:none}
-body.app-locked .account-sync-status{max-width:120px;text-align:right;font-size:.75rem}
-body.app-locked .account-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 12px;align-items:end;margin-top:0}
-body.app-locked .account-form label{min-width:0;width:100%;gap:5px;font-size:.85rem}
-body.app-locked .account-form label:nth-child(3){grid-column:1/-1}
-body.app-locked .account-form input,body.app-locked .account-form select{padding:10px 11px}
-body.app-locked .account-actions{grid-column:1/-1;width:100%;gap:8px}
-body.app-locked .account-actions button{flex:1;padding:10px 12px}
-body.app-locked #accountMessage{margin:10px 0 0;min-height:0;font-size:.82rem}
-body.app-locked #accountSignedIn{margin-top:10px}
+body.app-locked .account-panel{width:min(100%,580px);min-height:430px;margin:0 auto;padding:clamp(28px,5vw,52px);display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:20px;box-shadow:0 24px 80px rgba(0,0,0,.34);border-radius:18px;background:linear-gradient(155deg,rgba(28,39,64,.98),rgba(20,28,47,.98));border:1px solid var(--line)}
+body.app-locked .account-heading{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin:0}
+body.app-locked .account-heading h2{display:block;margin:0;font-size:clamp(2rem,5vw,2.7rem);line-height:1.12;letter-spacing:-.045em}
+body.app-locked .account-sync-status{max-width:none;text-align:left;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+body.app-locked .account-form{display:flex;flex-direction:column;align-items:stretch;gap:16px;width:100%;margin:0}
+body.app-locked .account-form label{min-width:0;width:100%;gap:7px;font-size:.9rem;color:var(--muted)}
+body.app-locked .account-form input,body.app-locked .account-form select{padding:14px 15px;min-height:50px;border-radius:9px;font-size:1rem}
+body.app-locked .account-actions{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:4px}
+body.app-locked .account-actions button{width:100%;min-height:48px;padding:12px 16px}
+body.app-locked #accountMessage{margin:0;min-height:0;font-size:.9rem;line-height:1.5}
+body.app-locked #accountSignedIn{margin-top:4px}
 body.app-locked #accountSignedIn p{margin:0 0 10px}
-body.app-locked #accountSetupWarning{margin:10px 0 0;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:.8rem}
-@media(max-width:480px){body.app-locked .account-heading{align-items:flex-start;flex-direction:column;gap:5px}body.app-locked .account-sync-status{text-align:left;max-width:none}body.app-locked .account-form{grid-template-columns:minmax(0,1fr)}body.app-locked .account-form label:nth-child(3),body.app-locked .account-actions{grid-column:auto}}
-</style></head>
+body.app-locked #accountSetupWarning{margin:0;padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-size:.85rem}
+@media(max-width:600px){body.app-locked main{padding:16px}body.app-locked .account-panel{min-height:0;padding:28px 22px;gap:18px}body.app-locked .account-heading{align-items:flex-start}body.app-locked .account-form{gap:14px}}
+@media(max-height:620px){body.app-locked main{align-items:flex-start}body.app-locked .account-panel{min-height:0;margin:12px auto}}</style></head>
 <body class="app-locked">
 
 <main>
 <div id="homeView">
 <nav class="home-navigation" role="tablist" aria-label="Dashboard sections"><button class="home-nav-card active" id="statsTab" role="tab" aria-selected="true" aria-controls="statsView" tabindex="0" data-home-tab="stats"><span class="home-nav-icon stats-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m0 14h16M8 15v-4m4 4V7m4 8V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="home-nav-copy"><strong>Dashboard</strong><small>Progress, reviews and mastery</small></span><span class="home-nav-arrow" aria-hidden="true">↗</span></button><button class="home-nav-card" id="contentTab" role="tab" aria-selected="false" aria-controls="contentView" tabindex="-1" data-home-tab="content"><span class="home-nav-icon content-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4.75A1.75 1.75 0 0 1 6.75 3H20v16H6.75A1.75 1.75 0 0 0 5 20.75v-16Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 17.5c0-1 .8-1.75 1.75-1.75H20M9 7h7m-7 3h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span class="home-nav-copy"><strong>Contents</strong><small>Browse and adjust your study pool</small></span><span class="home-nav-arrow" aria-hidden="true">↗</span></button></nav>
 <section class="list-panel account-panel" aria-labelledby="accountHeading">
- <div class="account-heading"><span id="accountSyncStatus" class="account-sync-status">Local-only mode</span></div>
+ <div class="account-heading"><span id="accountSyncStatus" class="account-sync-status">Account access</span><h2 id="accountHeading">Log in</h2></div>
  <p id="accountSetupWarning" class="hint">Cloud accounts are not configured yet. Follow <code>docs/SUPABASE_SETUP.md</code> and add your project keys to <code>supabase-config.js</code>.</p>
  <form id="accountForm" class="account-form hidden">
   <label for="accountEmail">Email <input id="accountEmail" type="email" autocomplete="email" required placeholder="you@example.com"></label>
   <label for="accountPassword">Password <input id="accountPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></label>
-  <label for="accountMode">Action <select id="accountMode" class="search"><option value="login">Log in</option><option value="signup">Create account</option></select></label>
+  <label for="accountMode">Account type <select id="accountMode" class="search"><option value="login">Log in</option><option value="signup">Create account</option></select></label>
   <div class="account-actions"><button id="accountSubmit" class="primary" type="submit">Log in</button><button id="accountForgot" class="ghost" type="button">Reset password</button></div>
  </form>
  <div id="accountSignedIn" class="hidden"><p>Signed in as <strong id="accountUserEmail"></strong></p><button id="accountLogout" class="ghost hidden" type="button">Log out</button></div>
