@@ -288,12 +288,14 @@ function initThematicContentControls(){
  function render(){
   units=thematicUnits();list.innerHTML="";
   units.forEach(unit=>{
-   const row=document.createElement("label");row.className="thematic-unit";
+   const row=document.createElement("div");row.className="thematic-unit";row.setAttribute("role","button");row.tabIndex=0;
    const check=document.createElement("input");check.type="checkbox";check.value=unit.id;check.dataset.unitId=unit.id;
    const copy=document.createElement("span");copy.className="thematic-unit-copy";
    const title=document.createElement("strong");title.textContent=unit.title;
    const detail=document.createElement("small");detail.textContent=unit.subtitle+" · "+unit.cards.filter(x=>state(x.card).stage>0).length+" already started";
-   copy.append(title,detail);row.append(check,copy);check.addEventListener("change",renderPreview);list.append(row);
+   copy.append(title,detail);row.append(check,copy);check.addEventListener("change",()=>renderPreview());
+   const toggleFromRow=e=>{if(e.target===check)return;check.checked=!check.checked;renderPreview()};
+   row.addEventListener("click",toggleFromRow);row.addEventListener("keydown",e=>{if(e.target!==row||(e.key!=="Enter"&&e.key!==" "))return;e.preventDefault();check.checked=!check.checked;renderPreview()});list.append(row);
   });
   document.getElementById("thematicUnitCount").textContent=units.length+" available units";
   renderPreview();
@@ -312,8 +314,8 @@ function initThematicContentControls(){
   previewPageIndex=Math.max(0,Math.min(previewPageIndex,pages-1));
   previewCount.textContent=cards.length+" items";
   previewPage.textContent=(previewPageIndex+1)+" / "+pages;
-  previewPrev.disabled=previewPageIndex===0;
-  previewNext.disabled=previewPageIndex>=pages-1;
+  previewPrev.disabled=pages<=1;
+  previewNext.disabled=pages<=1;
   previewItems.innerHTML="";
   cards.slice(previewPageIndex*pageSize,(previewPageIndex+1)*pageSize).forEach(({entry})=>{
    const chip=document.createElement("span");chip.className="thematic-preview-chip";
@@ -341,7 +343,7 @@ function initThematicContentControls(){
   thematic.classList.toggle("primary",isThematic);thematic.classList.toggle("ghost",!isThematic);thematic.setAttribute("aria-pressed",String(isThematic));
   if(isThematic){render();renderPreview()}else preview.classList.add("hidden");
  }
- previewPrev.addEventListener("click",()=>{previewPageIndex--;renderPreview(false)});previewNext.addEventListener("click",()=>{previewPageIndex++;renderPreview(false)});
+ previewPrev.addEventListener("click",()=>{const chosen=selectedUnits();const total=chosen.reduce((n,u)=>n+u.cards.length,0),pages=Math.max(1,Math.ceil(total/12));previewPageIndex=(previewPageIndex-1+pages)%pages;renderPreview(false)});previewNext.addEventListener("click",()=>{const chosen=selectedUnits();const total=chosen.reduce((n,u)=>n+u.cards.length,0),pages=Math.max(1,Math.ceil(total/12));previewPageIndex=(previewPageIndex+1)%pages;renderPreview(false)});
  granular.addEventListener("click",()=>showMode("granular"));thematic.addEventListener("click",()=>showMode("thematic"));
  document.getElementById("markThematicKnown").addEventListener("click",()=>{
   const chosen=selectedUnits();if(!chosen.length){message.textContent="Select at least one unit.";return}
