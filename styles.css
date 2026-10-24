@@ -1717,3 +1717,78 @@ main {
 @media(max-width:600px){.thematic-unit-preview{padding:9px 10px}.thematic-unit-preview .list-head{align-items:flex-start}.thematic-preview-pagination{gap:4px}.thematic-preview-pagination .hint{font-size:.7rem}.thematic-preview-pagination button{min-width:27px;width:27px;height:26px}.thematic-preview-chip.vocab{max-width:100%}}
 
 .review-intervals-panel{padding:12px 16px;margin:10px 0;gap:8px}.review-intervals-heading{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}.review-intervals-heading h2{margin:0;font-size:.95rem}.review-intervals-heading .hint{font-size:.75rem;margin:0}.review-intervals-compact{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:5px}.review-interval-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 3px;border:1px solid var(--line);border-radius:7px;background:var(--panel2);line-height:1.25;text-align:center;min-width:0}.review-interval-item strong{font-size:.75rem}.review-interval-item span{font-size:.72rem;font-weight:650}.review-interval-item small{font-size:.62rem;color:var(--muted)}.review-intervals-note{margin:0;font-size:.72rem;line-height:1.35}.individual-bulk-toolbar{display:flex;flex-direction:column;gap:9px;margin:12px 0;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2)}.individual-select-all{display:flex;align-items:center;gap:8px;font-size:.82rem}.individual-select-all input,.individual-card-check input{width:16px;height:16px;accent-color:var(--accent)}.individual-bulk-actions{display:flex;align-items:end;gap:8px;flex-wrap:wrap}.individual-bulk-actions label{display:flex;flex-direction:column;gap:4px;min-width:165px;font-size:.78rem;color:var(--muted)}.individual-bulk-actions select{width:100%}.individual-bulk-actions button{min-height:36px;padding:7px 10px;font-size:.8rem}.individual-content-row{grid-template-columns:24px 54px minmax(0,1fr);gap:10px;padding:10px;align-items:start}.individual-card-check{display:flex;align-items:center;justify-content:center;width:24px;height:28px;grid-column:1;grid-row:1}.individual-content-row>.kanji-catalog-char{grid-column:2;grid-row:1;font-size:1.8rem}.individual-content-row>div:not(.kanji-catalog-char){grid-column:3;grid-row:1;min-width:0}.individual-content-row .kanji-catalog-meta{overflow-wrap:anywhere}@media(max-width:760px){.review-intervals-compact{grid-template-columns:repeat(3,minmax(0,1fr))}.individual-bulk-actions{align-items:stretch}.individual-bulk-actions label,.individual-bulk-actions button{width:100%;min-width:0}.individual-content-row{grid-template-columns:22px 42px minmax(0,1fr);gap:8px;padding:9px}}
+
+
+/* Individual content cards: keep kana/kanji compact, but give vocabulary the full reading width. */
+#studyListResults .individual-content-row {
+  box-sizing:border-box;
+  min-width:0;
+}
+#studyListResults .individual-content-row:not(.vocab-catalog-row) {
+  grid-template-columns:24px 54px minmax(0,1fr);
+  gap:10px;
+  align-items:start;
+}
+#studyListResults .individual-content-row:not(.vocab-catalog-row) .individual-card-check {
+  grid-column:1;
+  grid-row:1;
+}
+#studyListResults .individual-content-row:not(.vocab-catalog-row) > .kanji-catalog-char {
+  grid-column:2;
+  grid-row:1;
+}
+#studyListResults .individual-content-row:not(.vocab-catalog-row) > div:not(.kanji-catalog-char):not(.individual-card-check) {
+  grid-column:3;
+  grid-row:1;
+  min-width:0;
+}
+#studyListResults .individual-content-row.vocab-catalog-row {
+  grid-template-columns:24px minmax(0,1fr);
+  gap:10px;
+  align-items:start;
+}
+#studyListResults .individual-content-row.vocab-catalog-row .individual-card-check {
+  grid-column:1;
+  grid-row:1;
+}
+#studyListResults .individual-content-row.vocab-catalog-row > div:not(.kanji-catalog-char):not(.individual-card-check) {
+  grid-column:2;
+  grid-row:1;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:4px;
+  min-width:0;
+  width:100%;
+}
+#studyListResults .individual-content-row.vocab-catalog-row .kanji-catalog-char {
+  min-width:0;
+  width:100%;
+  text-align:left;
+  font-size:1.15rem;
+  line-height:1.45;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+#studyListResults .individual-content-row.vocab-catalog-row .kanji-catalog-readings,
+#studyListResults .individual-content-row.vocab-catalog-row .kanji-catalog-meanings,
+#studyListResults .individual-content-row.vocab-catalog-row .kanji-catalog-meta {
+  min-width:0;
+  width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+#studyListResults .individual-content-row .kanji-catalog-meta {
+  line-height:1.45;
+}
+@media(max-width:760px) {
+  #studyListResults .individual-content-row:not(.vocab-catalog-row) {
+    grid-template-columns:22px 42px minmax(0,1fr);
+    gap:8px;
+    padding:9px;
+  }
+  #studyListResults .individual-content-row.vocab-catalog-row {
+    grid-template-columns:22px minmax(0,1fr);
+    gap:8px;
+    padding:9px;
+  }
+}
