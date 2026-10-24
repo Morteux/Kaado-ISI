@@ -282,7 +282,7 @@ function thematicUnits(){
  return units;
 }
 function initThematicContentControls(){
- const list=document.getElementById("thematicUnitList"),granular=document.getElementById("granularContentMode"),thematic=document.getElementById("thematicContentMode"),granularPanel=document.getElementById("studyListPanel"),thematicPanel=document.getElementById("thematicContentPanel"),stageSelect=document.getElementById("thematicTargetStage"),message=document.getElementById("thematicActionMessage"),preview=document.getElementById("thematicUnitPreview"),previewTitle=document.getElementById("thematicPreviewTitle"),previewCount=document.getElementById("thematicPreviewCount"),previewItems=document.getElementById("thematicPreviewItems"),previewMore=document.getElementById("thematicPreviewMore");
+ const list=document.getElementById("thematicUnitList"),granular=document.getElementById("granularContentMode"),thematic=document.getElementById("thematicContentMode"),granularPanel=document.getElementById("studyListPanel"),thematicPanel=document.getElementById("thematicContentPanel"),stageSelect=document.getElementById("thematicTargetStage"),message=document.getElementById("thematicActionMessage"),preview=document.getElementById("thematicUnitPreview"),previewTitle=document.getElementById("thematicPreviewTitle"),previewCount=document.getElementById("thematicPreviewCount"),previewItems=document.getElementById("thematicPreviewItems"),previewPrev=document.getElementById("thematicPreviewPrev"),previewNext=document.getElementById("thematicPreviewNext"),previewPage=document.getElementById("thematicPreviewPage");
  if(!list||!granular)return;
  let units=[];
  function render(){
@@ -300,36 +300,38 @@ function initThematicContentControls(){
  }
  function selectedUnits(){const ids=new Set([...list.querySelectorAll("input:checked")].map(x=>x.value));return units.filter(x=>ids.has(x.id))}
 
- function renderPreview(){
+ let previewPageIndex=0;
+ function renderPreview(resetPage=true){
   const chosen=selectedUnits();
-  if(!chosen.length){preview.classList.add("hidden");return}
+  if(!chosen.length){preview.classList.add("hidden");previewPageIndex=0;return}
+  if(resetPage)previewPageIndex=0;
   preview.classList.remove("hidden");
   previewTitle.textContent=chosen.length===1?chosen[0].title:"Selected unit contents";
   const cards=chosen.flatMap(unit=>unit.cards.map(entry=>({unit,entry})));
+  const pageSize=12,pages=Math.max(1,Math.ceil(cards.length/pageSize));
+  previewPageIndex=Math.max(0,Math.min(previewPageIndex,pages-1));
   previewCount.textContent=cards.length+" items";
+  previewPage.textContent=(previewPageIndex+1)+" / "+pages;
+  previewPrev.disabled=previewPageIndex===0;
+  previewNext.disabled=previewPageIndex>=pages-1;
   previewItems.innerHTML="";
-  const limit=36;
-  cards.slice(0,limit).forEach(({unit,entry})=>{
+  cards.slice(previewPageIndex*pageSize,(previewPageIndex+1)*pageSize).forEach(({entry})=>{
    const chip=document.createElement("span");chip.className="thematic-preview-chip";
    const card=entry.card||{},key=entry.key;
    if(entry.kind==="kanji"){
     const data=KANJI.find(k=>("kanji:"+k.c)===key);
     chip.classList.add("kanji");
-    chip.textContent=(data?.c||key.replace("kanji:",""))+(data?.en?.length?" · "+data.en.slice(0,2).join(", "):"");
-    chip.title=data?.en?.join(", ")||chip.textContent;
+    chip.textContent=data?.c||key.replace("kanji:","");
    }else if(entry.kind==="hiragana"||entry.kind==="katakana"){
     chip.classList.add("kana");
-    chip.textContent=(card.jp||"")+(card.reading?" · "+card.reading:"");
-    chip.title=card.reading||card.jp||"";
+    chip.textContent=card.jp||"";
    }else{
     chip.classList.add("vocab");
-    const meanings=[...(card.es||[]).slice(0,2)];
-    chip.textContent=(card.jp||"")+(card.reading&&card.reading!==card.jp?" · "+card.reading:"")+(meanings.length?" · "+meanings.join(", "):"");
-    chip.title=[card.jp,card.reading,...(card.es||[]),...(card.en||[])].filter(Boolean).join(" · ");
+    chip.textContent=card.jp||"";
    }
+   chip.title=chip.textContent;
    previewItems.append(chip);
   });
-  if(cards.length>limit){previewMore.textContent="Showing "+limit+" of "+cards.length+" items. Select one unit at a time for a more focused preview.";previewMore.classList.remove("hidden")}else{previewMore.textContent="";previewMore.classList.add("hidden")}
  }
 
  function showMode(mode){
@@ -339,6 +341,7 @@ function initThematicContentControls(){
   thematic.classList.toggle("primary",isThematic);thematic.classList.toggle("ghost",!isThematic);thematic.setAttribute("aria-pressed",String(isThematic));
   if(isThematic){render();renderPreview()}else preview.classList.add("hidden");
  }
+ previewPrev.addEventListener("click",()=>{previewPageIndex--;renderPreview(false)});previewNext.addEventListener("click",()=>{previewPageIndex++;renderPreview(false)});
  granular.addEventListener("click",()=>showMode("granular"));thematic.addEventListener("click",()=>showMode("thematic"));
  document.getElementById("markThematicKnown").addEventListener("click",()=>{
   const chosen=selectedUnits();if(!chosen.length){message.textContent="Select at least one unit.";return}
