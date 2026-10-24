@@ -6,7 +6,7 @@ Kaado ISI is a static web app for studying Japanese vocabulary, kana, and kanji 
 
 ## Content
 
-- **Vocabulary:** Japanese words with readings and English and Spanish meanings, organized by textbook topic.
+- **Vocabulary:** Japanese words with readings and English and Spanish meanings, organized by textbook and topic. Supported textbooks are できる日本語初中級 and できる日本語中級. The intermediate textbook is registered and ready for content; no vocabulary is included yet.
 - **Kanji · 初級 II:** Kanji from 漢字HSJ初級II, with kunyomi, onyomi, and meaning prompts.
 - **Kana:** Hiragana and katakana are prerequisite study content before kanji.
 - **Kanji reference data:** JLPT, Jōyō grade, and WaniKani levels where available.
