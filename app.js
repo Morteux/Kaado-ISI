@@ -313,7 +313,7 @@ function initThematicContentControls(){
   if(!confirm("Set "+cards.length+" cards across "+chosen.length+" unit(s) to Stage "+stage+"? Existing progress will be replaced."))return;
   const now=Date.now();
   cards.forEach(({key,card})=>{store[key]=KaadoSRS.manualStageTransition({previousState:state({key}),card,key,stage,now})});
-  save();render();renderList();renderKanjiCatalog?.();
+  save();render();renderList();
   message.textContent=cards.length+" cards set to Stage "+stage+".";
  });
  document.getElementById("forceThematicReview").addEventListener("click",()=>{
@@ -325,7 +325,7 @@ function initThematicContentControls(){
    const next=KaadoSRS.manualStageTransition({previousState:old,card,key,stage:targetStage,now});
    store[key]={...next,seen:Math.max(1,Number(next.seen)||0),due:now};
   });
-  save();render();renderList();renderKanjiCatalog?.();buildQueue();
+  save();render();renderList();buildQueue();
   message.textContent=cards.length+" cards from "+chosen.length+" unit(s) are available for review now. Their stage will continue normally after review.";
  });
  render();
