@@ -677,9 +677,51 @@ const DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS = [
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"10-2",mainTopic:"10",topicTitle:"ガイドブックを片手に"}));
 
 
+const DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS = [
+{jp:"彼",reading:"かれ",en:["he","him","boyfriend"],es:["él","novio"]},
+{jp:"彼女",reading:"かのじょ",en:["she","her","girlfriend"],es:["ella","novia"]},
+{jp:"こと（例：将来のこと）",reading:"こと",en:["thing","matter","about ..."],es:["asunto","cosa","sobre ..."]},
+{jp:"興味",reading:"きょうみ",en:["interest"],es:["interés"]},
+{jp:"ボランティア",reading:"ボランティア",en:["volunteer","volunteer work"],es:["voluntariado","voluntario"]},
+{jp:"物価",reading:"ぶっか",en:["prices","cost of living"],es:["precios","coste de vida"]},
+{jp:"敬語",reading:"けいご",en:["honorific language","polite language"],es:["lenguaje honorífico","lenguaje respetuoso"]},
+{jp:"文化",reading:"ぶんか",en:["culture"],es:["cultura"]},
+{jp:"違い",reading:"ちがい",en:["difference"],es:["diferencia"]},
+{jp:"無理",reading:"むり",en:["impossible","unreasonable","too much"],es:["imposible","irrazonable","excesivo"]},
+{jp:"無理をする",reading:"むりをする",en:["to overdo it","to push oneself too hard"],es:["forzarse demasiado","exigirse demasiado"]},
+{jp:"～代（例：食事代）",reading:"～だい",en:["fee","cost","charge for ..."],es:["coste de ...","gasto de ..."]},
+{jp:"持つ",reading:"もつ",en:["to have","to hold","to maintain"],es:["tener","sostener","mantener"]},
+{jp:"興味を持つ",reading:"きょうみをもつ",en:["to be interested in"],es:["tener interés en"]},
+{jp:"節約する",reading:"せつやくする",en:["to save","to economize"],es:["ahorrar","economizar"]},
+{jp:"外食する",reading:"がいしょくする",en:["to eat out"],es:["comer fuera"]},
+{jp:"ダイエットする",reading:"ダイエットする",en:["to go on a diet","to diet"],es:["hacer dieta"]},
+{jp:"太る",reading:"ふとる",en:["to gain weight","to get fat"],es:["engordar","ganar peso"]},
+{jp:"折れる",reading:"おれる",en:["to break","to snap","to be bent"],es:["romperse","partirse","doblarse"]},
+{jp:"故障する",reading:"こしょうする",en:["to break down","to malfunction"],es:["averiarse","estropearse"]},
+{jp:"学ぶ",reading:"まなぶ",en:["to learn","to study"],es:["aprender","estudiar"]},
+{jp:"育てる",reading:"そだてる",en:["to raise","to bring up","to grow"],es:["criar","educar","cultivar"]},
+{jp:"研究する",reading:"けんきゅうする",en:["to research","to conduct research"],es:["investigar","realizar una investigación"]},
+{jp:"あんまり",reading:"あんまり",en:["not very","not much (usually with a negative)"],es:["no mucho","no demasiado (normalmente con negación)"]},
+{jp:"だいたい",reading:"だいたい",en:["mostly","generally","approximately"],es:["por lo general","más o menos","aproximadamente"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"11-1",mainTopic:"11",topicTitle:"慣れてくると"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS = [
+{jp:"駅前",reading:"えきまえ",en:["in front of the station","station area"],es:["delante de la estación","zona de la estación"]},
+{jp:"具合",reading:"ぐあい",en:["condition","state","how one feels"],es:["estado","condición","cómo se encuentra alguien"]},
+{jp:"区役所",reading:"くやくしょ",en:["ward office"],es:["oficina del distrito municipal"]},
+{jp:"今夜",reading:"こんや",en:["tonight"],es:["esta noche"]},
+{jp:"出張する",reading:"しゅっちょうする",en:["to go on a business trip"],es:["ir de viaje de negocios"]},
+{jp:"打つ",reading:"うつ",en:["to hit","to strike","to bat"],es:["golpear","pegar","batear"]},
+{jp:"回る",reading:"まわる",en:["to go around","to turn","to visit several places"],es:["dar vueltas","girar","recorrer varios lugares"]},
+{jp:"投げる",reading:"なげる",en:["to throw","to toss"],es:["lanzar","tirar"]},
+{jp:"あきらめる",reading:"あきらめる",en:["to give up","to abandon"],es:["rendirse","abandonar"]},
+{jp:"出張",reading:"しゅっちょう",en:["business trip"],es:["viaje de negocios"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"11-2",mainTopic:"11",topicTitle:"スポーツチームに入って"}));
+
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
