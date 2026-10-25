@@ -1792,3 +1792,16 @@ main {
     padding:9px;
   }
 }
+
+
+/* Review interval cards reuse the established stage difficulty palette. */
+.review-interval-item{color:var(--stage-color);border-color:color-mix(in srgb,var(--stage-color) 48%,var(--line));background:var(--stage-bg)}
+.review-interval-item.stage-color-0{--stage-bg:var(--stage-bg-0)}
+.review-interval-item.stage-color-1{--stage-bg:var(--stage-bg-1)}
+.review-interval-item.stage-color-2{--stage-bg:var(--stage-bg-2)}
+.review-interval-item.stage-color-3{--stage-bg:var(--stage-bg-3)}
+.review-interval-item.stage-color-4{--stage-bg:var(--stage-bg-4)}
+.review-interval-item.stage-color-5{--stage-bg:var(--stage-bg-5)}
+.review-interval-item.stage-color-6{--stage-bg:var(--stage-bg-6)}
+.review-interval-item.stage-color-7{--stage-bg:var(--stage-bg-7)}
+.review-interval-item.stage-color-8{--stage-bg:var(--stage-bg-8)}
