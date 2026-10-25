@@ -341,10 +341,6 @@ const DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS = [
 {jp:"確かに",reading:"たしかに",en:["certainly","indeed"],es:["ciertamente","desde luego"]},
 {jp:"それが……",reading:"それが……",en:["well, the thing is..."],es:["es que...","lo que pasa es que..."]},
 {jp:"どうしよう",reading:"どうしよう",en:["What should I do?","What am I going to do?"],es:["¿Qué hago?","¿Qué voy a hacer?"]},
-{jp:"本当に",reading:"ほんとうに",en:["really","truly"],es:["de verdad","realmente"]},
-{jp:"もう少し",reading:"もうすこし",en:["a little more","a bit longer"],es:["un poco más"]},
-{jp:"ゆっくり",reading:"ゆっくり",en:["slowly","at a relaxed pace"],es:["despacio","con calma"]},
-{jp:"ゆっくり話してください",reading:"ゆっくりはなしてください",en:["Please speak slowly."],es:["Por favor, hable despacio."]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"5-1",mainTopic:"5",topicTitle:"困ったな……"}));
 
 const DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS = [
@@ -362,6 +358,11 @@ const DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS = [
 {jp:"戻る",reading:"もどる",en:["to return","to go back"],es:["volver","regresar"]},
 {jp:"すぐ",reading:"すぐ",en:["immediately","right away","soon"],es:["enseguida","inmediatamente"]},
 {jp:"びっくり",reading:"びっくり",en:["surprise","astonishment"],es:["sorpresa","asombro"]}
+,
+{jp:"本当に",reading:"ほんとうに",en:["really","truly"],es:["de verdad","realmente"]},
+{jp:"もう少し",reading:"もうすこし",en:["a little more","a bit longer"],es:["un poco más"]},
+{jp:"ゆっくり",reading:"ゆっくり",en:["slowly","at a relaxed pace"],es:["despacio","con calma"]},
+{jp:"ゆっくり話してください",reading:"ゆっくりはなしてください",en:["Please speak slowly."],es:["Por favor, hable despacio."]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"5-2",mainTopic:"5",topicTitle:"駅で"}));
 
 
