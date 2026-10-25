@@ -866,7 +866,7 @@ const DEKIRU_SHOCHUKYU_TOPIC_14_1_WORDS = [
 {jp:"～県（例：長崎県）",reading:"～けん（れい：ながさきけん）",en:["... Prefecture (e.g. Nagasaki Prefecture)"],es:["prefectura de ... (p. ej., prefectura de Nagasaki)"]},
 {jp:"祈る",reading:"いのる",en:["to pray","to wish for"],es:["rezar","desear"]},
 {jp:"祝う",reading:"いわう",en:["to celebrate","to congratulate"],es:["celebrar","felicitar"]},
-{jp:"包む",reading:"つつむ",en:["to wrap","to包む"],es:["envolver","empaquetar"]},
+{jp:"包む",reading:"つつむ",en:["to wrap","to package"],es:["envolver","empaquetar"]},
 {jp:"お祝いする",reading:"おいわいする",en:["to celebrate","to congratulate"],es:["celebrar","felicitar"]},
 {jp:"成長する",reading:"せいちょうする",en:["to grow","to develop"],es:["crecer","desarrollarse"]},
 {jp:"感謝する",reading:"かんしゃする",en:["to thank","to express gratitude"],es:["agradecer","expresar gratitud"]},
