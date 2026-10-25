@@ -1805,3 +1805,8 @@ main {
 .review-interval-item.stage-color-6{--stage-bg:var(--stage-bg-6)}
 .review-interval-item.stage-color-7{--stage-bg:var(--stage-bg-7)}
 .review-interval-item.stage-color-8{--stage-bg:var(--stage-bg-8)}
+
+
+/* Selected individual cards use border thickness, preserving stage/status colors. */
+#studyListResults .individual-content-row { box-sizing:border-box; }
+#studyListResults .individual-content-row.is-selected { border-width:3px; }
