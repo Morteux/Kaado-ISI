@@ -719,9 +719,66 @@ const DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS = [
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"11-2",mainTopic:"11",topicTitle:"スポーツチームに入って"}));
 
 
+const DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS = [
+{jp:"おにぎり",reading:"おにぎり",en:["rice ball","onigiri"],es:["bola de arroz","onigiri"]},
+{jp:"元気",reading:"げんき",en:["healthy","energetic","well"],es:["sano","con energía","bien"]},
+{jp:"元気がない",reading:"げんきがない",en:["to feel unwell","to lack energy","to be down"],es:["encontrarse mal","estar sin energía","estar decaído"]},
+{jp:"胃",reading:"い",en:["stomach"],es:["estómago"]},
+{jp:"痛み",reading:"いたみ",en:["pain","ache"],es:["dolor","molestia"]},
+{jp:"疲れ",reading:"つかれ",en:["fatigue","tiredness"],es:["cansancio","fatiga"]},
+{jp:"湿布",reading:"しっぷ",en:["medicated patch","compress"],es:["parche medicinal","compresa"]},
+{jp:"うがい",reading:"うがい",en:["gargling"],es:["hacer gárgaras"]},
+{jp:"ジム",reading:"ジム",en:["gym"],es:["gimnasio"]},
+{jp:"氷",reading:"こおり",en:["ice"],es:["hielo"]},
+{jp:"ドレッシング",reading:"ドレッシング",en:["salad dressing"],es:["aliño","aderezo para ensalada"]},
+{jp:"～金（例：入会金）",reading:"～きん",en:["fee","charge"],es:["cuota","tarifa"]},
+{jp:"酔う",reading:"よう",en:["to get drunk","to get motion sick"],es:["emborracharse","marearse"]},
+{jp:"取れる",reading:"とれる",en:["to come off","to be removed","to recover"],es:["desprenderse","quitarse","recuperarse"]},
+{jp:"入会する",reading:"にゅうかいする",en:["to join","to become a member"],es:["inscribirse","hacerse socio"]},
+{jp:"さす（傘をさす）",reading:"さす",en:["to put up/open (an umbrella)"],es:["abrir","usar (un paraguas)"]},
+{jp:"ガンガン",reading:"ガンガン",en:["throbbingly","pounding (pain)"],es:["intensamente","con dolor pulsátil"]},
+{jp:"パンパン",reading:"パンパン",en:["swollen","tight and full"],es:["hinchado","muy lleno y tenso"]},
+{jp:"フラフラ",reading:"フラフラ",en:["dizzy","unsteady","weak"],es:["mareado","inestable","débil"]},
+{jp:"ムカムカ",reading:"ムカムカ",en:["nauseated","queasy","irritated"],es:["con náuseas","revuelto","irritado"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"12-1",mainTopic:"12",topicTitle:"体調不良"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS = [
+{jp:"肩",reading:"かた",en:["shoulder"],es:["hombro"]},
+{jp:"首",reading:"くび",en:["neck"],es:["cuello"]},
+{jp:"カロリー",reading:"カロリー",en:["calorie"],es:["caloría"]},
+{jp:"ジューサー",reading:"ジューサー",en:["juicer"],es:["licuadora","extractor de zumos"]},
+{jp:"体脂肪計",reading:"たいしぼうけい",en:["body fat scale","body fat monitor"],es:["báscula de grasa corporal","medidor de grasa corporal"]},
+{jp:"体脂肪率",reading:"たいしぼうりつ",en:["body fat percentage"],es:["porcentaje de grasa corporal"]},
+{jp:"ネックストレッチ",reading:"ネックストレッチ",en:["neck stretch"],es:["estiramiento de cuello"]},
+{jp:"マッサージ器",reading:"マッサージき",en:["massager","massage device"],es:["masajeador","aparato de masaje"]},
+{jp:"万歩計",reading:"まんぽけい",en:["pedometer","step counter"],es:["podómetro","contador de pasos"]},
+{jp:"ストレス",reading:"ストレス",en:["stress"],es:["estrés"]},
+{jp:"虫歯",reading:"むしば",en:["cavity","tooth decay"],es:["caries"]},
+{jp:"ビタミンC",reading:"ビタミンシー",en:["vitamin C"],es:["vitamina C"]},
+{jp:"方法",reading:"ほうほう",en:["method","way"],es:["método","manera"]},
+{jp:"健康",reading:"けんこう",en:["health","healthy"],es:["salud","saludable"]},
+{jp:"栄養",reading:"えいよう",en:["nutrition","nutrients"],es:["nutrición","nutrientes"]},
+{jp:"ショウガ",reading:"ショウガ",en:["ginger"],es:["jengibre"]},
+{jp:"バランス",reading:"バランス",en:["balance"],es:["equilibrio"]},
+{jp:"～不足（例：運動不足）",reading:"～ぶそく",en:["lack of ...","insufficient ..."],es:["falta de ...","insuficiencia de ..."]},
+{jp:"取る（疲れを取る）",reading:"とる",en:["to relieve","to get rid of (fatigue)"],es:["quitar","aliviar (el cansancio)"]},
+{jp:"測る",reading:"はかる",en:["to measure"],es:["medir"]},
+{jp:"計算する",reading:"けいさんする",en:["to calculate"],es:["calcular"]},
+{jp:"マッサージする",reading:"マッサージする",en:["to massage"],es:["dar un masaje","masajear"]},
+{jp:"たまる",reading:"たまる",en:["to build up","to accumulate"],es:["acumularse","amontonarse"]},
+{jp:"やせる",reading:"やせる",en:["to lose weight","to become thin"],es:["adelgazar","perder peso"]},
+{jp:"こる",reading:"こる",en:["to become stiff","to get tense"],es:["agarrotarse","ponerse tenso"]},
+{jp:"動かす",reading:"うごかす",en:["to move","to operate"],es:["mover","poner en movimiento"]},
+{jp:"眠る",reading:"ねむる",en:["to sleep"],es:["dormir"]},
+{jp:"冷える",reading:"ひえる",en:["to get cold","to become chilled"],es:["enfriarse","quedarse frío"]},
+{jp:"このごろ",reading:"このごろ",en:["recently","these days","lately"],es:["últimamente","estos días"]},
+{jp:"ふーん",reading:"ふーん",en:["Hmm","I see","Is that so?"],es:["mmm","ya veo","¿ah, sí?"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"12-2",mainTopic:"12",topicTitle:"毎日、元気に！"}));
+
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
