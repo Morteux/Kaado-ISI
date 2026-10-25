@@ -421,9 +421,58 @@ const DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS = [
 {jp:"お願いします",reading:"おねがいします",en:["please","I'd appreciate it"],es:["por favor","se lo agradezco"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"6-2",mainTopic:"6",topicTitle:"旅行の準備"}));
 
+const DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS = [
+{jp:"会議",reading:"かいぎ",en:["meeting","conference"],es:["reunión","conferencia"]},
+{jp:"課長",reading:"かちょう",en:["section chief","section manager"],es:["jefe de sección","responsable de sección"]},
+{jp:"社長",reading:"しゃちょう",en:["company president","CEO"],es:["presidente de la empresa","director general"]},
+{jp:"ご存じ",reading:"ごぞんじ",en:["to know (honorific)","be aware of"],es:["saber (honorífico)","conocer"]},
+{jp:"どなた",reading:"どなた",en:["who (polite)"],es:["quién (formal)"]},
+{jp:"ミステリー",reading:"ミステリー",en:["mystery","mystery story"],es:["misterio","novela de misterio"]},
+{jp:"出身",reading:"しゅっしん",en:["hometown","place of origin"],es:["lugar de origen","procedencia"]},
+{jp:"ごろ",reading:"ごろ",en:["around (a time)","approximately"],es:["alrededor de (una hora)","aproximadamente"]},
+{jp:"いらっしゃる",reading:"いらっしゃる",en:["to be","to come","to go (honorific)"],es:["estar","venir","ir (honorífico)"]},
+{jp:"おっしゃる",reading:"おっしゃる",en:["to say (honorific)"],es:["decir (honorífico)"]},
+{jp:"ご覧になる",reading:"ごらんになる",en:["to see","to look at (honorific)"],es:["ver","mirar (honorífico)"]},
+{jp:"なさる",reading:"なさる",en:["to do (honorific)"],es:["hacer (honorífico)"]},
+{jp:"召し上がる",reading:"めしあがる",en:["to eat","to drink (honorific)"],es:["comer","beber (honorífico)"]},
+{jp:"出席・する",reading:"しゅっせきする",en:["to attend","to be present"],es:["asistir","estar presente"]},
+{jp:"退院・する",reading:"たいいんする",en:["to leave hospital","to be discharged"],es:["recibir el alta","salir del hospital"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"7-1",mainTopic:"7",topicTitle:"初めての訪問"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS = [
+{jp:"パスタ",reading:"パスタ",en:["pasta"],es:["pasta"]},
+{jp:"味",reading:"あじ",en:["taste","flavor"],es:["sabor"]},
+{jp:"はちみつ",reading:"はちみつ",en:["honey"],es:["miel"]},
+{jp:"みそ汁",reading:"みそしる",en:["miso soup"],es:["sopa de miso"]},
+{jp:"火",reading:"ひ",en:["heat","flame","fire"],es:["fuego","llama"]},
+{jp:"強火",reading:"つよび",en:["high heat"],es:["fuego fuerte"]},
+{jp:"弱火",reading:"よわび",en:["low heat"],es:["fuego bajo"]},
+{jp:"ルー",reading:"ルー",en:["curry roux","roux"],es:["roux","base para curry"]},
+{jp:"グラム",reading:"グラム",en:["gram"],es:["gramo"]},
+{jp:"できあがり",reading:"できあがり",en:["finished result","ready","completion"],es:["resultado final","listo","terminación"]},
+{jp:"むく",reading:"むく",en:["to peel"],es:["pelar"]},
+{jp:"焼く",reading:"やく",en:["to grill","to bake","to roast","to fry"],es:["asar","hornear","freír"]},
+{jp:"沸かす",reading:"わかす",en:["to boil (water)"],es:["hervir (agua)"]},
+{jp:"冷やす",reading:"ひやす",en:["to cool","to chill"],es:["enfriar"]},
+{jp:"煮る",reading:"にる",en:["to simmer","to boil","to stew"],es:["cocer","hervir a fuego lento","guisar"]},
+{jp:"ゆでる",reading:"ゆでる",en:["to boil","to cook in boiling water"],es:["hervir","cocer en agua"]},
+{jp:"変わる",reading:"かわる",en:["to change","to vary"],es:["cambiar","variar"]},
+{jp:"沸騰・する",reading:"ふっとうする",en:["to boil","to come to a boil"],es:["hervir","llegar a ebullición"]},
+{jp:"炒める",reading:"いためる",en:["to stir-fry","to sauté"],es:["saltear"]},
+{jp:"厚い",reading:"あつい",en:["thick"],es:["grueso","espeso"]},
+{jp:"薄い",reading:"うすい",en:["thin","watery","weak (flavor)"],es:["fino","aguado","suave (de sabor)"]},
+{jp:"濃い",reading:"こい",en:["strong","浓い","thick","rich (flavor)"],es:["intenso","concentrado","espeso"]},
+{jp:"細かい",reading:"こまかい",en:["fine","small","detailed"],es:["fino","pequeño","detallado"]},
+{jp:"細い",reading:"ほそい",en:["thin","narrow","slender"],es:["delgado","estrecho"]},
+{jp:"弱い",reading:"よわい",en:["weak","low (heat)"],es:["débil","bajo (fuego)"]},
+{jp:"まず",reading:"まず",en:["first","to begin with"],es:["primero","para empezar"]},
+{jp:"次に",reading:"つぎに",en:["next","then"],es:["después","a continuación"]},
+{jp:"最後に",reading:"さいごに",en:["finally","lastly"],es:["por último","finalmente"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"7-2",mainTopic:"7",topicTitle:"一緒に作りましょう"}));
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
