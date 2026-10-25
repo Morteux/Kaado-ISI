@@ -901,7 +901,27 @@ const DEKIRU_SHOCHUKYU_TOPIC_14_2_WORDS = [
 {jp:"彼女",reading:"かのじょ",en:["she","girlfriend"],es:["ella","novia"]},
 {jp:"彼",reading:"かれ",en:["he","boyfriend"],es:["él","novio"]},
 {jp:"みんな",reading:"みんな",en:["everyone","everybody"],es:["todos","todo el mundo"]},
-{jp:"置物",reading:"おきもの",en:["ornament","decorative object","figurine"],es:["adorno","objeto decorativo","figura"]}
+{jp:"置物",reading:"おきもの",en:["ornament","decorative object","figurine"],es:["adorno","objeto decorativo","figura"]},
+{jp:"火事",reading:"かじ",en:["fire","conflagration"],es:["incendio","fuego"]},
+{jp:"カメ",reading:"カメ",en:["turtle","tortoise"],es:["tortuga"]},
+{jp:"菊",reading:"きく",en:["chrysanthemum"],es:["crisantemo"]},
+{jp:"くし",reading:"くし",en:["comb"],es:["peine"]},
+{jp:"5円玉",reading:"ごえんだま",en:["five-yen coin"],es:["moneda de cinco yenes"]},
+{jp:"食器",reading:"しょっき",en:["tableware","dishes"],es:["vajilla"]},
+{jp:"シンボル",reading:"シンボル",en:["symbol"],es:["símbolo"]},
+{jp:"ストーブ",reading:"ストーブ",en:["heater","stove"],es:["estufa","calefactor"]},
+{jp:"（お）葬式",reading:"（お）そうしき",en:["funeral"],es:["funeral"]},
+{jp:"涙",reading:"なみだ",en:["tear"],es:["lágrima"]},
+{jp:"ハンカチ",reading:"ハンカチ",en:["handkerchief"],es:["pañuelo"]},
+{jp:"（お）見舞い",reading:"（お）みまい",en:["visit to someone who is ill","get-well visit"],es:["visita a un enfermo","visita para dar ánimos"]},
+{jp:"ライター",reading:"ライター",en:["lighter"],es:["mechero","encendedor"]},
+{jp:"～祝い（例：結婚祝い）",reading:"～いわい（れい：けっこんいわい）",en:["celebration gift for ... (e.g. wedding gift)"],es:["regalo de celebración por ... (p. ej., boda)"]},
+{jp:"贈る",reading:"おくる",en:["to give","to present","to send (a gift)"],es:["regalar","obsequiar","enviar (un regalo)"]},
+{jp:"増える",reading:"ふえる",en:["to increase","to grow in number"],es:["aumentar","incrementarse"]},
+{jp:"発音する",reading:"はつおんする",en:["to pronounce"],es:["pronunciar"]},
+{jp:"連想する",reading:"れんそうする",en:["to associate","to imagine by association"],es:["asociar","evocar"]},
+{jp:"恥ずかしい",reading:"はずかしい",en:["embarrassing","ashamed","shy"],es:["vergonzoso","avergonzado","tímido"]},
+{jp:"嫌（な）",reading:"いや（な）",en:["unpleasant","unwilling","disliked"],es:["desagradable","reacio","que no gusta"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"14-2",mainTopic:"14",topicTitle:"贈り物の習慣"}));
 
 
