@@ -561,6 +561,14 @@ const DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS = [
 {jp:"絶対に",reading:"ぜったいに",en:["absolutely","definitely","never (with negative)"],es:["absolutamente","sin falta","de ninguna manera (con negación)"]},
 {jp:"はっきり",reading:"はっきり",en:["clearly","distinctly"],es:["claramente","con claridad"]},
 {jp:"大きな",reading:"おおきな",en:["big","large"],es:["grande"]},
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"9-1",mainTopic:"9",topicTitle:"アルバイト先のルール"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS = [
+{jp:"お手洗い",reading:"おてあらい",en:["restroom","toilet"],es:["baño","servicio"]},
+{jp:"ガソリン",reading:"ガソリン",en:["gasoline","petrol"],es:["gasolina"]},
+{jp:"ひも",reading:"ひも",en:["string","cord","lace"],es:["cordón","cuerda","cordel"]},
+{jp:"袋",reading:"ふくろ",en:["bag","sack"],es:["bolsa","saco"]},
+{jp:"モップ",reading:"モップ",en:["mop"],es:["fregona","mopa"]},
 {jp:"引き出し",reading:"ひきだし",en:["drawer"],es:["cajón"]},
 {jp:"バター",reading:"バター",en:["butter"],es:["mantequilla"]},
 {jp:"鍋",reading:"なべ",en:["pot","cooking pot"],es:["olla"]},
@@ -582,14 +590,6 @@ const DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS = [
 {jp:"少々",reading:"しょうしょう",en:["a little","a moment (polite)"],es:["un poco","un momento (formal)"]},
 {jp:"お先にどうぞ",reading:"おさきにどうぞ",en:["please go ahead","after you"],es:["adelante, por favor","pase usted primero"]},
 {jp:"申し訳ないんですが",reading:"もうしわけないんですが",en:["I'm sorry, but...","I hate to ask, but..."],es:["lo siento, pero...","perdone que se lo pida, pero..."]}
-].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"9-1",mainTopic:"9",topicTitle:"アルバイト先のルール"}));
-
-const DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS = [
-{jp:"お手洗い",reading:"おてあらい",en:["restroom","toilet"],es:["baño","servicio"]},
-{jp:"ガソリン",reading:"ガソリン",en:["gasoline","petrol"],es:["gasolina"]},
-{jp:"ひも",reading:"ひも",en:["string","cord","lace"],es:["cordón","cuerda","cordel"]},
-{jp:"袋",reading:"ふくろ",en:["bag","sack"],es:["bolsa","saco"]},
-{jp:"モップ",reading:"モップ",en:["mop"],es:["fregona","mopa"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"9-2",mainTopic:"9",topicTitle:"楽しいアルバイト"}));
 
 
