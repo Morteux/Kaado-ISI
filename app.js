@@ -294,9 +294,79 @@ const DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS = [
 {jp:"デッサンする",reading:"デッサンする",en:["to sketch"],es:["hacer un boceto"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"3-2",mainTopic:"3",topicTitle:"夢に向かって"}));
 
+
+const DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS = [
+{jp:"池",reading:"いけ",en:["pond"],es:["estanque"]},
+{jp:"階段",reading:"かいだん",en:["stairs","staircase"],es:["escaleras"]},
+{jp:"切符",reading:"きっぷ",en:["ticket"],es:["billete","boleto"]},
+{jp:"線路",reading:"せんろ",en:["railway track","railroad track"],es:["vía férrea"]},
+{jp:"定期券",reading:"ていきけん",en:["commuter pass","season ticket"],es:["abono de transporte"]},
+{jp:"ケース",reading:"ケース",en:["case"],es:["estuche","funda"]},
+{jp:"忘れ物",reading:"わすれもの",en:["lost item","something left behind"],es:["objeto perdido","objeto olvidado"]},
+{jp:"鍵",reading:"かぎ",en:["key","lock"],es:["llave","cerradura"]},
+{jp:"辺",reading:"へん",en:["area","vicinity"],es:["zona","alrededores"]},
+{jp:"途中",reading:"とちゅう",en:["on the way"],es:["por el camino","a medio camino"]},
+{jp:"カード",reading:"カード",en:["card"],es:["tarjeta"]},
+{jp:"銀行のカード",reading:"ぎんこうのカード",en:["bank card"],es:["tarjeta bancaria"]},
+{jp:"革",reading:"かわ",en:["leather"],es:["cuero","piel"]},
+{jp:"教科書",reading:"きょうかしょ",en:["textbook"],es:["libro de texto"]},
+{jp:"警官",reading:"けいかん",en:["police officer"],es:["agente de policía"]},
+{jp:"ハート",reading:"ハート",en:["heart","heart shape"],es:["corazón"]},
+{jp:"ピンク",reading:"ピンク",en:["pink"],es:["rosa"]},
+{jp:"星",reading:"ほし",en:["star"],es:["estrella"]},
+{jp:"緑",reading:"みどり",en:["green"],es:["verde"]},
+{jp:"横長",reading:"よこなが",en:["landscape orientation","wider than tall"],es:["formato apaisado","más ancho que alto"]},
+{jp:"色",reading:"いろ",en:["color"],es:["color"]},
+{jp:"大きさ",reading:"おおきさ",en:["size"],es:["tamaño"]},
+{jp:"形",reading:"かたち",en:["shape","form"],es:["forma"]},
+{jp:"預かる",reading:"あずかる",en:["to keep","to look after","to take custody of"],es:["guardar","custodiar"]},
+{jp:"落とす",reading:"おとす",en:["to drop","to lose"],es:["dejar caer","perder"]},
+{jp:"なくなる",reading:"なくなる",en:["to be lost","to go missing","to disappear"],es:["perderse","desaparecer"]},
+{jp:"乗り過ごす",reading:"のりすごす",en:["to ride past one's stop"],es:["pasarse de parada"]},
+{jp:"間違える",reading:"まちがえる",en:["to make a mistake","to get wrong"],es:["equivocarse"]},
+{jp:"迷う",reading:"まよう",en:["to get lost","to be unsure"],es:["perderse","estar indeciso"]},
+{jp:"転ぶ",reading:"ころぶ",en:["to fall down","to trip"],es:["caerse","tropezar"]},
+{jp:"心配する",reading:"しんぱいする",en:["to worry"],es:["preocuparse"]},
+{jp:"気がつく",reading:"きがつく",en:["to notice","to realize"],es:["darse cuenta","notar"]},
+{jp:"付く",reading:"つく",en:["to be attached","to have something attached"],es:["estar unido","tener algo incorporado"]},
+{jp:"見つかる",reading:"みつかる",en:["to be found","to turn up"],es:["encontrarse","aparecer"]},
+{jp:"出る",reading:"でる",en:["to leave","to exit"],es:["salir"]},
+{jp:"乗り換える",reading:"のりかえる",en:["to transfer","to change trains"],es:["hacer transbordo","cambiar de tren"]},
+{jp:"連絡する",reading:"れんらくする",en:["to contact","to get in touch"],es:["contactar","ponerse en contacto"]},
+{jp:"困る",reading:"こまる",en:["to be in trouble","to be at a loss"],es:["estar en un apuro","no saber qué hacer"]},
+{jp:"さっき",reading:"さっき",en:["a moment ago","just now"],es:["hace un momento","justo ahora"]},
+{jp:"しばらく",reading:"しばらく",en:["for a while","for some time"],es:["un rato","durante un tiempo"]},
+{jp:"全部で",reading:"ぜんぶで",en:["in total","altogether"],es:["en total"]},
+{jp:"急に",reading:"きゅうに",en:["suddenly"],es:["de repente"]},
+{jp:"確かに",reading:"たしかに",en:["certainly","indeed"],es:["ciertamente","desde luego"]},
+{jp:"それが……",reading:"それが……",en:["well, the thing is..."],es:["es que...","lo que pasa es que..."]},
+{jp:"どうしよう",reading:"どうしよう",en:["What should I do?","What am I going to do?"],es:["¿Qué hago?","¿Qué voy a hacer?"]},
+{jp:"本当に",reading:"ほんとうに",en:["really","truly"],es:["de verdad","realmente"]},
+{jp:"もう少し",reading:"もうすこし",en:["a little more","a bit longer"],es:["un poco más"]},
+{jp:"ゆっくり",reading:"ゆっくり",en:["slowly","at a relaxed pace"],es:["despacio","con calma"]},
+{jp:"ゆっくり話してください",reading:"ゆっくりはなしてください",en:["Please speak slowly."],es:["Por favor, hable despacio."]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"5-1",mainTopic:"5",topicTitle:"困ったな……"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS = [
+{jp:"コインロッカー",reading:"コインロッカー",en:["coin locker","coin-operated locker"],es:["taquilla de monedas","consigna automática"]},
+{jp:"特急",reading:"とっきゅう",en:["limited express train"],es:["tren exprés limitado"]},
+{jp:"終点",reading:"しゅうてん",en:["terminal station","last stop"],es:["estación terminal","última parada"]},
+{jp:"終電",reading:"しゅうでん",en:["last train of the day"],es:["último tren del día"]},
+{jp:"タクシー",reading:"タクシー",en:["taxi"],es:["taxi"]},
+{jp:"急行",reading:"きゅうこう",en:["express train"],es:["tren expreso"]},
+{jp:"アナウンスする",reading:"アナウンスする",en:["to make an announcement"],es:["anunciar","hacer un anuncio"]},
+{jp:"変える",reading:"かえる",en:["to change","to alter"],es:["cambiar","modificar"]},
+{jp:"安心する",reading:"あんしんする",en:["to feel relieved","to feel at ease"],es:["tranquilizarse","sentirse aliviado"]},
+{jp:"遅刻する",reading:"ちこくする",en:["to be late"],es:["llegar tarde"]},
+{jp:"寝坊する",reading:"ねぼうする",en:["to oversleep"],es:["quedarse dormido"]},
+{jp:"戻る",reading:"もどる",en:["to return","to go back"],es:["volver","regresar"]},
+{jp:"すぐ",reading:"すぐ",en:["immediately","right away","soon"],es:["enseguida","inmediatamente"]},
+{jp:"びっくり",reading:"びっくり",en:["surprise","astonishment"],es:["sorpresa","asombro"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"5-2",mainTopic:"5",topicTitle:"駅で"}));
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
