@@ -183,9 +183,54 @@ const DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS = [
 {jp:"もう一杯",reading:"もういっぱい",en:["one more cup","another glass","one more drink"],es:["otra taza","otro vaso","una bebida más"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"2-2",mainTopic:"2",topicTitle:"一緒に食事"}));
 
+const DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS = [
+{jp:"美容院",reading:"びよういん",en:["beauty salon","hair salon"],es:["peluquería","salón de belleza"]},
+{jp:"空港",reading:"くうこう",en:["airport"],es:["aeropuerto"]},
+{jp:"歯科",reading:"しか",en:["dentistry","dental clinic"],es:["odontología","clínica dental"]},
+{jp:"市民",reading:"しみん",en:["citizen","resident"],es:["ciudadano","residente"]},
+{jp:"三味線",reading:"しゃみせん",en:["shamisen","Japanese three-stringed instrument"],es:["shamisen","instrumento japonés de tres cuerdas"]},
+{jp:"種類",reading:"しゅるい",en:["type","kind","sort"],es:["tipo","clase"]},
+{jp:"水道",reading:"すいどう",en:["water supply","tap water"],es:["suministro de agua","agua corriente"]},
+{jp:"てんぷら",reading:"てんぷら",en:["tempura"],es:["tempura"]},
+{jp:"不動産",reading:"ふどうさん",en:["real estate","property"],es:["bienes inmuebles","inmobiliaria"]},
+{jp:"交流会",reading:"こうりゅうかい",en:["exchange gathering","social gathering"],es:["encuentro de intercambio","reunión social"]},
+{jp:"小学校",reading:"しょうがっこう",en:["elementary school","primary school"],es:["escuela primaria","colegio de primaria"]},
+{jp:"市役所",reading:"しやくしょ",en:["city hall","municipal office"],es:["ayuntamiento","oficina municipal"]},
+{jp:"情報",reading:"じょうほう",en:["information"],es:["información"]},
+{jp:"タオル",reading:"タオル",en:["towel"],es:["toalla"]},
+{jp:"茶道",reading:"さどう",en:["Japanese tea ceremony","tea ceremony"],es:["ceremonia japonesa del té","ceremonia del té"]},
+{jp:"センター",reading:"センター",en:["center","centre"],es:["centro"]},
+{jp:"～場",reading:"～じょう",en:["place","site","grounds"],es:["lugar","recinto"]},
+{jp:"～口",reading:"～ぐち",en:["entrance","exit","opening"],es:["entrada","salida","boca"]},
+{jp:"かかる",reading:"かかる",en:["to take time","to cost"],es:["tardar","costar"]},
+{jp:"質問する",reading:"しつもんする",en:["to ask a question","to inquire"],es:["hacer una pregunta","preguntar"]},
+{jp:"カットする",reading:"カットする",en:["to cut","to have a haircut"],es:["cortar","cortarse el pelo"]},
+{jp:"紹介する",reading:"しょうかいする",en:["to introduce","to recommend"],es:["presentar","recomendar"]},
+{jp:"修理する",reading:"しゅうりする",en:["to repair","to fix"],es:["reparar","arreglar"]},
+{jp:"知らせる",reading:"しらせる",en:["to inform","to let someone know"],es:["informar","avisar"]},
+{jp:"止まる",reading:"とまる",en:["to stop"],es:["pararse","detenerse"]},
+{jp:"出る",reading:"でる",en:["to leave","to depart","to come out"],es:["salir","partir"]},
+{jp:"着く",reading:"つく",en:["to arrive","to reach"],es:["llegar"]},
+{jp:"利用する",reading:"りようする",en:["to use","to make use of"],es:["utilizar","hacer uso de"]},
+{jp:"必要（な）",reading:"ひつよう（な）",en:["necessary","needed"],es:["necesario","preciso"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"4-1",mainTopic:"4",topicTitle:"生活を楽しむ"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS = [
+{jp:"大使館",reading:"たいしかん",en:["embassy"],es:["embajada"]},
+{jp:"メートル",reading:"メートル",en:["meter","metre"],es:["metro"]},
+{jp:"次",reading:"つぎ",en:["next"],es:["siguiente","próximo"]},
+{jp:"坂",reading:"さか",en:["slope","hill"],es:["cuesta","pendiente"]},
+{jp:"～階建て",reading:"～かいだて",en:["...-story building","building with ... floors"],es:["edificio de ... plantas","edificio de ... pisos"]},
+{jp:"～番線",reading:"～ばんせん",en:["platform number ...","track number ..."],es:["andén número ...","vía número ..."]},
+{jp:"～行き",reading:"～ゆき",en:["bound for ...","going to ..."],es:["con destino a ...","hacia ..."]},
+{jp:"上る",reading:"のぼる",en:["to go up","to climb"],es:["subir","ascender"]},
+{jp:"下りる",reading:"おりる",en:["to go down","to get off"],es:["bajar","descender"]},
+{jp:"駐車する",reading:"ちゅうしゃする",en:["to park"],es:["aparcar","estacionar"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"4-2",mainTopic:"4",topicTitle:"行き方を教える"}));
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
