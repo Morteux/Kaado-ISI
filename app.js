@@ -118,9 +118,74 @@ const DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS = [
 {jp:"朝早く",reading:"あさはやく",en:["early in the morning","early morning"],es:["temprano por la mañana","a primera hora de la mañana"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"1-2",mainTopic:"1",topicTitle:"新しい友達"}));
 
+// ── Vocabulary subtopics: できる日本語初中級 · Topic 2 ──
+const DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS = [
+{jp:"画面",reading:"がめん",en:["screen","display"],es:["pantalla"]},
+{jp:"腕時計",reading:"うでどけい",en:["wristwatch","watch"],es:["reloj de pulsera","reloj"]},
+{jp:"セーター",reading:"セーター",en:["sweater","jumper"],es:["jersey","suéter"]},
+{jp:"スーツケース",reading:"スーツケース",en:["suitcase"],es:["maleta"]},
+{jp:"コート",reading:"コート",en:["coat","overcoat"],es:["abrigo"]},
+{jp:"棚",reading:"たな",en:["shelf","shelving"],es:["estante","estantería"]},
+{jp:"指輪",reading:"ゆびわ",en:["ring"],es:["anillo"]},
+{jp:"サイズ",reading:"サイズ",en:["size"],es:["talla","tamaño"]},
+{jp:"数字",reading:"すうじ",en:["number","numeral","digit"],es:["número","cifra","dígito"]},
+{jp:"ヒール",reading:"ヒール",en:["heel","high heel"],es:["tacón"]},
+{jp:"ボタン",reading:"ボタン",en:["button"],es:["botón"]},
+{jp:"ジーンズ",reading:"ジーンズ",en:["jeans","denim jeans"],es:["vaqueros","pantalones vaqueros","jeans"]},
+{jp:"売り場",reading:"うりば",en:["sales floor","department","counter"],es:["sección de ventas","sección","mostrador"]},
+{jp:"動く",reading:"うごく",en:["to move","to work","to operate"],es:["moverse","funcionar","operar"]},
+{jp:"説明する",reading:"せつめいする",en:["to explain","to give an explanation"],es:["explicar","dar una explicación"]},
+{jp:"配達する",reading:"はいたつする",en:["to deliver","to make a delivery"],es:["entregar","repartir","hacer una entrega"]},
+{jp:"重い",reading:"おもい",en:["heavy"],es:["pesado","pesada"]},
+{jp:"軽い",reading:"かるい",en:["light","not heavy"],es:["ligero","ligera"]},
+{jp:"ちょうどいい",reading:"ちょうどいい",en:["just right","perfect","a good fit"],es:["justo","justa","perfecto","perfecta","adecuado","adecuada"]},
+{jp:"丈夫（な）",reading:"じょうぶ（な）",en:["durable","sturdy","strong","hard-wearing"],es:["resistente","duradero","duradera","robusto","robusta"]},
+{jp:"もっと",reading:"もっと",en:["more","even more"],es:["más","aún más"]},
+{jp:"ちょっと",reading:"ちょっと",en:["a little","a bit","just a moment"],es:["un poco","un momento"]},
+{jp:"いかがですか",reading:"いかがですか",en:["how about it?","would you like it?","how is it?"],es:["¿qué le parece?","¿qué tal?","¿le gustaría?"]},
+{jp:"かしこまりました",reading:"かしこまりました",en:["certainly","understood","right away"],es:["por supuesto","entendido","enseguida"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"2-1",mainTopic:"2",topicTitle:"上手に買い物"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS = [
+{jp:"壁",reading:"かべ",en:["wall"],es:["pared"]},
+{jp:"カレンダー",reading:"カレンダー",en:["calendar"],es:["calendario"]},
+{jp:"世界地図",reading:"せかいちず",en:["world map"],es:["mapamundi","mapa del mundo"]},
+{jp:"最新",reading:"さいしん",en:["latest","newest","most recent"],es:["último","última","más reciente","novedad"]},
+{jp:"飲み放題",reading:"のみほうだい",en:["all-you-can-drink","unlimited drinks"],es:["barra libre de bebidas","bebida ilimitada"]},
+{jp:"期間限定",reading:"きかんげんてい",en:["limited-time","for a limited time"],es:["por tiempo limitado","limitado por tiempo"]},
+{jp:"セット",reading:"セット",en:["set","combo","meal set"],es:["conjunto","menú","combo"]},
+{jp:"フロアガイド",reading:"フロアガイド",en:["floor guide","store directory"],es:["guía de plantas","directorio de la tienda"]},
+{jp:"意味",reading:"いみ",en:["meaning","sense"],es:["significado","sentido"]},
+{jp:"営業中",reading:"えいぎょうちゅう",en:["open","now open","in business"],es:["abierto","abierta","abierto al público"]},
+{jp:"大盛り",reading:"おおもり",en:["large serving","large portion","extra-large serving"],es:["ración grande","porción grande","ración extra grande"]},
+{jp:"おかわり",reading:"おかわり",en:["another serving","second helping","refill"],es:["otra ración","repetición","más","relleno"]},
+{jp:"送料",reading:"そうりょう",en:["shipping fee","delivery charge","postage"],es:["gastos de envío","coste de envío","porte"]},
+{jp:"タイムサービス",reading:"タイムサービス",en:["special offer for a limited time","time-limited sale","happy-hour special"],es:["oferta por tiempo limitado","oferta especial por horario"]},
+{jp:"定休日",reading:"ていきゅうび",en:["regular closing day","regular day off"],es:["día de cierre semanal","día habitual de cierre"]},
+{jp:"本日",reading:"ほんじつ",en:["today","this day"],es:["hoy","en el día de hoy"]},
+{jp:"半額",reading:"はんがく",en:["half price","50 percent off"],es:["mitad de precio","50 % de descuento"]},
+{jp:"レディースデー",reading:"レディースデー",en:["ladies' day","women's day promotion"],es:["día de las mujeres","día de promoción para mujeres"]},
+{jp:"量",reading:"りょう",en:["amount","quantity","portion"],es:["cantidad","porción"]},
+{jp:"親子丼",reading:"おやこどん",en:["oyakodon","chicken and egg rice bowl"],es:["oyakodon","cuenco de arroz con pollo y huevo"]},
+{jp:"牛丼",reading:"ぎゅうどん",en:["gyudon","beef rice bowl"],es:["gyudon","cuenco de arroz con ternera"]},
+{jp:"サンドイッチ",reading:"サンドイッチ",en:["sandwich"],es:["sándwich","emparedado"]},
+{jp:"ソース",reading:"ソース",en:["sauce","Worcestershire-style sauce"],es:["salsa"]},
+{jp:"～券",reading:"～けん",en:["ticket","voucher","coupon"],es:["entrada","vale","cupón"]},
+{jp:"かける",reading:"かける",en:["to hang","to put on","to pour over","to apply"],es:["colgar","poner","echar","verter","añadir"]},
+{jp:"貼る",reading:"はる",en:["to stick","to paste","to put up"],es:["pegar","adherir","colocar"]},
+{jp:"注文する",reading:"ちゅうもんする",en:["to order","to place an order"],es:["pedir","hacer un pedido"]},
+{jp:"割引する",reading:"わりびきする",en:["to discount","to give a discount"],es:["hacer un descuento","descontar"]},
+{jp:"両替する",reading:"りょうがえする",en:["to exchange money","to change currency"],es:["cambiar dinero","cambiar divisa"]},
+{jp:"得（な）",reading:"とく（な）",en:["good value","a bargain","economical"],es:["ventajoso","ventajosa","económico","económica","una ganga"]},
+{jp:"特別（な）",reading:"とくべつ（な）",en:["special","particular"],es:["especial","particular"]},
+{jp:"どういう",reading:"どういう",en:["what kind of","what sort of","what ... means"],es:["qué tipo de","qué clase de","qué ... significa"]},
+{jp:"もう",reading:"もう",en:["already","any more","another"],es:["ya","más","otro","otra"]},
+{jp:"もう一杯",reading:"もういっぱい",en:["one more cup","another glass","one more drink"],es:["otra taza","otro vaso","una bebida más"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"2-2",mainTopic:"2",topicTitle:"一緒に食事"}));
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
