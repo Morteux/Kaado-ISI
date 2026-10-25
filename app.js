@@ -905,9 +905,67 @@ const DEKIRU_SHOCHUKYU_TOPIC_14_2_WORDS = [
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"14-2",mainTopic:"14",topicTitle:"贈り物の習慣"}));
 
 
+const DEKIRU_SHOCHUKYU_TOPIC_15_1_WORDS = [
+{jp:"原因",reading:"げんいん",en:["cause","reason"],es:["causa","motivo"]},
+{jp:"食料品",reading:"しょくりょうひん",en:["food products","groceries"],es:["productos alimenticios","comestibles"]},
+{jp:"増加する",reading:"ぞうかする",en:["to increase","to rise"],es:["aumentar","incrementarse"]},
+{jp:"問題",reading:"もんだい",en:["problem","issue","question"],es:["problema","cuestión","pregunta"]},
+{jp:"レコード",reading:"レコード",en:["record","vinyl record"],es:["disco","disco de vinilo"]},
+{jp:"貿易",reading:"ぼうえき",en:["trade","foreign trade"],es:["comercio","comercio exterior"]},
+{jp:"事情",reading:"じじょう",en:["circumstances","situation","conditions"],es:["circunstancias","situación"]},
+{jp:"温暖（な）",reading:"おんだん（な）",en:["warm","mild"],es:["templado","cálido"]},
+{jp:"英会話",reading:"えいかいわ",en:["English conversation"],es:["conversación en inglés"]},
+{jp:"女性",reading:"じょせい",en:["woman","female"],es:["mujer","femenino"]},
+{jp:"男性",reading:"だんせい",en:["man","male"],es:["hombre","masculino"]},
+{jp:"地球",reading:"ちきゅう",en:["Earth","the planet"],es:["Tierra","el planeta"]},
+{jp:"直接",reading:"ちょくせつ",en:["directly","in person"],es:["directamente","en persona"]},
+{jp:"輸入する",reading:"ゆにゅうする",en:["to import"],es:["importar"]},
+{jp:"洋服",reading:"ようふく",en:["Western-style clothes","clothing"],es:["ropa occidental","ropa"]},
+{jp:"理由",reading:"りゆう",en:["reason","cause"],es:["razón","motivo"]},
+{jp:"グラフ",reading:"グラフ",en:["graph","chart"],es:["gráfico"]},
+{jp:"～化（例：温暖化）",reading:"～か（れい：おんだんか）",en:["-ization","the process of becoming ..."],es:["-ización","proceso de convertirse en ..."]},
+{jp:"～倍（例：2倍）",reading:"～ばい（れい：にばい）",en:["... times","...-fold"],es:["... veces","... veces más"]},
+{jp:"下がる",reading:"さがる",en:["to fall","to go down","to decrease"],es:["bajar","descender","disminuir"]},
+{jp:"値段が下がる",reading:"ねだんがさがる",en:["the price goes down","prices fall"],es:["bajar el precio","bajar los precios"]},
+{jp:"飼う",reading:"かう",en:["to keep (a pet)","to raise an animal"],es:["tener (una mascota)","criar un animal"]},
+{jp:"咲く",reading:"さく",en:["to bloom","to blossom"],es:["florecer"]},
+{jp:"アンケートする",reading:"アンケートする",en:["to conduct a survey"],es:["hacer una encuesta"]},
+{jp:"インタビューする",reading:"インタビューする",en:["to interview"],es:["entrevistar"]},
+{jp:"発表する",reading:"はっぴょうする",en:["to present","to announce"],es:["presentar","anunciar"]},
+{jp:"来日する",reading:"らいにちする",en:["to come to Japan"],es:["venir a Japón"]},
+{jp:"流行する",reading:"りゅうこうする",en:["to become popular","to be in fashion","to spread"],es:["ponerse de moda","popularizarse","propagarse"]},
+{jp:"過ごす",reading:"すごす",en:["to spend (time)","to pass"],es:["pasar (tiempo)","transcurrir"]},
+{jp:"比べる",reading:"くらべる",en:["to compare"],es:["comparar"]},
+{jp:"汚い",reading:"きたない",en:["dirty","messy"],es:["sucio","desordenado"]},
+{jp:"ほとんど",reading:"ほとんど",en:["almost","mostly","hardly (with negative)"],es:["casi","la mayoría","apenas (con negación)"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"15-1",mainTopic:"15",topicTitle:"発表の準備"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_15_2_WORDS = [
+{jp:"クッキー",reading:"クッキー",en:["cookie","biscuit"],es:["galleta"]},
+{jp:"輸出する",reading:"ゆしゅつする",en:["to export"],es:["exportar"]},
+{jp:"インフルエンザ",reading:"インフルエンザ",en:["influenza","flu"],es:["gripe","influenza"]},
+{jp:"円高",reading:"えんだか",en:["strong yen","yen appreciation"],es:["fortaleza del yen","apreciación del yen"]},
+{jp:"気温",reading:"きおん",en:["air temperature"],es:["temperatura ambiente"]},
+{jp:"立入禁止",reading:"たちいりきんし",en:["no entry","keep out"],es:["prohibido el paso","entrada prohibida"]},
+{jp:"南極",reading:"なんきょく",en:["South Pole","Antarctica"],es:["Polo Sur","Antártida"]},
+{jp:"北極",reading:"ほっきょく",en:["North Pole","Arctic"],es:["Polo Norte","Ártico"]},
+{jp:"ダウンロードする",reading:"ダウンロードする",en:["to download"],es:["descargar"]},
+{jp:"進む",reading:"すすむ",en:["to progress","to advance","to proceed"],es:["avanzar","progresar"]},
+{jp:"研究が進む",reading:"けんきゅうがすすむ",en:["research progresses"],es:["la investigación avanza"]},
+{jp:"溶ける",reading:"とける",en:["to melt","to dissolve"],es:["derretirse","disolverse"]},
+{jp:"減る",reading:"へる",en:["to decrease","to diminish"],es:["disminuir","reducirse"]},
+{jp:"欠席する",reading:"けっせきする",en:["to be absent"],es:["faltar","ausentarse"]},
+{jp:"危険（な）",reading:"きけん（な）",en:["dangerous","danger"],es:["peligroso","peligro"]},
+{jp:"大変",reading:"たいへん",en:["very","terrible","hard","serious"],es:["muy","terrible","duro","grave"]},
+{jp:"しかし",reading:"しかし",en:["however","but"],es:["sin embargo","pero"]},
+{jp:"どんどん",reading:"どんどん",en:["steadily","rapidly","more and more"],es:["cada vez más","rápidamente","sin parar"]},
+{jp:"～によると",reading:"～によると",en:["according to ..."],es:["según ..."]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"15-2",mainTopic:"15",topicTitle:"みんなの前で発表"}));
+
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_15_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_15_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
