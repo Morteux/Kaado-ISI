@@ -470,9 +470,44 @@ const DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS = [
 {jp:"最後に",reading:"さいごに",en:["finally","lastly"],es:["por último","finalmente"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"7-2",mainTopic:"7",topicTitle:"一緒に作りましょう"}));
 
+const DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS = [
+{jp:"（お）団子",reading:"（お）だんご",en:["dango","Japanese dumplings"],es:["dango","bolitas japonesas de arroz"]},
+{jp:"肉じゃが",reading:"にくじゃが",en:["nikujaga","meat and potato stew"],es:["nikujaga","estofado japonés de carne y patatas"]},
+{jp:"湖",reading:"みずうみ",en:["lake"],es:["lago"]},
+{jp:"運転手",reading:"うんてんしゅ",en:["driver"],es:["conductor","chofer"]},
+{jp:"駅員",reading:"えきいん",en:["station attendant","railway station staff"],es:["empleado de estación","personal ferroviario"]},
+{jp:"お巡りさん",reading:"おまわりさん",en:["police officer","policeman"],es:["agente de policía","policía"]},
+{jp:"～さん（例：駅員さん）",reading:"～さん",en:["Mr./Ms. ...","polite title for a person"],es:["señor/señora ...","tratamiento respetuoso para una persona"]},
+{jp:"送る（車で送る）",reading:"おくる",en:["to take someone (by car)","to give someone a ride"],es:["llevar a alguien en coche","acercar en coche"]},
+{jp:"直す",reading:"なおす",en:["to fix","to repair","to correct"],es:["arreglar","reparar","corregir"]},
+{jp:"譲る",reading:"ゆずる",en:["to give up","to hand over","to yield"],es:["ceder","entregar","dar paso"]},
+{jp:"連れて行く",reading:"つれていく",en:["to take someone along","to take someone somewhere"],es:["llevar a alguien","acompañar a alguien a un lugar"]},
+{jp:"教える",reading:"おしえる",en:["to tell","to inform","to teach"],es:["decir","informar","enseñar"]},
+{jp:"拾う",reading:"ひろう",en:["to pick up","to find"],es:["recoger","encontrar"]},
+{jp:"届ける",reading:"とどける",en:["to deliver","to bring","to report"],es:["entregar","llevar","notificar"]},
+{jp:"迎えに来る",reading:"むかえにくる",en:["to come to pick someone up"],es:["venir a recoger a alguien"]},
+{jp:"捕る",reading:"とる",en:["to catch","to capture"],es:["capturar","atrapar"]},
+{jp:"そんなに",reading:"そんなに",en:["that much","so much","that many"],es:["tanto","tantos"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"8-1",mainTopic:"8",topicTitle:"うれしい出来事"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS = [
+{jp:"花瓶",reading:"かびん",en:["vase","flower vase"],es:["jarrón","florero"]},
+{jp:"茶碗",reading:"ちゃわん",en:["rice bowl","tea bowl"],es:["cuenco para arroz","cuenco de té"]},
+{jp:"机",reading:"つくえ",en:["desk","table"],es:["escritorio","mesa"]},
+{jp:"本棚",reading:"ほんだな",en:["bookshelf","bookcase"],es:["estantería","librería"]},
+{jp:"近所",reading:"きんじょ",en:["neighborhood","nearby area"],es:["barrio","vecindario"]},
+{jp:"～先（例：アルバイト先）",reading:"～さき",en:["place where one works or goes","destination"],es:["lugar de trabajo o actividad","destino"]},
+{jp:"教授",reading:"きょうじゅ",en:["professor"],es:["profesor universitario"]},
+{jp:"部長",reading:"ぶちょう",en:["department manager","department head"],es:["jefe de departamento","director de sección"]},
+{jp:"資料",reading:"しりょう",en:["materials","documents","reference materials"],es:["materiales","documentación"]},
+{jp:"いただく",reading:"いただく",en:["to receive (humble)","to eat/drink (humble)"],es:["recibir (humilde)","comer/beber (humilde)"]},
+{jp:"くださる",reading:"くださる",en:["to give (honorific)"],es:["dar (honorífico)"]},
+{jp:"どういたしまして",reading:"どういたしまして",en:["you're welcome","not at all"],es:["de nada","no hay de qué"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"8-2",mainTopic:"8",topicTitle:"お世話になりました"}));
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
