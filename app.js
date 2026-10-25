@@ -776,9 +776,51 @@ const DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS = [
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"12-2",mainTopic:"12",topicTitle:"毎日、元気に！"}));
 
 
+const DEKIRU_SHOCHUKYU_TOPIC_13_1_WORDS = [
+{jp:"親",reading:"おや",en:["parent"],es:["padre","madre","progenitor"]},
+{jp:"父親",reading:"ちちおや",en:["father"],es:["padre"]},
+{jp:"母親",reading:"ははおや",en:["mother"],es:["madre"]},
+{jp:"子ども",reading:"こども",en:["child","children"],es:["niño","niña","niños"]},
+{jp:"近所の子ども",reading:"きんじょのこども",en:["neighborhood children","children who live nearby"],es:["niños del vecindario","niños de la zona"]},
+{jp:"家事",reading:"かじ",en:["housework","household chores"],es:["tareas domésticas","quehaceres"]},
+{jp:"コーチ",reading:"コーチ",en:["coach"],es:["entrenador","entrenadora"]},
+{jp:"塾",reading:"じゅく",en:["cram school","tutoring school"],es:["academia de refuerzo","academia"]},
+{jp:"数学",reading:"すうがく",en:["mathematics","math"],es:["matemáticas"]},
+{jp:"ゲームセンター",reading:"ゲームセンター",en:["arcade","game center"],es:["salón recreativo","salón de videojuegos"]},
+{jp:"ころ",reading:"ころ",en:["around (a time)","when","around the time"],es:["por (una época)","cuando","alrededor de"]},
+{jp:"～キロ",reading:"～キロ",en:["... kilometers","... kilograms"],es:["... kilómetros","... kilos"]},
+{jp:"～ずつ",reading:"～ずつ",en:["each","at a time","... apiece"],es:["cada uno","de ... en ...","... por persona"]},
+{jp:"騒ぐ",reading:"さわぐ",en:["to make a noise","to be noisy","to fuss"],es:["hacer ruido","alborotar","armar jaleo"]},
+{jp:"世話をする",reading:"せわをする",en:["to take care of","to look after"],es:["cuidar","ocuparse de"]},
+{jp:"えらい",reading:"えらい",en:["great","admirable","remarkable"],es:["admirable","estupendo","impresionante"]},
+{jp:"この間",reading:"このあいだ",en:["the other day","recently"],es:["el otro día","recientemente"]},
+{jp:"必ず",reading:"かならず",en:["without fail","certainly","always"],es:["sin falta","seguro","siempre"]},
+{jp:"やっぱり",reading:"やっぱり",en:["as expected","after all","just as I thought"],es:["como esperaba","después de todo","tal como pensaba"]},
+{jp:"夜遅く",reading:"よるおそく",en:["late at night"],es:["tarde por la noche","a altas horas de la noche"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"13-1",mainTopic:"13",topicTitle:"町で見かけた子どもたち"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_13_2_WORDS = [
+{jp:"うち",reading:"うち",en:["home","one's home","family"],es:["casa","hogar","familia"]},
+{jp:"うちの親",reading:"うちのおや",en:["my parents","one's parents"],es:["mis padres","los padres de uno"]},
+{jp:"海外",reading:"かいがい",en:["overseas","abroad"],es:["el extranjero","fuera del país"]},
+{jp:"曲",reading:"きょく",en:["song","piece of music","tune"],es:["canción","pieza musical","melodía"]},
+{jp:"教育",reading:"きょういく",en:["education"],es:["educación"]},
+{jp:"化粧品",reading:"けしょうひん",en:["cosmetics","makeup products"],es:["cosméticos","productos de maquillaje"]},
+{jp:"けんかをする",reading:"けんかをする",en:["to quarrel","to have a fight"],es:["pelearse","discutir"]},
+{jp:"泣く",reading:"なく",en:["to cry","to weep"],es:["llorar"]},
+{jp:"残す",reading:"のこす",en:["to leave behind","to leave uneaten"],es:["dejar","dejar sin terminar (la comida)"]},
+{jp:"やる",reading:"やる",en:["to do","to carry out"],es:["hacer","llevar a cabo"]},
+{jp:"宿題をやる",reading:"しゅくだいをやる",en:["to do homework"],es:["hacer los deberes","hacer la tarea"]},
+{jp:"厳しい",reading:"きびしい",en:["strict","harsh","severe"],es:["estricto","duro","severo"]},
+{jp:"うれしい",reading:"うれしい",en:["happy","glad","pleased"],es:["contento","alegre","encantado"]},
+{jp:"熱心（な）",reading:"ねっしん（な）",en:["enthusiastic","eager","dedicated"],es:["entusiasta","aplicado","dedicado"]},
+{jp:"何でも",reading:"なんでも",en:["anything","everything","whatever"],es:["cualquier cosa","todo","lo que sea"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"13-2",mainTopic:"13",topicTitle:"思い出すと"}));
+
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
