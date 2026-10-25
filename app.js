@@ -364,9 +364,66 @@ const DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS = [
 {jp:"びっくり",reading:"びっくり",en:["surprise","astonishment"],es:["sorpresa","asombro"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"5-2",mainTopic:"5",topicTitle:"駅で"}));
 
+
+const DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS = [
+{jp:"着物",reading:"きもの",en:["kimono","traditional Japanese clothing"],es:["kimono","ropa tradicional japonesa"]},
+{jp:"ショッピングセンター",reading:"ショッピングセンター",en:["shopping center","shopping mall"],es:["centro comercial"]},
+{jp:"水族館",reading:"すいぞくかん",en:["aquarium"],es:["acuario"]},
+{jp:"スノーボード",reading:"スノーボード",en:["snowboarding","snowboard"],es:["snowboard","tabla de snowboard"]},
+{jp:"船",reading:"ふね",en:["ship","boat"],es:["barco"]},
+{jp:"雰囲気",reading:"ふんいき",en:["atmosphere","ambience"],es:["ambiente","atmósfera"]},
+{jp:"街",reading:"まち",en:["town","city"],es:["ciudad","pueblo"]},
+{jp:"こっち",reading:"こっち",en:["this way","here","this one"],es:["por aquí","aquí","este"]},
+{jp:"そっち",reading:"そっち",en:["that way","there","that one"],es:["por ahí","ahí","ese"]},
+{jp:"市内",reading:"しない",en:["within the city","city area"],es:["dentro de la ciudad","zona urbana"]},
+{jp:"最後",reading:"さいご",en:["last","final"],es:["último","final"]},
+{jp:"旅館",reading:"りょかん",en:["traditional Japanese inn"],es:["posada tradicional japonesa","ryokan"]},
+{jp:"朝食",reading:"ちょうしょく",en:["breakfast"],es:["desayuno"]},
+{jp:"夕食",reading:"ゆうしょく",en:["dinner","evening meal"],es:["cena"]},
+{jp:"観光地",reading:"かんこうち",en:["tourist attraction","tourist destination"],es:["lugar turístico","destino turístico"]},
+{jp:"登山",reading:"とざん",en:["mountain climbing","mountaineering"],es:["alpinismo","excursionismo de montaña"]},
+{jp:"虫",reading:"むし",en:["insect","bug"],es:["insecto","bicho"]},
+{jp:"宿泊",reading:"しゅくはく",en:["lodging","overnight stay"],es:["alojamiento","pernoctación"]},
+{jp:"代金",reading:"だいきん",en:["price","charge","payment"],es:["precio","importe"]},
+{jp:"内容",reading:"ないよう",en:["contents","details"],es:["contenido","detalles"]},
+{jp:"なし",reading:"なし",en:["without","none"],es:["sin","ninguno"]},
+{jp:"値段",reading:"ねだん",en:["price"],es:["precio"]},
+{jp:"大人",reading:"おとな",en:["adult"],es:["adulto"]},
+{jp:"～付き（例：朝食付き）",reading:"～つき",en:["including ...","with ... included"],es:["con ... incluido"]},
+{jp:"～泊～日（例：2泊3日）",reading:"～はく～にち",en:["... nights and ... days"],es:["... noches y ... días"]},
+{jp:"～費（例：交通費）",reading:"～ひ",en:["... expenses","... costs"],es:["gastos de ..."]},
+{jp:"待ち合わせる",reading:"まちあわせる",en:["to arrange to meet","to meet up"],es:["quedar","reunirse"]},
+{jp:"ガイドする",reading:"ガイドする",en:["to guide"],es:["hacer de guía","guiar"]},
+{jp:"観光する",reading:"かんこうする",en:["to go sightseeing"],es:["hacer turismo"]},
+{jp:"出発する",reading:"しゅっぱつする",en:["to depart","to leave"],es:["partir","salir"]},
+{jp:"キャンプする",reading:"キャンプする",en:["to camp","to go camping"],es:["acampar"]},
+{jp:"珍しい",reading:"めずらしい",en:["rare","unusual"],es:["raro","poco común"]},
+{jp:"伝統的（な）",reading:"でんとうてき（な）",en:["traditional"],es:["tradicional"]},
+{jp:"それに",reading:"それに",en:["besides","in addition","moreover"],es:["además"]},
+{jp:"どっち",reading:"どっち",en:["which one (of two)","which way"],es:["cuál (de dos)","por dónde"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"6-1",mainTopic:"6",topicTitle:"旅行の計画"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS = [
+{jp:"イルカ",reading:"イルカ",en:["dolphin"],es:["delfín"]},
+{jp:"ショー",reading:"ショー",en:["show","performance"],es:["espectáculo","show"]},
+{jp:"手袋",reading:"てぶくろ",en:["gloves"],es:["guantes"]},
+{jp:"マフラー",reading:"マフラー",en:["scarf"],es:["bufanda"]},
+{jp:"年末",reading:"ねんまつ",en:["year-end","end of the year"],es:["fin de año"]},
+{jp:"ガイドブック",reading:"ガイドブック",en:["guidebook","travel guide"],es:["guía turística"]},
+{jp:"パーク",reading:"パーク",en:["park"],es:["parque"]},
+{jp:"早割",reading:"はやわり",en:["early-bird discount"],es:["descuento por compra anticipada"]},
+{jp:"～中（例：旅行中）",reading:"～ちゅう",en:["during ...","in the middle of ..."],es:["durante ...","en medio de ..."]},
+{jp:"取る（休みを取る）",reading:"とる",en:["to take (time off)"],es:["tomarse (días libres)"]},
+{jp:"ぬれる",reading:"ぬれる",en:["to get wet"],es:["mojarse"]},
+{jp:"用意する",reading:"よういする",en:["to prepare","to get ready"],es:["preparar","disponer"]},
+{jp:"伝える",reading:"つたえる",en:["to tell","to convey","to communicate"],es:["transmitir","comunicar"]},
+{jp:"コピーする",reading:"コピーする",en:["to copy","to make a copy"],es:["copiar","hacer una copia"]},
+{jp:"お願いします",reading:"おねがいします",en:["please","I'd appreciate it"],es:["por favor","se lo agradezco"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"6-2",mainTopic:"6",topicTitle:"旅行の準備"}));
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
