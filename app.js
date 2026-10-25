@@ -228,9 +228,75 @@ const DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS = [
 {jp:"駐車する",reading:"ちゅうしゃする",en:["to park"],es:["aparcar","estacionar"]}
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"4-2",mainTopic:"4",topicTitle:"行き方を教える"}));
 
+const DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS = [
+{jp:"給料",reading:"きゅうりょう",en:["salary"],es:["salario"]},
+{jp:"サークル",reading:"サークル",en:["club"],es:["club"]},
+{jp:"説明会",reading:"せつめいかい",en:["information session"],es:["sesión informativa"]},
+{jp:"専門学校",reading:"せんもんがっこう",en:["vocational school"],es:["escuela profesional"]},
+{jp:"見学会",reading:"けんがくかい",en:["open day"],es:["visita guiada"]},
+{jp:"学部",reading:"がくぶ",en:["faculty"],es:["facultad"]},
+{jp:"経済",reading:"けいざい",en:["economics"],es:["economía"]},
+{jp:"法律",reading:"ほうりつ",en:["law"],es:["ley"]},
+{jp:"カナダ",reading:"カナダ",en:["Canada"],es:["Canadá"]},
+{jp:"聴解",reading:"ちょうかい",en:["listening comprehension"],es:["comprensión auditiva"]},
+{jp:"アクセサリー",reading:"アクセサリー",en:["accessories"],es:["accesorios"]},
+{jp:"一生懸命",reading:"いっしょうけんめい",en:["hard; with all one's might"],es:["con empeño"]},
+{jp:"答え",reading:"こたえ",en:["answer"],es:["respuesta"]},
+{jp:"試験",reading:"しけん",en:["exam"],es:["examen"]},
+{jp:"将来",reading:"しょうらい",en:["future"],es:["futuro"]},
+{jp:"ビジネス",reading:"ビジネス",en:["business"],es:["negocios"]},
+{jp:"日本語能力試験",reading:"にほんごのうりょくしけん",en:["JLPT"],es:["JLPT"]},
+{jp:"間違い",reading:"まちがい",en:["mistake"],es:["error"]},
+{jp:"寮",reading:"りょう",en:["dormitory"],es:["residencia"]},
+{jp:"目標",reading:"もくひょう",en:["goal"],es:["objetivo"]},
+{jp:"～料",reading:"～りょう",en:["fee"],es:["tarifa"]},
+{jp:"翻訳する",reading:"ほんやくする",en:["to translate"],es:["traducir"]},
+{jp:"調べる",reading:"しらべる",en:["to look up; investigate"],es:["consultar; investigar"]},
+{jp:"見学する",reading:"けんがくする",en:["to visit; observe"],es:["visitar"]},
+{jp:"相談する",reading:"そうだんする",en:["to consult; discuss"],es:["consultar"]},
+{jp:"貯金する",reading:"ちょきんする",en:["to save money"],es:["ahorrar"]},
+{jp:"留学する",reading:"りゅうがくする",en:["to study abroad"],es:["estudiar en el extranjero"]},
+{jp:"開く",reading:"ひらく",en:["to open; hold an event"],es:["abrir; organizar"]},
+{jp:"続ける",reading:"つづける",en:["to continue"],es:["continuar"]},
+{jp:"やめる",reading:"やめる",en:["to quit; stop"],es:["dejar; parar"]},
+{jp:"受ける",reading:"うける",en:["to take; receive"],es:["hacer; recibir"]},
+{jp:"案内する",reading:"あんないする",en:["to guide"],es:["guiar"]},
+{jp:"進学する",reading:"しんがくする",en:["to go on to higher education"],es:["continuar estudios"]},
+{jp:"通学する",reading:"つうがくする",en:["to commute to school"],es:["ir a la escuela"]},
+{jp:"選ぶ",reading:"えらぶ",en:["to choose"],es:["elegir"]},
+{jp:"迷う",reading:"まよう",en:["to hesitate; be unsure"],es:["dudar"]},
+{jp:"考える",reading:"かんがえる",en:["to think"],es:["pensar"]},
+{jp:"決める",reading:"きめる",en:["to decide"],es:["decidir"]},
+{jp:"合格する",reading:"ごうかくする",en:["to pass an exam"],es:["aprobar"]},
+{jp:"専攻する",reading:"せんこうする",en:["to major in"],es:["especializarse"]},
+{jp:"悩む",reading:"なやむ",en:["to worry"],es:["preocuparse"]},
+{jp:"就職する",reading:"しゅうしょくする",en:["to get a job"],es:["conseguir trabajo"]},
+{jp:"確認する",reading:"かくにんする",en:["to confirm; check"],es:["confirmar; comprobar"]},
+{jp:"正しい",reading:"ただしい",en:["correct"],es:["correcto"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"3-1",mainTopic:"3",topicTitle:"これからの計画"}));
+
+const DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS = [
+{jp:"建築家",reading:"けんちくか",en:["architect"],es:["arquitecto"]},
+{jp:"デザイナー",reading:"デザイナー",en:["designer"],es:["diseñador"]},
+{jp:"夢",reading:"ゆめ",en:["dream"],es:["sueño"]},
+{jp:"スーツ",reading:"スーツ",en:["suit"],es:["traje"]},
+{jp:"願書",reading:"がんしょ",en:["application form"],es:["formulario de solicitud"]},
+{jp:"事務室",reading:"じむしつ",en:["office"],es:["oficina"]},
+{jp:"書類",reading:"しょるい",en:["documents"],es:["documentos"]},
+{jp:"～中",reading:"～ちゅう",en:["during; by the end of"],es:["durante; antes de terminar"]},
+{jp:"経営する",reading:"けいえいする",en:["to manage"],es:["gestionar"]},
+{jp:"体験する",reading:"たいけんする",en:["to experience"],es:["experimentar"]},
+{jp:"頑張る",reading:"がんばる",en:["to do one's best"],es:["esforzarse"]},
+{jp:"スピーチする",reading:"スピーチする",en:["to give a speech"],es:["dar un discurso"]},
+{jp:"受験する",reading:"じゅけんする",en:["to take an exam"],es:["presentarse a un examen"]},
+{jp:"復習する",reading:"ふくしゅうする",en:["to review"],es:["repasar"]},
+{jp:"予習する",reading:"よしゅうする",en:["to prepare in advance"],es:["preparar la lección"]},
+{jp:"デッサンする",reading:"デッサンする",en:["to sketch"],es:["hacer un boceto"]}
+].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"3-2",mainTopic:"3",topicTitle:"夢に向かって"}));
+
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
 const VOCABULARY_BOOKS = [
-  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS]},
+  {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS]},
   {id:"dekiru-chukyu",title:"できる日本語中級",words:[]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
