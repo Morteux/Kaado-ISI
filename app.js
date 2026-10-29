@@ -984,6 +984,51 @@ const DEKIRU_SHOCHUKYU_TOPIC_15_2_WORDS = [
 ].map(w=>({...w,bookId:"dekiru-shochukyu",topic:"15-2",mainTopic:"15",topicTitle:"みんなの前で発表"}));
 
 
+const DEKIRU_CHUKYU_TOPIC_1_0_WORDS = [
+{jp:"きっかけ",reading:"きっかけ",en:["ice breaker"]},
+{jp:"中心",reading:"ちゅうしん",en:["center"]},
+{jp:"立場",reading:"たちば",en:["position"]},
+{jp:"試す",reading:"ためす",en:["to try","to try out"]},
+{jp:"あなた",reading:"あなた",en:["you"]},
+{jp:"旅する",reading:"たびする",en:["to travel"]},
+{jp:"お供",reading:"おとも",en:["companion"]},
+{jp:"動物",reading:"どうぶつ",en:["animal"]},
+{jp:"羊",reading:"ひつじ",en:["sheep"]},
+{jp:"馬",reading:"うま",en:["horse"]},
+{jp:"ライオン",reading:"ライオン",en:["lion"]},
+{jp:"牛",reading:"うし",en:["cow"]},
+{jp:"協力する",reading:"きょうりょくする",en:["to cooperate"]},
+{jp:"さて",reading:"さて",en:["so","well"]},
+{jp:"順に",reading:"じゅんに",en:["in order","in turn"]},
+{jp:"手放す",reading:"てばなす",en:["to let go"]},
+{jp:"なぜ",reading:"なぜ",en:["why"]},
+{jp:"付ける（番号を付ける）",reading:"つける（ばんごうをつける）",en:["to give (a number)"]},
+{jp:"それぞれ",reading:"それぞれ",en:["each"]},
+{jp:"象徴する",reading:"しょうちょうする",en:["to represent"]},
+{jp:"財産",reading:"ざいさん",en:["possessions"]},
+{jp:"やわらか（な）",reading:"やわらか（な）",en:["soft"]},
+{jp:"そば",reading:"そば",en:["beside"]},
+{jp:"ほっと",reading:"ほっと",en:["to feel relief","comfort"]},
+{jp:"移動する",reading:"いどうする",en:["to move","to travel"]},
+{jp:"手段",reading:"しゅだん",en:["means"]},
+{jp:"表す",reading:"あらわす",en:["to represent"]},
+{jp:"つまり",reading:"つまり",en:["in other words"]},
+{jp:"困難（な）",reading:"こんなん（な）",en:["adversity"]},
+{jp:"守る",reading:"まもる",en:["to protect"]},
+{jp:"たっぷり（な）",reading:"たっぷり（な）",en:["full of"]},
+{jp:"与える",reading:"あたえる",en:["to give"]},
+{jp:"順番",reading:"じゅんばん",en:["order"]},
+{jp:"人生",reading:"じんせい",en:["life"]},
+{jp:"出合う",reading:"であう",en:["to encounter"]},
+{jp:"自然（な）",reading:"しぜん（な）",en:["naturally"]},
+{jp:"昔話",reading:"むかしばなし",en:["folk tale"]},
+{jp:"キジ",reading:"キジ",en:["pheasant"]},
+{jp:"連れる",reading:"つれる",en:["to take someone with you"]},
+{jp:"鬼退治",reading:"おにたいじ",en:["ogre hunting"]},
+{jp:"重大（な）",reading:"じゅうだい（な）",en:["major","important"]},
+{jp:"種明かし",reading:"たねあかし",en:["answer","reveal"]}
+].map(w=>({...w,bookId:"dekiru-chukyu",topic:"1-0",mainTopic:"1",topicTitle:"知って楽しむ"}));
+
 const DEKIRU_CHUKYU_TOPIC_1_1_WORDS = [
 {jp:"掲示板",reading:"けいじばん",en:["bulletin board","notice board"],es:["tablón de anuncios"]},
 {jp:"交流する",reading:"こうりゅうする",en:["to interact","to socialize","to exchange"],es:["relacionarse","intercambiar"]},
@@ -997,18 +1042,18 @@ const DEKIRU_CHUKYU_TOPIC_1_1_WORDS = [
 {jp:"または",reading:"または",en:["or","alternatively"],es:["o","alternativamente"]},
 {jp:"当日",reading:"とうじつ",en:["that day","the day itself"],es:["ese día","el mismo día"]},
 {jp:"支払う",reading:"しはらう",en:["to pay"],es:["pagar"]},
-{jp:"雨天",reading:"うてん",en:["rainy weather"],es:["tiempo lluvioso"]},
-{jp:"就職活動する",reading:"しゅうしょくかつどうする",en:["to look for a job","to job-hunt"],es:["buscar empleo"]},
+{jp:"雨天",reading:"うてん",en:["rain"],es:["tiempo lluvioso"]},
+{jp:"就職活動する",reading:"しゅうしょくかつどうする",en:["to job-hunt"],es:["buscar empleo"]},
 {jp:"重要（な）",reading:"じゅうよう（な）",en:["important","essential"],es:["importante","esencial"]},
-{jp:"評価する",reading:"ひょうかする",en:["to evaluate","to assess"],es:["evaluar","valorar"]},
+{jp:"評価する",reading:"ひょうかする",en:["to appreciate"],es:["evaluar","valorar"]},
 {jp:"年々",reading:"ねんねん",en:["year by year","annually"],es:["año tras año"]},
 {jp:"高まる",reading:"たかまる",en:["to rise","to increase"],es:["aumentar","elevarse"]},
 {jp:"金額",reading:"きんがく",en:["amount of money","sum"],es:["cantidad de dinero","importe"]},
 {jp:"領収書",reading:"りょうしゅうしょ",en:["receipt"],es:["recibo"]},
 {jp:"サインする",reading:"サインする",en:["to sign"],es:["firmar"]},
-{jp:"完成する",reading:"かんせいする",en:["to be completed","to be finished"],es:["completarse","terminarse"]},
+{jp:"完成する",reading:"かんせいする",en:["to complete"],es:["completarse","terminarse"]},
 {jp:"～品（完成品）",reading:"～ひん（かんせいひん）",en:["product","finished product"],es:["producto","producto terminado"]},
-{jp:"工事する",reading:"こうじする",en:["to carry out construction work"],es:["realizar obras"]},
+{jp:"工事する",reading:"こうじする",en:["to construct"],es:["realizar obras"]},
 {jp:"立てる（音を立てる）",reading:"たてる（おとをたてる）",en:["to make (a noise)"],es:["hacer (ruido)"]}
 ].map(w=>({...w,bookId:"dekiru-chukyu",topic:"1-1",mainTopic:"1",topicTitle:"ことば・グループ1"}));
 
@@ -1026,49 +1071,49 @@ const DEKIRU_CHUKYU_TOPIC_1_2_WORDS = [
 
 const DEKIRU_CHUKYU_TOPIC_1_3_WORDS = [
 {jp:"天気予報",reading:"てんきよほう",en:["weather forecast"],es:["pronóstico del tiempo"]},
-{jp:"キャスター",reading:"キャスター",en:["presenter","news anchor"],es:["presentador","presentadora"]},
-{jp:"気象予報士",reading:"きしょうよほうし",en:["weather forecaster","meteorologist"],es:["meteorólogo","meteoróloga"]},
-{jp:"青空",reading:"あおぞら",en:["blue sky"],es:["cielo azul"]},
+{jp:"キャスター",reading:"キャスター",en:["newscaster"],es:["presentador","presentadora"]},
+{jp:"気象予報士",reading:"きしょうよほうし",en:["weather forecaster"],es:["meteorólogo","meteoróloga"]},
+{jp:"青空",reading:"あおぞら",en:["clear sky"],es:["cielo azul"]},
 {jp:"広がる",reading:"ひろがる",en:["to spread","to extend"],es:["extenderse","expandirse"]},
 {jp:"日中",reading:"にっちゅう",en:["during the day","daytime"],es:["durante el día"]},
-{jp:"最高",reading:"さいこう",en:["maximum","highest"],es:["máximo","más alto"]},
-{jp:"見込み",reading:"みこみ",en:["expectation","prospect","forecast"],es:["previsión","posibilidad"]},
-{jp:"汗ばむ",reading:"あせばむ",en:["to begin to perspire"],es:["empezar a sudar"]},
-{jp:"陽気",reading:"ようき",en:["pleasant weather","cheerful mood"],es:["tiempo agradable","alegría"]},
-{jp:"～日和（洗濯日和）",reading:"～びより（せんたくびより）",en:["ideal weather for (laundry)"],es:["día ideal para (hacer la colada)"]},
+{jp:"最高",reading:"さいこう",en:["highest"],es:["máximo","más alto"]},
+{jp:"見込み",reading:"みこみ",en:["expectation"],es:["previsión","posibilidad"]},
+{jp:"汗ばむ",reading:"あせばむ",en:["to bring out a slight sweat"],es:["empezar a sudar"]},
+{jp:"陽気",reading:"ようき",en:["warm"],es:["tiempo agradable","alegría"]},
+{jp:"～日和（洗濯日和）",reading:"～びより（せんたくびより）",en:["perfect weather (for doing laundry)"],es:["día ideal para (hacer la colada)"]},
 {jp:"星空",reading:"ほしぞら",en:["starry sky"],es:["cielo estrellado"]},
 {jp:"のち",reading:"のち",en:["later","afterwards"],es:["después","más tarde"]},
 {jp:"前日",reading:"ぜんじつ",en:["the previous day","the day before"],es:["el día anterior"]},
-{jp:"午前中",reading:"ごぜんちゅう",en:["during the morning"],es:["durante la mañana"]},
+{jp:"午前中",reading:"ごぜんちゅう",en:["in the morning"],es:["durante la mañana"]},
 {jp:"続く",reading:"つづく",en:["to continue","to last"],es:["continuar","durar"]},
 {jp:"折りたたみ傘",reading:"おりたたみがさ",en:["folding umbrella"],es:["paraguas plegable"]},
-{jp:"平年",reading:"へいねん",en:["average year","normal year"],es:["año normal","promedio habitual"]},
+{jp:"平年",reading:"へいねん",en:["average year"],es:["año normal","promedio habitual"]},
 {jp:"～並み（平年並み）",reading:"～なみ（へいねんなみ）",en:["at the same level as (average)"],es:["al nivel habitual","como de costumbre"]},
-{jp:"予想する",reading:"よそうする",en:["to predict","to expect"],es:["predecir","esperar"]},
-{jp:"肌寒い",reading:"はだざむい",en:["chilly","rather cold"],es:["fresco","algo frío"]},
+{jp:"予想する",reading:"よそうする",en:["to expect"],es:["predecir","esperar"]},
+{jp:"肌寒い",reading:"はだざむい",en:["chilly"],es:["fresco","algo frío"]},
 {jp:"感じる",reading:"かんじる",en:["to feel","to sense"],es:["sentir","notar"]},
-{jp:"連休",reading:"れんきゅう",en:["consecutive holidays","holiday stretch"],es:["varios días festivos seguidos","puente"]},
+{jp:"連休",reading:"れんきゅう",en:["holiday weekend"],es:["varios días festivos seguidos","puente"]},
 {jp:"～地方（東北地方）",reading:"～ちほう（とうほくちほう）",en:["region (Tōhoku region)"],es:["región (región de Tōhoku)"]},
-{jp:"関東",reading:"かんとう",en:["Kanto region"],es:["región de Kantō"]},
-{jp:"崩れる（天気が崩れる）",reading:"くずれる（てんきがくずれる）",en:["to deteriorate (weather)"],es:["empeorar (el tiempo)"]},
-{jp:"各地",reading:"かくち",en:["various places","various regions"],es:["distintas localidades","varias regiones"]},
-{jp:"助かる",reading:"たすかる",en:["to be saved","to be helpful","to be a relief"],es:["salvarse","ser de ayuda","ser un alivio"]}
+{jp:"関東",reading:"かんとう",en:["Kanto"],es:["región de Kantō"]},
+{jp:"崩れる（天気が崩れる）",reading:"くずれる（てんきがくずれる）",en:["to get worse (the weather gets worse)"],es:["empeorar (el tiempo)"]},
+{jp:"各地",reading:"かくち",en:["everywhere","all over the place"],es:["distintas localidades","varias regiones"]},
+{jp:"助かる",reading:"たすかる",en:["to be helped"],es:["salvarse","ser de ayuda","ser un alivio"]}
 ].map(w=>({...w,bookId:"dekiru-chukyu",topic:"1-3",mainTopic:"1",topicTitle:"ことば・グループ3"}));
 
 const DEKIRU_CHUKYU_TOPIC_1_4_WORDS = [
-{jp:"しっかりする（彼はしっかりしている）",reading:"しっかりする（かれはしっかりしている）",en:["to be sensible","to be reliable"],es:["ser responsable","tener la cabeza bien puesta"]},
+{jp:"しっかりする（彼はしっかりしている）",reading:"しっかりする（かれはしっかりしている）",en:["to be reliable"],es:["ser responsable","tener la cabeza bien puesta"]},
 {jp:"ハッピー（な）",reading:"ハッピー（な）",en:["happy"],es:["feliz"]},
 {jp:"ストーリー",reading:"ストーリー",en:["story","plot"],es:["historia","argumento"]},
-{jp:"イギリス",reading:"イギリス",en:["United Kingdom","Britain"],es:["Reino Unido","Gran Bretaña"]},
+{jp:"イギリス",reading:"イギリス",en:["the UK"],es:["Reino Unido","Gran Bretaña"]},
 {jp:"実は",reading:"じつは",en:["actually","to tell the truth"],es:["en realidad","a decir verdad"]},
-{jp:"おっちょこちょい（な）",reading:"おっちょこちょい（な）",en:["careless","scatterbrained","clumsy"],es:["despistado","torpe"]},
-{jp:"性格",reading:"せいかく",en:["personality","character"],es:["personalidad","carácter"]},
-{jp:"欠点",reading:"けってん",en:["weak point","flaw","shortcoming"],es:["defecto","punto débil"]},
-{jp:"周り",reading:"まわり",en:["surroundings","people around (someone)"],es:["alrededores","gente de alrededor"]},
-{jp:"交換する",reading:"こうかんする",en:["to exchange","to swap"],es:["intercambiar","cambiar"]},
+{jp:"おっちょこちょい（な）",reading:"おっちょこちょい（な）",en:["scatter-brained"],es:["despistado","torpe"]},
+{jp:"性格",reading:"せいかく",en:["character"],es:["personalidad","carácter"]},
+{jp:"欠点",reading:"けってん",en:["shortcoming"],es:["defecto","punto débil"]},
+{jp:"周り",reading:"まわり",en:["around"],es:["alrededores","gente de alrededor"]},
+{jp:"交換する",reading:"こうかんする",en:["to exchange"],es:["intercambiar","cambiar"]},
 {jp:"気が短い",reading:"きがみじかい",en:["short-tempered","impatient"],es:["impaciente","tener poca paciencia"]},
 {jp:"怒る",reading:"おこる",en:["to get angry","to scold"],es:["enfadarse","regañar"]},
-{jp:"行動する",reading:"こうどうする",en:["to act","to take action"],es:["actuar","tomar medidas"]},
+{jp:"行動する",reading:"こうどうする",en:["behavior"],es:["actuar","tomar medidas"]},
 {jp:"ずいぶん",reading:"ずいぶん",en:["quite","considerably","rather"],es:["bastante","considerablemente"]}
 ].map(w=>({...w,bookId:"dekiru-chukyu",topic:"1-4",mainTopic:"1",topicTitle:"ことば・グループ4"}));
 
@@ -1137,7 +1182,7 @@ const DEKIRU_CHUKYU_TOPIC_3_1_WORDS = [
 
 const VOCABULARY_BOOKS = [
   {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_15_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_15_2_WORDS]},
-  {id:"dekiru-chukyu",title:"できる日本語中級",words:[...DEKIRU_CHUKYU_TOPIC_1_1_WORDS,...DEKIRU_CHUKYU_TOPIC_1_2_WORDS,...DEKIRU_CHUKYU_TOPIC_1_3_WORDS,...DEKIRU_CHUKYU_TOPIC_1_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_1_WORDS,...DEKIRU_CHUKYU_TOPIC_2_2_WORDS,...DEKIRU_CHUKYU_TOPIC_2_3_WORDS,...DEKIRU_CHUKYU_TOPIC_2_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_5_WORDS,...DEKIRU_CHUKYU_TOPIC_3_1_WORDS]}
+  {id:"dekiru-chukyu",title:"できる日本語中級",words:[...DEKIRU_CHUKYU_TOPIC_1_0_WORDS,...DEKIRU_CHUKYU_TOPIC_1_1_WORDS,...DEKIRU_CHUKYU_TOPIC_1_2_WORDS,...DEKIRU_CHUKYU_TOPIC_1_3_WORDS,...DEKIRU_CHUKYU_TOPIC_1_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_1_WORDS,...DEKIRU_CHUKYU_TOPIC_2_2_WORDS,...DEKIRU_CHUKYU_TOPIC_2_3_WORDS,...DEKIRU_CHUKYU_TOPIC_2_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_5_WORDS,...DEKIRU_CHUKYU_TOPIC_3_1_WORDS]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
 const WORDS = VOCABULARY_BOOKS.flatMap(book=>book.words);
