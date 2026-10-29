@@ -1194,9 +1194,47 @@ const DEKIRU_CHUKYU_TOPIC_3_1_WORDS = [
 {jp:"一休みする",reading:"ひとやすみする",en:["to take a quick break","to rest for a while"]}
 ].map(w=>({...w,bookId:"dekiru-chukyu",topic:"3-1",mainTopic:"3",topicTitle:"ことば・グループ1"}));
 
+const DEKIRU_CHUKYU_TOPIC_3_2_WORDS = [
+{jp:"リズム",reading:"リズム",en:["rhythm"]},
+{jp:"あっという間",reading:"あっというま",en:["in the blink of an eye"]},
+{jp:"過ぎる（時間が過ぎる）",reading:"すぎる（じかんがすぎる）",en:["to pass (time passes)"]},
+{jp:"だらだら",reading:"だらだら",en:["leisurely","idly"]},
+{jp:"振り返る",reading:"ふりかえる",en:["to reflect","to look back on"]},
+{jp:"結構",reading:"けっこう",en:["fairly","quite"]},
+{jp:"浮かぶ（頭に浮かぶ）",reading:"うかぶ（あたまにうかぶ）",en:["to come into one's head"]},
+{jp:"手帳",reading:"てちょう",en:["notebook","planner"]},
+{jp:"メモする",reading:"メモする",en:["to make a note","to take a memo"]},
+{jp:"落ち着く",reading:"おちつく",en:["to calm down"]},
+{jp:"余裕",reading:"よゆう",en:["margin","room to spare"]},
+{jp:"見直す",reading:"みなおす",en:["to review","to reconsider"]},
+{jp:"また",reading:"また",en:["again"]}
+].map(w=>({...w,bookId:"dekiru-chukyu",topic:"3-2",mainTopic:"3",topicTitle:"ことば・グループ2"}));
+
+const DEKIRU_CHUKYU_TOPIC_3_3_WORDS = [
+{jp:"宝物",reading:"たからもの",en:["prized possession","treasure"]},
+{jp:"たまに",reading:"たまに",en:["sometimes","occasionally"]},
+{jp:"通勤する",reading:"つうきんする",en:["to commute"]},
+{jp:"貴重（な）",reading:"きちょう（な）",en:["precious","valuable"]},
+{jp:"まとめる",reading:"まとめる",en:["to summarize","to put together"]}
+].map(w=>({...w,bookId:"dekiru-chukyu",topic:"3-3",mainTopic:"3",topicTitle:"ことば・グループ3"}));
+
+const DEKIRU_CHUKYU_TOPIC_3_4_WORDS = [
+{jp:"楽しむ",reading:"たのしむ",en:["to enjoy"]},
+{jp:"習い事",reading:"ならいごと",en:["lessons","classes"]},
+{jp:"公民館",reading:"こうみんかん",en:["community center"]},
+{jp:"太鼓",reading:"たいこ",en:["(Japanese) drum"]},
+{jp:"せっかく",reading:"せっかく",en:["since one has made such an effort to"]},
+{jp:"だったら",reading:"だったら",en:["in that case"]},
+{jp:"実際に",reading:"じっさいに",en:["actually","in practice"]},
+{jp:"筆箱",reading:"ふでばこ",en:["pencil case"]},
+{jp:"悪いけど",reading:"わるいけど",en:["sorry, but"]},
+{jp:"グラス",reading:"グラス",en:["glass"]},
+{jp:"かける（声をかける）",reading:"かける（こえをかける）",en:["to address (talk to) someone"]}
+].map(w=>({...w,bookId:"dekiru-chukyu",topic:"3-4",mainTopic:"3",topicTitle:"ことば・グループ4"}));
+
 const VOCABULARY_BOOKS = [
   {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_15_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_15_2_WORDS]},
-  {id:"dekiru-chukyu",title:"できる日本語中級",words:[...DEKIRU_CHUKYU_TOPIC_1_0_WORDS,...DEKIRU_CHUKYU_TOPIC_1_1_WORDS,...DEKIRU_CHUKYU_TOPIC_1_2_WORDS,...DEKIRU_CHUKYU_TOPIC_1_3_WORDS,...DEKIRU_CHUKYU_TOPIC_1_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_0_WORDS,...DEKIRU_CHUKYU_TOPIC_2_1_WORDS,...DEKIRU_CHUKYU_TOPIC_2_2_WORDS,...DEKIRU_CHUKYU_TOPIC_2_3_WORDS,...DEKIRU_CHUKYU_TOPIC_2_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_5_WORDS,...DEKIRU_CHUKYU_TOPIC_3_1_WORDS]}
+  {id:"dekiru-chukyu",title:"できる日本語中級",words:[...DEKIRU_CHUKYU_TOPIC_1_0_WORDS,...DEKIRU_CHUKYU_TOPIC_1_1_WORDS,...DEKIRU_CHUKYU_TOPIC_1_2_WORDS,...DEKIRU_CHUKYU_TOPIC_1_3_WORDS,...DEKIRU_CHUKYU_TOPIC_1_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_0_WORDS,...DEKIRU_CHUKYU_TOPIC_2_1_WORDS,...DEKIRU_CHUKYU_TOPIC_2_2_WORDS,...DEKIRU_CHUKYU_TOPIC_2_3_WORDS,...DEKIRU_CHUKYU_TOPIC_2_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_5_WORDS,...DEKIRU_CHUKYU_TOPIC_3_1_WORDS,...DEKIRU_CHUKYU_TOPIC_3_2_WORDS,...DEKIRU_CHUKYU_TOPIC_3_3_WORDS,...DEKIRU_CHUKYU_TOPIC_3_4_WORDS]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
 const WORDS = VOCABULARY_BOOKS.flatMap(book=>book.words);
