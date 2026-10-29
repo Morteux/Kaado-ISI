@@ -1083,9 +1083,61 @@ const DEKIRU_CHUKYU_TOPIC_2_4_WORDS = [{"jp":"試着する","reading":"しちゃ
 const DEKIRU_CHUKYU_TOPIC_2_5_WORDS = [{"jp":"失敗する","reading":"しっぱいする","en":["to fail","to make a mistake"],"es":["fracasar","cometer un error"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"福袋","reading":"ふくぶくろ","en":["lucky bag","New Year's mystery bag"],"es":["bolsa sorpresa de Año Nuevo"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"品物","reading":"しなもの","en":["goods","item","article"],"es":["artículo","mercancía"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"ブランド","reading":"ブランド","en":["brand"],"es":["marca"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"フリーサイズ","reading":"フリーサイズ","en":["one size fits all","free size"],"es":["talla única"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"合う（サイズが合う）","reading":"あう（サイズがあう）","en":["to fit (the size fits)"],"es":["quedar bien (la talla)","ajustarse"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"中身","reading":"なかみ","en":["contents","inside"],"es":["contenido","interior"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"振り仮名","reading":"ふりがな","en":["furigana","kana reading above kanji"],"es":["furigana","lectura en kana sobre los kanji"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"家電","reading":"かでん","en":["home appliances","electrical appliances"],"es":["electrodomésticos"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"},{"jp":"エピソード集","reading":"エピソードしゅう","en":["collection of anecdotes","episode collection"],"es":["colección de anécdotas"],"bookId":"dekiru-chukyu","topic":"2-5","mainTopic":"2","topicTitle":"ことば・グループ5"}];
 
 // Register vocabulary textbooks independently from their datasets. The intermediate book is ready for content, but intentionally starts empty.
+const DEKIRU_CHUKYU_TOPIC_3_1_WORDS = [
+{jp:"効率",reading:"こうりつ",en:["efficiency"]},
+{jp:"アップする",reading:"アップする",en:["to increase"]},
+{jp:"管理する",reading:"かんりする",en:["to manage"]},
+{jp:"～法（管理法）",reading:"～ほう（かんりほう）",en:["method (management method)"]},
+{jp:"少しも",reading:"すこしも",en:["not at all"]},
+{jp:"注目する",reading:"ちゅうもくする",en:["to focus on"]},
+{jp:"タイマー",reading:"タイマー",en:["timer"]},
+{jp:"活用する",reading:"かつようする",en:["to utilize","to make use of"]},
+{jp:"～力（集中力）",reading:"～りょく（しゅうちゅうりょく）",en:["power (concentration)"]},
+{jp:"テクニック",reading:"テクニック",en:["technique"]},
+{jp:"リスト",reading:"リスト",en:["list"]},
+{jp:"繰り返す",reading:"くりかえす",en:["to repeat"]},
+{jp:"長め",reading:"ながめ",en:["longish","rather long"]},
+{jp:"利点",reading:"りてん",en:["benefit","advantage"]},
+{jp:"終了する",reading:"しゅうりょうする",en:["to end","to complete"]},
+{jp:"アラーム",reading:"アラーム",en:["alarm"]},
+{jp:"鳴る",reading:"なる",en:["to ring"]},
+{jp:"つい",reading:"つい",en:["can't help doing","despite oneself"]},
+{jp:"スマートフォン",reading:"スマートフォン",en:["smartphone"]},
+{jp:"関係",reading:"かんけい",en:["relation","relationship"]},
+{jp:"どれだけ",reading:"どれだけ",en:["how much","to what extent"]},
+{jp:"回数",reading:"かいすう",en:["number of times"]},
+{jp:"しかも",reading:"しかも",en:["moreover","furthermore"]},
+{jp:"～気（やる気）",reading:"～き（やるき）",en:["willingness (motivation)"]},
+{jp:"立てる（スケジュールを立てる）",reading:"たてる（スケジュールをたてる）",en:["to make (a schedule)"]},
+{jp:"キッチン",reading:"キッチン",en:["kitchen"]},
+{jp:"設定する",reading:"せっていする",en:["to set","to configure"]},
+{jp:"ただ",reading:"ただ",en:["however"]},
+{jp:"受信する",reading:"じゅしんする",en:["to receive"]},
+{jp:"気が散る",reading:"きがちる",en:["to be distracted"]},
+{jp:"有効（な）",reading:"ゆうこう（な）",en:["effective","efficient"]},
+{jp:"記事",reading:"きじ",en:["article"]},
+{jp:"朝活",reading:"あさかつ",en:["using the early morning for a particular activity"]},
+{jp:"もったいない",reading:"もったいない",en:["wasteful"]},
+{jp:"解消する",reading:"かいしょうする",en:["to relieve","to resolve"]},
+{jp:"早起きは三文の徳",reading:"はやおきはさんもんのとく",en:["the early bird catches the worm"]},
+{jp:"早朝",reading:"そうちょう",en:["early morning"]},
+{jp:"ぴったり（な）",reading:"ぴったり（な）",en:["perfect","just right"]},
+{jp:"キャリアアップする",reading:"キャリアアップする",en:["to advance one's career"]},
+{jp:"出勤する",reading:"しゅっきんする",en:["to go to work"]},
+{jp:"講座",reading:"こうざ",en:["course","class"]},
+{jp:"集中する",reading:"しゅうちゅうする",en:["to concentrate"]},
+{jp:"筆者",reading:"ひっしゃ",en:["writer","author"]},
+{jp:"初心者",reading:"しょしんしゃ",en:["beginner"]},
+{jp:"信じる",reading:"しんじる",en:["to believe"]},
+{jp:"山頂",reading:"さんちょう",en:["summit","mountaintop"]},
+{jp:"近づく",reading:"ちかづく",en:["to get close to","to approach"]},
+{jp:"眺め",reading:"ながめ",en:["view","scenery"]},
+{jp:"一休みする",reading:"ひとやすみする",en:["to take a quick break","to rest for a while"]}
+].map(w=>({...w,bookId:"dekiru-chukyu",topic:"3-1",mainTopic:"3",topicTitle:"ことば・グループ1"}));
+
 const VOCABULARY_BOOKS = [
   {id:"dekiru-shochukyu",title:"できる日本語初中級",words:[...INITIAL_VOCABULARY_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_1_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_2_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_3_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_4_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_5_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_6_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_7_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_8_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_9_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_10_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_11_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_12_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_13_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_14_2_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_15_1_WORDS,...DEKIRU_SHOCHUKYU_TOPIC_15_2_WORDS]},
-  {id:"dekiru-chukyu",title:"できる日本語中級",words:[...DEKIRU_CHUKYU_TOPIC_1_1_WORDS,...DEKIRU_CHUKYU_TOPIC_1_2_WORDS,...DEKIRU_CHUKYU_TOPIC_1_3_WORDS,...DEKIRU_CHUKYU_TOPIC_1_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_1_WORDS,...DEKIRU_CHUKYU_TOPIC_2_2_WORDS,...DEKIRU_CHUKYU_TOPIC_2_3_WORDS,...DEKIRU_CHUKYU_TOPIC_2_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_5_WORDS]}
+  {id:"dekiru-chukyu",title:"できる日本語中級",words:[...DEKIRU_CHUKYU_TOPIC_1_1_WORDS,...DEKIRU_CHUKYU_TOPIC_1_2_WORDS,...DEKIRU_CHUKYU_TOPIC_1_3_WORDS,...DEKIRU_CHUKYU_TOPIC_1_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_1_WORDS,...DEKIRU_CHUKYU_TOPIC_2_2_WORDS,...DEKIRU_CHUKYU_TOPIC_2_3_WORDS,...DEKIRU_CHUKYU_TOPIC_2_4_WORDS,...DEKIRU_CHUKYU_TOPIC_2_5_WORDS,...DEKIRU_CHUKYU_TOPIC_3_1_WORDS]}
 ];
 const VOCABULARY_BOOKS_BY_ID = Object.fromEntries(VOCABULARY_BOOKS.map(book=>[book.id,book]));
 const WORDS = VOCABULARY_BOOKS.flatMap(book=>book.words);
