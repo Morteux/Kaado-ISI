@@ -1,0 +1,44 @@
+[
+  {
+    "jp": "まく（水をまく）",
+    "english": "to sprinkle",
+    "spanish_pdf_extract": "(vt) derramar (derramar agua) [separado del término japonés por el diseño de columnas]",
+    "proposed_es": "esparcir; rociar (agua)",
+    "reason": "La extracción separó la glosa de la entrada y repitió el ejemplo entre paréntesis."
+  },
+  {
+    "jp": "～分の～（３分の２）",
+    "english": "xx parts of xx (two thirds)",
+    "spanish_pdf_extract": "manera de expresar fracción (dos tercios) [fragmentado en varias líneas]",
+    "proposed_es": "fracción; partes de un todo (por ejemplo, dos tercios)",
+    "reason": "La definición aparece partida por el salto de línea y la disposición de columnas."
+  },
+  {
+    "jp": "職人",
+    "english": "artisan",
+    "spanish_pdf_extract": "[sin traducción española visible en el PDF]",
+    "proposed_es": "artesano/a",
+    "reason": "La celda española está vacía; traducción completada con el término inglés de referencia."
+  },
+  {
+    "jp": "小論文",
+    "english": "short essay",
+    "spanish_pdf_extract": "ensayo, opúsculo (M) / paper, artículo de investigación (E)",
+    "proposed_es": "ensayo breve",
+    "reason": "La entrada mezcla glosas españolas e inglesas y marcas editoriales."
+  },
+  {
+    "jp": "埋め立てる",
+    "english": "to reclaim (land)",
+    "spanish_pdf_extract": "desecar, ganar terreno, reclamar terreno [texto partido entre columnas/líneas]",
+    "proposed_es": "ganar terreno al mar; rellenar",
+    "reason": "La extracción separó el complemento y produjo una secuencia poco natural."
+  },
+  {
+    "jp": "凧揚げ",
+    "english": "kite flying",
+    "spanish_pdf_extract": "remontamiento de cometa/volantín; volar una cometa (E)",
+    "proposed_es": "vuelo de cometas",
+    "reason": "La glosa está mezclada con una nota editorial y una alternativa marcada como inglés."
+  }
+]
